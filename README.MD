@@ -3,4 +3,4 @@
 
 ### started 19/3.2018
 
-live **here** [homepage](https://2lach.github.io/)
+live  [**here**](https://2lach.github.io/)
