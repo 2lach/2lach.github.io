@@ -19,6 +19,7 @@
     "type": "git",
     "url": "https://github.com/2lach/2lach.github.io.git"
   },
+  "homepage" : "https://2lach.github.io/",
   "author": "Stefan \"2lach\" Lachmann",
   "license": "MIT"
 }
