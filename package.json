@@ -1,0 +1,24 @@
+{
+  "name": "cv",
+  "version": "0.1.0",
+  "description": "cv, resume, stefan lachmann",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "push": "git add -A; timestamp=$(date \"+%c\") && git commit -m \"automated push $timestamp\"; git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2lach/2lach.github.io.git"
+  },
+  "author": "Stefan \"2lach\" Lachmann",
+  "license": "MIT"
+}

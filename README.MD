@@ -1,0 +1,23 @@
+okey 
+stefan's hemsida
+precis som en miljon hemsidor du gjort tidigare
+
+så vad vill jag bygga den med?
+
+react, node.js, webpack
+
+vad ska jag ha med?
+
+Sektioner:
+
+About
+
+Experience 
+
+Project
+
+Skills
+
+Contact
+
+# 2lach.github.io
