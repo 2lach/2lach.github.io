@@ -6,7 +6,8 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "tachyons": "^4.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +22,7 @@
     "type": "git",
     "url": "https://github.com/2lach/2lach.github.io.git"
   },
-  "homepage" : "https://2lach.github.io/",
+  "homepage": "https://2lach.github.io/",
   "author": "Stefan \"2lach\" Lachmann",
   "license": "MIT"
 }
