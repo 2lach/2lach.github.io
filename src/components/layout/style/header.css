@@ -1,12 +1,11 @@
 .nav {
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 200px;
 }
 
 .nav-bar {
     display: flex;
     flex-direction: column;
-    border-right:2px solid black;
 }
 
 .nav-bar_item {
@@ -17,8 +16,7 @@
 .nav-bar_item>a {
     color: #312727;
     text-transform: capitalize;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
+    font-family: Consolas, monaco, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
     transition: ease-in-out .4s;
 }
@@ -26,4 +24,7 @@
 .nav-bar_item>a:hover {
     color:#204c4a;
     text-shadow:1px 2px 3px gray;
+}
+.copy{
+    font-family:Baskerville, system serif;
 }

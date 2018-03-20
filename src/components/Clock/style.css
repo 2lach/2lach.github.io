@@ -10,4 +10,5 @@
 .time:hover {
     color: #204c4a;
     font-size:20px;
+    opacity: .7;
 }

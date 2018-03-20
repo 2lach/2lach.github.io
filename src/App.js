@@ -3,8 +3,8 @@ import './index.css';
 
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import BlockClock from './components/BlockClock/Index';
 import Clock from './components/Clock/index';
+import ContentCard from './components/ContentCard/index';
 
 
 class App extends Component {
@@ -13,6 +13,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Clock />
+        <ContentCard />
         <Footer />
       </div>
     );

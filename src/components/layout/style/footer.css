@@ -1,4 +1,5 @@
-footer {
+footer, .footer-first {
+    font-family:Consolas, monaco;
     width: 100%;
     height: 60px;
     background: #204c4a;
@@ -8,7 +9,9 @@ footer {
     bottom: 0;
     color: white;
     height: auto;
+    transition: ease-in-out all .25s;
 }
+footer:hover{opacity:1;}
 
 .footer-bar {
     display: inline-flex;
