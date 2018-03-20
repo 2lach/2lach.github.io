@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './layoutStyle.css';
 
 class Header extends Component {
     render() {

@@ -1,40 +1,28 @@
 .nav,
-.header,
-footer {
+.header {
     width: 100%;
     height: 60px;
-    background:#204c4a;
+    background: #204c4a;
     text-align: center;
     opacity: .7;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    color: white;
-    height: auto;
-}
-
-.nav-bar,
-.footer-bar {
+.nav-bar {
     display: inline-flex;
 }
 
-.nav-bar_item,
-.footer_item {
+.nav-bar_item {
     list-style: none;
     margin: 20px;
 }
 
-.nav-bar_item>a,
-.footer_item>a {
+.nav-bar_item>a {
     color: white;
     text-transform: capitalize;
     text-decoration: none;
     transition: ease-in-out .4s;
 }
 
-.nav-bar_item>a:hover,
-.footer_item>a:hover {
+.nav-bar_item>a:hover {
     color: #0AE6FF;
 }

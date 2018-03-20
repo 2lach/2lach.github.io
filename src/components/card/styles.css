@@ -1,0 +1,43 @@
+.flip3D {
+    width: 40rem;
+    height: 22rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    /*annars lägger dem sig lodrätt*/
+    .flip3D > .front {
+        position: absolute;
+        -webkit-transform: perspective( 600px ) rotateY( 0deg );
+        transform: perspective( 600px ) rotateY( 0deg );
+        background: #FC0;
+        width: 40vw;
+        height: 22vh;
+        border-radius: 7px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden; /*ser bara en sida när den snurrar*/
+        transition: -webkit-transform .5s linear 0s;
+        transition: transform 0.5s linear 0s;
+    }
+    .flip3D > .back {
+        position: absolute;
+        -webkit-transform: perspective( 600px ) rotateY( 180deg );
+        transform: perspective( 600px ) rotateY( 180deg );
+        background: lightblue;
+        width: 40vw;
+        height: 22vh;
+        border-radius: 7px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden; /*ser bara en sida när den snurrar*/
+        transition: -webkit-transform .5s linear 0s;
+        transition: transform 0.5s linear 0s;
+    }
+    .flip3D:hover > .front {
+        -webkit-transform: perspective( 600px ) rotateY( -180deg );
+        transform: perspective( 600px ) rotateY(-180deg);
+    }
+    .flip3D:hover > .back {
+        -webkit-transform: perspective( 600px ) rotateY( 0deg );
+        transform: perspective( 600px ) rotateY(0deg);
+    }
