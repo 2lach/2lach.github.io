@@ -1,0 +1,13 @@
+.time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /*font:font-style font-variant font-weight font-size/line-height font-family;*/
+    font: small-caps normal 13px/150% Arial, Helvetica, sans-serif;
+    transition: ease-in-out .4s;
+}
+
+.time:hover {
+    color: #204c4a;
+    font-size:20px;
+}
