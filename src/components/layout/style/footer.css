@@ -29,6 +29,6 @@ footer:hover{opacity:1;}
     transition: ease-in-out .4s;
 }
 
-.footer_item>a:hover {
-    color: #0AE6FF;
+.copy {
+    font-family: Baskerville, system serif;
 }

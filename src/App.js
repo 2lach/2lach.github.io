@@ -11,10 +11,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Clock />
-        <ContentCard />
-        <Footer />
+        <Clock/>
+        <div className="fl w-100">
+        <Header className="fl w-third" />
+        <ContentCard className="fl w-third"/>
+        </div>
+        <Footer className="fl w-100" />
       </div>
     );
   }
