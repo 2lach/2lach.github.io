@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import Clock from './components/clock/index';
 import ContentCard from './components/contentCard/index';
 //import Logincontrol from './components/loginControl/index';
+import Topbanner from './components/topBanner/index';
 
 
 
@@ -14,17 +15,13 @@ class App extends Component {
     return (
       <div className="App">
         <Clock/>
-        <div className="fl w-100">
+        <Topbanner  /> 
         <Header className="fl w-third" />
-        <ContentCard className="fl w-third"/>
-        </div>
-        {/*  
-          <Logincontrol className="fr w-third" /> 
-        */}
-        
-       
+        <ContentCard className="fl w-third"/>    
         <Footer className="fl w-100" />
+        {/*  <Logincontrol />     */}
       </div>
+      
     );
   }
 }
