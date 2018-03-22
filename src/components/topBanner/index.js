@@ -28,7 +28,7 @@ class Topbanner extends Component {
         return (
             <div>
             <Banner warn={this.state.showWarning} />
-            <div className="hideButton" onClick={this.handleToogleClick}>
+            <div className="hideButton f4 fw6 db black link dim" onClick={this.handleToogleClick}>
                 {this.state.showWarning ? 'X': ''}
             </div>
             </div>
