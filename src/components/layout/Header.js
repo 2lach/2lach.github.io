@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import {Link, BrowserRouter} from 'react-router-dom';
 
+
+// TODO switch componentent onclick with react-router and delete contentCard component
 class Header extends Component {
     render() {
         return (
