@@ -11,7 +11,7 @@
 .hideButton{
     margin: -46px 0 0 10px;
     color: white;
-    z-index: 100;
+    z-index: 9;
     position: absolute;
     border: 2px solid white;
     border-radius: 50%;

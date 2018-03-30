@@ -8,7 +8,7 @@ function Banner(props) {
     }
     return (
         <div className="cookieInfo">
-            I'm not collecting any cookie or user info so enjoy it!
+            I'm not collecting any cookies or user info so enjoy it!
     </div>
     );
 }
