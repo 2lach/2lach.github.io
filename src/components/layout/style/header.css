@@ -15,7 +15,7 @@
     border-bottom: 2px solid transparent;
 }
 
-.nav-bar_item>a {
+.nav-bar_item {
     color: #312727;
     text-transform: capitalize;
     font-family: Consolas, monaco, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
