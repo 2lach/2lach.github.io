@@ -1,21 +1,12 @@
+/* global document */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-// Routing
-import { BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+import { render } from 'react-snapshot';
+import App from './pages/App';
+import registerServiceWorker from './utils/registerServiceWorker';
+import autotrack from './utils/autotrack';
+import './utils/style';
 
-const Routes = (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/home" component={App} />
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </BrowserRouter>
-);
-
-
-
-ReactDOM.render(Routes, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
 registerServiceWorker();
+autotrack(process.env.REACT_APP_GA_ID);
