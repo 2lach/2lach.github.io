@@ -11,6 +11,7 @@ import Center from '../components/Center';
 import A from '../components/A';
 import IconWrapper from '../components/IconWrapper';
 import PostContainer from '../components/PostContainer';
+import Projects from '../components/Projects';
 
 const App = () => (
   <div>
@@ -47,7 +48,7 @@ const App = () => (
        He’s got strong design and UX experience within web development, and masters Windows
        as well as Mac environments.
       </p>
-
+      <Projects />
       <PostContainer />
       <IconWrapper />
 
