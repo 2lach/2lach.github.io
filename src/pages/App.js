@@ -27,31 +27,32 @@ const App = () => (
 
       <Center>
         <h1>
-          <A href="/">Stefan Lachmann</A>
+          <A href="/" className="f2 avenir">
+            Stefan Lachmann
+          </A>
         </h1>
-        <h3>
+        <h3 className="f3 avenir">
           <b>Front-End Developer</b>
         </h3>
       </Center>
-      <p>
-        Stefan is a highly-focused frontend developer with several years of experience in a
-        variety of development and engineering positions. He’s organized, methodical and has a
-        keen eye for detail results in solid coding and trustworthy software programs.
-        Understanding client requirements and communicating the progress of
-        projects are core values in achieving long lasting business relationships.
+      <p className="f4 avenir">
+        Stefan is a highly-focused frontend developer with several years of
+        experience in a variety of development and engineering positions. He’s
+        organized, methodical and has a keen eye for detail results in solid
+        coding and trustworthy software programs. Understanding client
+        requirements and communicating the progress of projects are core values
+        in achieving long lasting business relationships.
       </p>
-      <p>
+      <p className="f4 avenir">
         Stefan’s broad development knowledge includes HTML, CSS, JavaScript and
-      several JS libraries. To be industry aware and technically up to speed with
-      current software development tools is important for him, and his strong
-       analytical skills makes him a level-headed problem solver.
-       He’s got strong design and UX experience within web development, and masters Windows
-       as well as Mac environments.
+        several JS libraries. To be industry aware and technically up to speed
+        with current software development tools is important for him, and his
+        strong analytical skills makes him a level-headed problem solver. He’s
+        got strong design and UX experience within web development, and masters
+        Windows as well as Mac environments.
       </p>
-      <Projects />
       <PostContainer />
       <IconWrapper />
-
     </Body>
   </div>
 );

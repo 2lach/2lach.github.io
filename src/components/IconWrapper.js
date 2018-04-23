@@ -11,7 +11,7 @@ class IconWrapper extends Component {
         <div className="footer-first">
           <ul className="footer-bar" />
           <footer className="pv4 ph2 tc-l">
-            <li style={{ "listStyle": "none" }}>
+            <li className="avenir" style={{ listStyle: 'none' }}>
               &copy; Stefan Lachmann <span>{year}</span>
             </li>
             <a
@@ -106,7 +106,7 @@ class IconWrapper extends Component {
               </svg>
               <span className="f6 ml3 pr2">Code Pen</span>
             </a>
-            <a
+            {/*<a
               rel="noopener noreferrer"
               className="no-underline near-white bg-animate bg-near-black hover-bg-gray inline-flex items-center ma2 tc br2 pa2"
               style={{height:"2rem", width:"5rem"}}
@@ -116,7 +116,7 @@ class IconWrapper extends Component {
             >
             <span className="f6 ml3 pr2">Contact</span>
             
-            </a>
+            </a>*/}
           </footer>
         </div>
       </div>
