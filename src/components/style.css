@@ -1,36 +1,37 @@
 * {
     font-family: ""
 }
-.polaroid_images_a
-{
+
+.polaroid_images_a {
     background: white;
-  /*  display: inline; */
+    /*  display: inline; */
     float: left;
     margin: 0 15px 30px;
     padding: 10px 10px 25px;
     text-align: center;
     text-decoration: none;
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
     -webkit-transition: all .15s linear;
     -moz-transition: all .15s linear;
     transition: all .15s linear;
-    z-index:0;
-        position:relative;
+    z-index: 0;
+    position: relative;
 }
+
 .polaroid_images_a:after {
     color: #333;
     font-size: 20px;
     content: attr(title);
     position: relative;
-    top:15px;
-}
-.polaroid_images_img { 
-    display: block; 
-    width: inherit; 
+    top: 15px;
 }
 
+.polaroid_images_img {
+    display: block;
+    width: inherit;
+}
 
 /*.polaroid_images_a:nth-child(2n)
 {
@@ -55,21 +56,16 @@
     -moz-transform: rotate(-18deg); 
     transform: rotate(-18deg); 
 }*/
+
 /* To create a picked up motion we can use the hover event of the mouse.
  As the images will be slightly rotated on the screen the hover event will scale 
  the image and reset the rotation back to zero. On the hover event we set the rotation back to 0, 
  add a scale of 120% and add a box shadow to the box to make it look like it is moving away from the page. */
 
-
-.polaroid_images_a:hover{
-    -webkit-transform: rotate(0deg); 
-    -moz-transform: rotate(0deg);
-        transform: rotate(0deg);
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    z-index:10;
+.polaroid_images_a:hover {
+    transform: scale(1.1);
+    z-index: 10;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
-        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }

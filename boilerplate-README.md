@@ -1,4 +1,4 @@
-# michaelhsu.tw
+# 2lach-cv
 
 [![Travis][travis-badge]][travis]
 [![Codecov Status][codecov-badge]][codecov]
@@ -81,21 +81,6 @@ $ yarn run test:watch
 
 ## [LICENSE](LICENSE)
 
-MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 
-[travis-badge]: https://img.shields.io/travis/evenchange4/michaelhsu.tw/master.svg?style=flat-square
-[travis]: https://travis-ci.org/evenchange4/michaelhsu.tw
-[codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/michaelhsu.tw.svg?style=flat-square
-[codecov]: https://codecov.io/github/evenchange4/michaelhsu.tw?branch=master
-[dependency-badge]: https://david-dm.org/evenchange4/michaelhsu.tw.svg?style=flat-square
-[dependency]: https://david-dm.org/evenchange4/michaelhsu.tw
-[devdependency-badge]: https://david-dm.org/evenchange4/michaelhsu.tw/dev-status.svg?style=flat-square
-[devdependency]: https://david-dm.org/evenchange4/michaelhsu.tw#info=devDependencies
-[peerdependency-badge]: https://david-dm.org/evenchange4/michaelhsu.tw/peer-status.svg?style=flat-square
-[peerdependency]: https://david-dm.org/evenchange4/michaelhsu.tw#info=peerDependencies
-[githubtag-badge]: https://img.shields.io/github/tag/evenchange4/michaelhsu.tw.svg?style=flat-square
-[githubtag]: ./CHANGELOG.md
-[license-badge]: https://img.shields.io/github/license/evenchange4/michaelhsu.tw.svg?style=flat-square
-[license]: http://michaelhsu.mit-license.org/
 [prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg
 [prettier]: https://github.com/prettier/prettier

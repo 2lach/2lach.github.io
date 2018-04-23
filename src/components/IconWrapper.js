@@ -11,7 +11,7 @@ class IconWrapper extends Component {
         <div className="footer-first">
           <ul className="footer-bar" />
           <footer className="pv4 ph2 tc-l">
-            <li className="avenir" style={{ listStyle: 'none' }}>
+            <li className="avenir mt4 mb4" style={{ listStyle: 'none' }}>
               &copy; Stefan Lachmann <span>{year}</span>
             </li>
             <a

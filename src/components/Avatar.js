@@ -6,16 +6,16 @@ const Avatar = styled.div`
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
   position: relative;
   top: -50px;
   margin-bottom: -50px;
+  transform: rotate(-16deg);
   border: 2px solid white;
-  border-radius: 50px;
+  border-radius: 50% 0% 50% 0;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
 `;
-
 
 Avatar.displayName = 'Avatar';
 
