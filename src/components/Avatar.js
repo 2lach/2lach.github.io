@@ -11,9 +11,9 @@ const Avatar = styled.div`
   position: relative;
   top: -50px;
   margin-bottom: -50px;
-  transform: rotate(-16deg);
+  background-position-x: -2rem;
   border: 2px solid white;
-  border-radius: 50% 0% 50% 0;
+  border-radius:50%;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
 `;
 
