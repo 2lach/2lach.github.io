@@ -10,11 +10,11 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "apollo-fetch": "0.7.0",
     "date-fns": "1.29.0",
     "polished": "1.9.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-grid-gallery": "^0.4.8",
     "react-icons": "2.2.7",
     "react-media": "1.6.1",
     "react-progressive-bg-image": "2.1.2",
