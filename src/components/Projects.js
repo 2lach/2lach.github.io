@@ -31,7 +31,6 @@ class Projects extends Component {
                                     className="pa2"
                                     style={{ listStyle: 'none' }}
                                     key={key}
-                                    details={this.state.data[key]}
                                 >
                                     <div className="polaroid_images_a ba bw2 b--light-gray">
                                         <img
