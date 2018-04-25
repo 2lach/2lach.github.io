@@ -4,7 +4,7 @@ import Gallery from 'react-grid-gallery';
 // import styles from './style.css';
 
 // https://benhowell.github.io/react-grid-gallery/
-
+// Todo map thru images and make a spinning block image component re
 
 class Skillz extends React.Component {
         constructor(props){
