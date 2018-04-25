@@ -12,7 +12,7 @@ import A from '../components/A';
 import IconWrapper from '../components/IconWrapper';
 import PostContainer from '../components/PostContainer';
 import Projects from '../components/Projects';
-import Skillz from '../components/Skillz';
+import Carousel from '../components/imageSlider';
 
 const App = () => (
   <div>
@@ -52,8 +52,8 @@ const App = () => (
         got strong design and UX experience within web development, and masters
         Windows as well as Mac environments.
       </p>
-      {/* <PostContainer /> */}
-      <Skillz /> 
+      {/* <PostContainer />  <Skillz /> */}
+      <Carousel />
       <IconWrapper />
     </Body>
   </div>

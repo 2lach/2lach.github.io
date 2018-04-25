@@ -10,9 +10,11 @@ class IconWrapper extends Component {
       <div>
         <div className="footer-first">
           <ul className="footer-bar" />
+
           <footer className="pv4 ph2 tc-l">
             <li className="avenir mt4 mb4" style={{ listStyle: 'none' }}>
-              &copy; Stefan Lachmann <span>{year}</span>
+              &copy; Stefan Lachmann <span>{year}</span><br />
+              <a className="mt3 p4 f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black" href="mailto:stefan.lachmann@hotmail.com">Contact me</a>
             </li>
             <a
               rel="noopener noreferrer"
