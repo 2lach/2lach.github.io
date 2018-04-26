@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import images from './data/skillsdata';
+// import images from './data/skillsdata';
 
 
 const imgUrls = [
@@ -13,6 +13,7 @@ const imgUrls = [
     'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
     'https://seeklogo.com/images/C/css3-logo-FD8D698B77-seeklogo.com.png',
 ]
+
 class Carousel extends React.Component {
     constructor(props) {
         super(props);
@@ -23,8 +24,9 @@ class Carousel extends React.Component {
 
         this.nextSlide = this.nextSlide.bind(this);
         this.previousSlide = this.previousSlide.bind(this);
+        // this.autoSlider = this.autoSlider.bind(this);
     }
-
+     
     previousSlide() {
         const lastIndex = imgUrls.length - 1;
         const { currentImageIndex } = this.state;
@@ -34,7 +36,14 @@ class Carousel extends React.Component {
         this.setState({
             currentImageIndex: index
         });
+        
     }
+    componentDidMount() {
+        this.intervalId = setInterval(this.nextSlide.bind(this), 4000);
+      }
+      componentWillUnmount(){
+        clearInterval(this.intervalId);
+      }
 
     nextSlide() {
         const lastIndex = imgUrls.length - 1;
@@ -47,6 +56,14 @@ class Carousel extends React.Component {
         });
     }
 
+    autoSlider() {
+        const lastIndex = imgUrls.length - 1;
+        const { currentImageIndex } = this.state;
+        const shouldResetIndex = currentImageIndex === lastIndex;
+        const index = shouldResetIndex ? 0 : currentImageIndex + 1;
+        this.setState({ currentImageIndex: index });
+    }
+    
     render() {
         return (
             <div className="carousel">
@@ -66,6 +83,7 @@ const Arrow = ({ direction, clickFunction, glyph }) => (
     </div>
 );
 
+
 const ImageSlide = ({ url }) => {
     const styles = {
         backgroundPosition: 'center'
@@ -73,9 +91,10 @@ const ImageSlide = ({ url }) => {
 
     return (
         <div className="image-slide tc" style={styles}>
-            <img src={`${url}`} className="skillImage m2" />
+            <img src={`${url}`} alt="" className="skillImage m2" />
         </div>
     );
 }
+
 
 export default Carousel;

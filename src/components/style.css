@@ -54,12 +54,14 @@ margin-left:0 !important;
   
   .slide-arrow.right {
     right: 1rem;
-    float: right;
+    margin: -12.4rem 2rem 8rem 36rem;
   }
   
   .slide-arrow.left {
     left: 1rem;
     float:left;
+    margin: 8rem 0 0 0;
+    
   }
   .skillImage{
         min-height: 20rem;
