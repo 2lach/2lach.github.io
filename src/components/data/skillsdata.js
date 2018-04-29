@@ -39,7 +39,7 @@ module.exports = [
   },
   {
     id: 60,
-    imgUrls: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    imgUrls: 'https://www.javatpoint.com/images/javascript/javascript_logo.png',
     title: '',
     image: '',
   },
@@ -54,7 +54,26 @@ module.exports = [
     imgUrls: 'https://joomla-extensions.kubik-rubik.de/ejs-easy-joomla-spoiler',
     title: '',
     image: '',
+  },
+  {
+    id: 70,
+    imgUrls: 'https://joomla-extensions.kubik-rubik.de/ejs-easy-joomla-spoiler',
+    title: '',
+    image: '',
+  },
+  {
+    id: 70,
+    imgUrls: 'https://joomla-extensions.kubik-rubik.de/ejs-easy-joomla-spoiler',
+    title: '',
+    image: '',
+  },
+  {
+    id: 70,
+    imgUrls: 'https://joomla-extensions.kubik-rubik.de/ejs-easy-joomla-spoiler',
+    title: '',
+    image: '',
   }
+
 ];
 
 
