@@ -31,7 +31,7 @@ class Carousel extends React.Component {
         this.state = {
             currentImageIndex: 0
         };
-        const { toogle, onClick } = this.props
+        // const { toogle, onClick } = this.props
 
         this.nextSlide = this.nextSlide.bind(this);
         this.previousSlide = this.previousSlide.bind(this);
