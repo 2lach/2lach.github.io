@@ -48,6 +48,12 @@ module.exports = [
     imgUrls: 'https://seeklogo.com/images/C/css3-logo-FD8D698B77-seeklogo.com.png',
     title: '',
     image: '',
+  },
+  {
+    id: 70,
+    imgUrls: 'https://joomla-extensions.kubik-rubik.de/ejs-easy-joomla-spoiler',
+    title: '',
+    image: '',
   }
 ];
 

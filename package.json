@@ -4,13 +4,16 @@
   "version": "1.4.1",
   "scripts": {
     "start": "react-scripts start",
+    "docs": "browser-sync start --server --files '*.css, *.html, *.js'",
     "build": "react-scripts build && react-snapshot",
     "test": "CI=true react-scripts test --env=jsdom --coverage --runInBand",
     "test:watch": "react-scripts test --env=jsdom",
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "browser-sync": "^2.23.7",
     "date-fns": "1.29.0",
+    "docco": "^0.8.0",
     "polished": "1.9.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
