@@ -62,7 +62,21 @@
 .slide-arrow.left {
     float: left;
 }
-
+@media only screen and (max-width: 600px) {
+    .slide-arrow {
+        position: absolute;
+        z-index: 20;
+        display:none !important;
+    };
+    .slide-arrow.right {
+        float: right;
+        left: calc(100% - 10%);
+    }
+    
+    .left {
+        left:0;
+    }
+}
 .skillImage {
     height: 20rem;
     width: 22rem;
