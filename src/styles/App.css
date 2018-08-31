@@ -1,25 +1,26 @@
-.content{
-    color: rgb(85, 26, 139);
-    text-align: center;
-}
 body{
+    color: rgb(85, 26, 139);
     margin:0;
     margin-bottom:10vh;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom:2px;
+    transition:ease-in-out all 0.3s;
+}
+a:hover{
+    color:black;
+    transform: scale(1.2);
+    text-shadow: 4px 4px 4px lightgrey;
+}
+.content{
+    text-align: center;
 }
 h1{
     font-size:5vw;
 }
-a {
-    text-decoration: none;
-    transition:ease-in-out all 0.3s;
-    font-size: 20px;
-    padding-bottom:2px;
-}
-a:hover{
-    color:black;
-    font-size: 23px;
-    text-shadow: 4px 4px 4px lightgrey;
-}
+
 .flexRow{
     display: flex; 
     flex-Direction: row;
@@ -29,7 +30,7 @@ a:hover{
   }
 @media (min-width: 100px) and (max-width: 550px) {
             span{
-            display:none;
+                display:none;
             }  
             .flexRow{
                 display: flex; 
