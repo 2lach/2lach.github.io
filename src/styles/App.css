@@ -1,0 +1,25 @@
+.content{
+    color: rgb(85, 26, 139);
+    text-align: center;
+}
+body{
+    margin:0;
+    margin-bottom:10vh;
+}
+a {
+    text-decoration: none;
+    transition:ease-in-out all 0.3s;
+    font-size: 20px;
+    padding-bottom:2px;
+}
+a:hover{
+    color:black;
+    font-size: 23px;
+    text-shadow: 4px 4px 4px lightgrey;
+}
+.flexRow{
+    display: flex; flex-Direction: row;
+}
+.item {
+    flex-grow: 7;
+  }

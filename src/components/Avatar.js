@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import stefan from '../statics/images/stefan.jpg';
+import stefan from '../images/stefan.jpg';
 
 const Avatar = styled.div`
   background-image: url(${stefan});
