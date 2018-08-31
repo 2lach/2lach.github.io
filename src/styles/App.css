@@ -1,5 +1,5 @@
 body{
-    color: rgb(85, 26, 139);
+    color: rgb(85, 26, 139), #990099;
     margin:0;
     margin-bottom:10vh;
 }
@@ -27,6 +27,9 @@ h1{
 }
 .item {
     flex-grow: 7;
+  }
+  svg{
+    color: rgb(85, 26, 139), #990099;
   }
 @media (min-width: 100px) and (max-width: 550px) {
             span{
