@@ -5,7 +5,7 @@ module.exports = {
 	entry: ["babel-polyfill", "./src/index.js"],
 	output: {
 		// Webpack will bundle all of our JavaScript files into index-bundle.js file inside the /dist directory.
-		path: path.join(__dirname, "./"),
+		path: path.join(__dirname, "/dist"),
 		filename: "index_bundle.js"
 	},
 	module:{
