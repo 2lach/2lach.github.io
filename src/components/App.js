@@ -11,8 +11,7 @@ class App extends Component {
             <Coverimage />
             <Avatar />
             <div className="content">
-            <h1>Hello</h1>
-            <h2>My name is Stefan and I build things</h2>
+            <h1>My name is Stefan and I build things</h1>
             <Links />
             </div>
         </div>

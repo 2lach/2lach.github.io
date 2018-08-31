@@ -18,12 +18,12 @@ window.matchMedia = window.matchMedia ||
   };
 
 const StyledProgressiveImage = styled(ProgressiveImage)`
-  height: calc(30vh - 120px);
+  height: 60vh;
   width: auto;
   background-color: aliceblue;
   background-size: cover;
   background-attachment: fixed;
-  background-position-y: 60%;
+  background-position-y: 180%;
   background-position-x: center;
   overflow: hidden;
 `;

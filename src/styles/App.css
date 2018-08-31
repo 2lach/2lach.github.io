@@ -6,6 +6,9 @@ body{
     margin:0;
     margin-bottom:10vh;
 }
+h1{
+    font-size:5vw;
+}
 a {
     text-decoration: none;
     transition:ease-in-out all 0.3s;
@@ -18,15 +21,18 @@ a:hover{
     text-shadow: 4px 4px 4px lightgrey;
 }
 .flexRow{
-    display: flex; flex-Direction: row;
+    display: flex; 
+    flex-Direction: row;
 }
 .item {
     flex-grow: 7;
   }
-  @media (min-width: 100px) and (max-width: 550px) {
-  
+@media (min-width: 100px) and (max-width: 550px) {
             span{
             display:none;
+            }  
+            .flexRow{
+                display: flex; 
+                flex-Direction:column;
             }
-    
   }
