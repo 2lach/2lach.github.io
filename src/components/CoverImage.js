@@ -18,7 +18,7 @@ window.matchMedia = window.matchMedia ||
   };
 
 const StyledProgressiveImage = styled(ProgressiveImage)`
-  height: calc(100vh - 120px);
+  height: calc(30vh - 120px);
   width: auto;
   background-color: aliceblue;
   background-size: cover;
