@@ -1,22 +1,28 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const WebpackMonitor = require('webpack-monitor');
 
 
 module.exports = {
 	entry: ["babel-polyfill", "./src/index.js"],
 	output: {
-		// Webpack will bundle all of our JavaScript files into index-bundle.js file inside the /dist directory.
+		filename: "index_bundle.js",
 		path: path.join(__dirname, "./"),
-		filename: "index_bundle.js"
+		chunkFilename: '[name].bundle.js',
 	},
+	optimization: {
+		splitChunks: {
+				chunks: 'all'
+			}
+	},
+	
 	module:{
 		rules:[
 			{
 				test: /\.js$/,
 				exclude:/node_modules/,
 				use: {
-					// babel-loader is used to load our JSX/JavaScript
 					loader:"babel-loader",
 					query: {
 						presets: ['react'],
@@ -27,8 +33,6 @@ module.exports = {
 			},
 			{
 				test:/\.css$/,
-				//  and style-loader will add all of the styles inside the style tag of the document.
-				//	css-loader is used to load and bundle all of the CSS files into one file
 				use: ["style-loader", "css-loader"]
 			},
 			{
@@ -49,6 +53,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html"
 		}),
-		  new webpack.ContextReplacementPlugin(),
+		new webpack.ContextReplacementPlugin(),
+    	/*new WebpackMonitor({
+				capture: true,
+				launch: true,
+    	}),*/
 	]
 };
