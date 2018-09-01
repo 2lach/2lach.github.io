@@ -1,13 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-const WebpackMonitor = require('webpack-monitor');
+// const WebpackMonitor = require('webpack-monitor');
 
 
 module.exports = {
 	entry: ["babel-polyfill", "./src/index.js"],
 	output: {
-		filename: "index_bundle.js",
 		path: path.join(__dirname, "./"),
 		chunkFilename: '[name].bundle.js',
 	},
@@ -20,7 +19,7 @@ module.exports = {
 	module:{
 		rules:[
 			{
-				test: /\.js$/,
+				test: /\.(js|jsx)$/,
 				exclude:/node_modules/,
 				use: {
 					loader:"babel-loader",
@@ -54,9 +53,12 @@ module.exports = {
 			template: "./src/index.html"
 		}),
 		new webpack.ContextReplacementPlugin(),
-    	/*new WebpackMonitor({
+		/*
+		uncomment for webpack monitor data
+		new WebpackMonitor({
 				capture: true,
 				launch: true,
-    	}),*/
+		}),
+		*/
 	]
 };

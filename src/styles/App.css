@@ -4,9 +4,11 @@ body{
     margin-bottom:10vh;
 }
 a {
+    color: #990099;
     text-decoration: none;
     font-size: 20px;
     padding-bottom:2px;
+    transition:ease-in-out all 0.3s;
 
 }
 svg{
@@ -17,6 +19,7 @@ a:hover, svg:hover{
     color:black;
     transform: scale(1.2);
     text-shadow: 4px 4px 4px lightgrey;
+    
 }
 .content{
     text-align: center;

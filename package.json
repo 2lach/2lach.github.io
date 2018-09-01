@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot --port 3000",
+    "dev:webpack": "webpack-dev-server --no-inline --mode development --open --hot --port 3000",
     "dev:watch": "webpack --mode development --watch",
     "start:prod": "webpack-dev-server --mode production --open --hot --port 4000",
     "build": "webpack --mode production",
@@ -38,13 +39,17 @@
     "react-dom": "^16.4.2",
     "react-icons": "^3.0.5",
     "react-media": "^1.8.0",
+    "react-modal": "^3.5.1",
     "react-progressive-bg-image": "^3.0.0",
     "react-redux": "^5.0.7",
+    "react-responsive-modal": "^3.3.0",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "styled-components": "^3.4.5"
   },
-  "babel":{
-    "presets": ["minify"]
+  "babel": {
+    "presets": [
+      "minify"
+    ]
   }
 }
