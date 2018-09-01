@@ -1,5 +1,5 @@
 body{
-    color: rgb(85, 26, 139), #990099;
+    color: #990099;
     margin:0;
     margin-bottom:10vh;
 }
@@ -7,9 +7,13 @@ a {
     text-decoration: none;
     font-size: 20px;
     padding-bottom:2px;
-    transition:ease-in-out all 0.3s;
+
 }
-a:hover{
+svg{
+    color: #990099;
+    transition:ease-in-out all 0.3s;
+  }
+a:hover, svg:hover{
     color:black;
     transform: scale(1.2);
     text-shadow: 4px 4px 4px lightgrey;
@@ -28,9 +32,7 @@ h1{
 .item {
     flex-grow: 7;
   }
-  svg{
-    color: rgb(85, 26, 139), #990099;
-  }
+
 @media (min-width: 100px) and (max-width: 550px) {
             span{
                 display:none;

@@ -1,11 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+
 
 module.exports = {
 	entry: ["babel-polyfill", "./src/index.js"],
 	output: {
 		// Webpack will bundle all of our JavaScript files into index-bundle.js file inside the /dist directory.
-		path: path.join(__dirname, "/dist"),
+		path: path.join(__dirname, "./"),
 		filename: "index_bundle.js"
 	},
 	module:{
@@ -47,6 +49,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html"
 		}),
-		new webpack.ContextReplacementPlugin()
+		  new webpack.ContextReplacementPlugin(),
 	]
 };
