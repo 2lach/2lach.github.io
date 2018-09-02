@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoCodepen, IoMdContact, IoMdClose } from 'react-icons/io';
 import { FaMedium, FaTwitter } from 'react-icons/fa';
 import Modal from 'react-modal';
+import Email from './email';
 
 Modal.setAppElement('#root');
 
@@ -46,21 +47,13 @@ class Links extends Component{
                            style={{
                               overlay: {
                                 backgroundColor: 'rgba(32, 31, 31, 0.6)'
-                              },
-                              content: {
-                                position: 'absolute',
-                                color: '#990099',
-                                textAlign: 'center',
-                                top:' 20%',
-                                left: 'calc(50% - 25vw)',
-                                height: 'auto',
-                                width: '50vw'
                               }
                             }}
                         >
                           <IoMdClose onClick={this.handleCloseModal} style={{ float:'right'}}/>
-                          <h2><a href="mailto:stefanlachmann@hotmail.com?subject=Heyo">Click here to contact me</a></h2>
-                          <div><p onClick={this.changeSource} style={{textAlign:'center'}}><img src={this.state.imgsrc} style={{width:'auto', height: 'auto'}} /></p></div>
+                          <div><a href="mailto:stefanlachmann@hotmail.com?subject=Heyo"><Email /></a>
+                          
+                          {/*<p onClick={this.changeSource} style={{textAlign:'center'}}><img src={this.state.imgsrc} style={{width:'auto', height: 'auto'}} /></p> */}</div>
                         </Modal>
                       </a>
                     </li>

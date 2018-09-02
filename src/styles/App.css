@@ -36,6 +36,16 @@ h1{
     flex-grow: 7;
   }
 
+    .ReactModal__Content, .ReactModal__Content--after-open{
+        position: absolute;
+        color: #990099;
+        text-Align: center;
+        top: 20%;
+        left: calc(50% - 25vw) !important;
+        height: auto;
+        width: 50vw;
+ }
+
 @media (min-width: 100px) and (max-width: 550px) {
             span{
                 display:none;
@@ -44,4 +54,21 @@ h1{
                 display: flex; 
                 flex-Direction:column;
             }
-  }
+            .ReactModal__Content, .ReactModal__Content--after-open{
+                position: absolute;
+                top: 20%;
+                left: calc(50% - 45vw) !important;
+                right: 40px;
+                bottom: 40px;
+                border: 1px solid rgb(204, 204, 204);
+                background: rgb(255, 255, 255);
+                overflow: auto;
+                border-radius: 4px;
+                outline: none;
+                padding: 20px;
+                color: rgb(153, 0, 153);
+                text-align: center;
+                height: auto;
+                width: 80vw;
+            }
+}

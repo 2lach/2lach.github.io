@@ -1,7 +1,7 @@
 {
   "name": "2lach",
-  "version": "2.0.0",
-  "description": "",
+  "version": "2.0.1",
+  "description": "Stefan Lachmann Homepage",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot --port 3000",
