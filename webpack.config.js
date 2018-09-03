@@ -42,6 +42,7 @@ module.exports = {
                         loader: "file-loader", 
                         options: {
 							limit: 100000,
+							// publicPath: 'http://localhost:3000/',
                         }
                     }
                 ]
@@ -49,13 +50,13 @@ module.exports = {
 
 		]
 	},
-	devServer: {
+	/*devServer: {
 		compress: true,
 		quiet: true,
 		port: 9101,
 		historyApiFallback: true,
 		host: '0.0.0.0', // Make it accessible from another host
-	  },
+	},*/
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new HtmlWebpackPlugin({
