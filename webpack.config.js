@@ -1,14 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-// const WebpackMonitor = require('webpack-monitor');
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 
 
 module.exports = {
 	entry: ["babel-polyfill", "./src/index.js"],
 	output: {
-		path: path.join(__dirname, "./"),
-		chunkFilename: '[name].bundle.js',
+		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].[hash].js',
+		publicPath: '/',
 	},
 	optimization: {
 		splitChunks: {
@@ -40,7 +41,8 @@ module.exports = {
                     {
                         loader: "file-loader", 
                         options: {
-                            limit: 100000
+							limit: 100000,
+							publicPath: 'http://localhost:3000/',
                         }
                     }
                 ]
@@ -48,17 +50,20 @@ module.exports = {
 
 		]
 	},
+	devServer: {
+		compress: true,
+		quiet: true,
+		port: 9101,
+		historyApiFallback: true,
+		host: '0.0.0.0', // Make it accessible from another host
+	  },
 	plugins: [
+		new webpack.optimize.ModuleConcatenationPlugin(),
 		new HtmlWebpackPlugin({
-			template: "./src/index.html"
+		  template: path.resolve('template/index.ejs'),
 		}),
-		new webpack.ContextReplacementPlugin(),
-		/*
-		uncomment for webpack monitor data
-		new WebpackMonitor({
-				capture: true,
-				launch: true,
-		}),
-		*/
-	]
+		new webpack.NamedModulesPlugin(),
+		// add better error logging for build
+		new FriendlyErrorsWebpackPlugin(),
+	  ],
 };
