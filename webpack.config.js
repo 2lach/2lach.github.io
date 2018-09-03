@@ -42,7 +42,6 @@ module.exports = {
                         loader: "file-loader", 
                         options: {
 							limit: 100000,
-							publicPath: 'http://localhost:3000/',
                         }
                     }
                 ]
