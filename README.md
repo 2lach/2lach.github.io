@@ -10,3 +10,8 @@ with webpack as the bundler and some other stuff
 	drop me a line
 else
 	have a nice day and thx for dropping by```
+
+
+images:
+
+Mobile landscape - Photo by asoggetti on Unsplash

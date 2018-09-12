@@ -5,7 +5,7 @@ import Media from 'react-media';
 import ProgressiveImage from 'react-progressive-bg-image';
 import landscapeX60  from '../images/landscapeX60.jpg';
 import landscape   from '../images/landscape.jpg';
-import portraitX60  from '../images/portraitX60.jpg';
+import portraitX60  from '../images/portraitX60.png';
 import portrait  from '../images/portrait.jpg';
 
 window.matchMedia = window.matchMedia ||
