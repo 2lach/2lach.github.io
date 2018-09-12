@@ -6,12 +6,11 @@ everything is pretty much built and setup from scratch
 currently its a react site -v 16.4
 with webpack as the bundler and some other stuff 
 
-```if (you want to know more) 
-	drop me a line
-else
-	have a nice day and thx for dropping by```
+`wannaKnowMore`
+	`? Drop me a line`
+	`: have a nice day and thx for dropping by`
 
 
 images:
-
-Mobile landscape - Photo by asoggetti on Unsplash
+Mobile landscape - Photo by asoggetti from Unsplash
+(currently location names of not named)
