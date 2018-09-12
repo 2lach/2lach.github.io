@@ -6,9 +6,9 @@ everything is pretty much built and setup from scratch
 currently its a react site -v 16.4
 with webpack as the bundler and some other stuff 
 
-`wannaKnowMore`
-	`? Drop me a line`
-	`: have a nice day and thx for dropping by`
+`wannaKnowMore`<br/>
+	`? Drop me a line`<br/>
+	`: have a nice day and thx for dropping by`<br/>
 
 
 images:
