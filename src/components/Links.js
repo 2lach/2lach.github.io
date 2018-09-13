@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import {
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoLogoCodepen,
-  IoMdContact,
-  IoMdClose
-} from "react-icons/io";
-import { FaMedium, FaTwitter } from "react-icons/fa";
+import { FaMediumM, FaTwitter, FaLinkedin, FaCodepen } from "react-icons/fa";
+import { IoMdClose, IoLogoGithub } from "react-icons/io";
+import { MdMail } from "react-icons/md";
 import Modal from "react-modal";
 import Email from "./email";
 
@@ -51,13 +46,13 @@ class Links extends Component {
           </li>
           <li className="item">
             <a href="https://www.linkedin.com/in/slachmann/" rel="noopener">
-              <IoLogoLinkedin />
+              <FaLinkedin />
               <br /> <span>Linkedin</span>
             </a>
           </li>
           <li className="item">
             <a href="https://codepen.io/2lach/" rel="noopener">
-              <IoLogoCodepen />
+              <FaCodepen />
               <br /> <span>Codepen</span>
             </a>
           </li>
@@ -69,16 +64,13 @@ class Links extends Component {
           </li>
           <li className="item">
             <a href="https://medium.com/@2lach" rel="noopener">
-              <FaMedium />
+              <FaMediumM />
               <br /> <span>Medium</span>
             </a>
           </li>
           <li className="item contactItem">
             <a>
-              <IoMdContact
-                className="contactIcon"
-                onClick={this.handleOpenModal}
-              />
+              <MdMail className="contactIcon" onClick={this.handleOpenModal} />
               <br />
               <span>Contact</span>
               <Modal
