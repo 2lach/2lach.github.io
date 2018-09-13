@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
@@ -69,15 +69,3 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
   ],
 }
-
-/*
-  plugins: [
-    new WebpackMonitor({
-      capture: true, // -> default 'true'
-      target: './monitor/stats.json',
-      errors: false,
-      // launch: true,
-      port: 3030, // default -> 8081
-    }),
-    ]
-*/
