@@ -60,7 +60,7 @@ module.exports = {
 		template: path.resolve('template/index.ejs'),
 		}),
 		new webpack.NamedModulesPlugin(),
-		// add better error logging for build
+		// add FriendlyErrorsWebpackPlugin better error logging for build
 		new FriendlyErrorsWebpackPlugin(),
 	],
 };
