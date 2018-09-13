@@ -19,8 +19,7 @@ module.exports = {
       "react"
   ],
     rules: {
-      // BFF pattern uses classes that don't necessarily use `this`
-      'class-methods-use-this': 0,
+      'class-methods-use-this': 1,
       // associated control test
       'jsx-a11y/label-has-for': [0, {
         required: {

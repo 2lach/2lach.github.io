@@ -12,9 +12,12 @@ a {
   transition: ease-in-out all 0.3s;
 }
 
-svg {
+svg,
+.contactIcon {
   color: #990099;
   transition: ease-in-out all 0.3s;
+  width: 7vw;
+  height: 8vh;
 }
 
 a:hover,
@@ -57,14 +60,24 @@ h1 {
   height: auto;
   width: 50vw;
 }
+
 @media (min-width: 800px) {
   h1 {
     color: #990099;
   }
 }
+
 @media (min-width: 100px) and (max-width: 550px) {
   span {
     display: none;
+  }
+  svg{
+    height: 60px;
+    width: 45px;
+  }
+  .contactIcon {
+    height: 70px;
+    width: 55px;
   }
   .flexRow {
     display: flex;

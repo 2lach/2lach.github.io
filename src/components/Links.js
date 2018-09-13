@@ -44,40 +44,40 @@ class Links extends Component {
         <ul style={{ listStyleType: "none", display: "contents" }}>
           <li className="item">
             <a href="https://github.com/2lach" rel="noopener">
-              <IoLogoGithub style={{ width: 40, height: 50 }} />
+              <IoLogoGithub className="svg" />
               <br />
-              <span>Github</span>{" "}
+              <span>Github</span>
             </a>
           </li>
           <li className="item">
             <a href="https://www.linkedin.com/in/slachmann/" rel="noopener">
-              <IoLogoLinkedin style={{ width: 40, height: 50 }} />
+              <IoLogoLinkedin />
               <br /> <span>Linkedin</span>
             </a>
           </li>
           <li className="item">
             <a href="https://codepen.io/2lach/" rel="noopener">
-              <IoLogoCodepen style={{ width: 40, height: 50 }} />
+              <IoLogoCodepen />
               <br /> <span>Codepen</span>
             </a>
           </li>
           <li className="item">
             <a href="https://twitter.com/2lach__" rel="noopener">
-              <FaTwitter style={{ width: 40, height: 50 }} />
+              <FaTwitter />
               <br /> <span>Twitter</span>
             </a>
           </li>
           <li className="item">
             <a href="https://medium.com/@2lach" rel="noopener">
-              <FaMedium style={{ width: 40, height: 50 }} />
+              <FaMedium />
               <br /> <span>Medium</span>
             </a>
           </li>
           <li className="item contactItem">
             <a>
               <IoMdContact
+                className="contactIcon"
                 onClick={this.handleOpenModal}
-                style={{ width: 40, height: 50 }}
               />
               <br />
               <span>Contact</span>
