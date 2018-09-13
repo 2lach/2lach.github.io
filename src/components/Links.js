@@ -39,21 +39,14 @@ class Links extends Component{
                     <li className="item"><a href="https://codepen.io/2lach/" rel="noopener"><IoLogoCodepen style={{width:40,height:50}}/><br /> <span>Codepen</span></a></li>
                     <li className="item"><a href="https://twitter.com/2lach__" rel="noopener"><FaTwitter style={{width:40,height:50}}/><br /> <span>Twitter</span></a></li>
                     <li className="item"><a href="https://medium.com/@2lach" rel="noopener"><FaMedium style={{width:40,height:50}}/><br /> <span>Medium</span></a></li>
-                    <li className="item">
-                      <a>
-                        <IoMdContact onClick={this.handleOpenModal} style={{width:40,height:50}}/><br /><span>Contact</span>
-                        <Modal 
-                           isOpen={this.state.showModal}
-                           style={{
-                              overlay: {
-                                backgroundColor: 'rgba(32, 31, 31, 0.6)'
-                              }
-                            }}
-                        >
-                          <IoMdClose onClick={this.handleCloseModal} style={{ float:'right'}}/>
-                          <div><a href="mailto:stefanlachmann@hotmail.com?subject=Heyo"><Email /></a>
-                          
-                          {/*<p onClick={this.changeSource} style={{textAlign:'center'}}><img src={this.state.imgsrc} style={{width:'auto', height: 'auto'}} /></p> */}</div>
+                    <li className="item contactItem"><a>
+                      <IoMdContact onClick={this.handleOpenModal} style={{width:40,height:50}}/><br /><span>Contact</span>
+                        <Modal isOpen={this.state.showModal} 
+                              style={{
+                                    overlay: {backgroundColor: 'rgba(32, 31, 31, 0.6)'}
+                              }}>
+                              <IoMdClose onClick={this.handleCloseModal} style={{ float:'right'}}/>
+                          <div><a href="mailto:stefanlachmann@hotmail.com?subject=Heyo"><Email /></a></div>
                         </Modal>
                       </a>
                     </li>

@@ -1,74 +1,88 @@
-body{
+body {
     color: #990099;
-    margin:0;
-    margin-bottom:10vh;
+    margin: 0;
+    margin-bottom: 10vh;
 }
+
 a {
     color: #990099;
     text-decoration: none;
     font-size: 20px;
-    padding-bottom:2px;
-    transition:ease-in-out all 0.3s;
-
+    padding-bottom: 2px;
+    transition: ease-in-out all 0.3s;
 }
-svg{
+
+svg {
     color: #990099;
-    transition:ease-in-out all 0.3s;
-  }
-a:hover, svg:hover{
-    color:black;
+    transition: ease-in-out all 0.3s;
+}
+
+a:hover, svg:hover {
+    color: black;
     transform: scale(1.2);
     text-shadow: 4px 4px 4px lightgrey;
-    
 }
-.content{
+
+.content {
     text-align: center;
 }
-h1{
-    font-size:5vw;
+
+h1 {
+    font-size: 5vw;
+    padding-bottom: 1em;
+    color: #8e2b78
 }
 
-.flexRow{
-    display: flex; 
+.flexRow {
+    display: flex;
     flex-Direction: row;
 }
+
 .item {
     flex-grow: 7;
-  }
+}
 
-    .ReactModal__Content, .ReactModal__Content--after-open{
-        position: absolute;
+.contactItem {
+    cursor: pointer;
+}
+
+.ReactModal__Content, .ReactModal__Content--after-open {
+    position: absolute;
+    color: #990099;
+    text-Align: center;
+    top: 20%;
+    left: calc(50% - 25vw) !important;
+    height: auto;
+    width: 50vw;
+}
+@media (min-width: 800px) {
+    h1 {
         color: #990099;
-        text-Align: center;
-        top: 20%;
-        left: calc(50% - 25vw) !important;
-        height: auto;
-        width: 50vw;
- }
-
+    }
+}
 @media (min-width: 100px) and (max-width: 550px) {
-            span{
-                display:none;
-            }  
-            .flexRow{
-                display: flex; 
-                flex-Direction:column;
-            }
-            .ReactModal__Content, .ReactModal__Content--after-open{
-                position: absolute;
-                top: 20%;
-                left: calc(50% - 45vw) !important;
-                right: 40px;
-                bottom: 40px;
-                border: 1px solid rgb(204, 204, 204);
-                background: rgb(255, 255, 255);
-                overflow: auto;
-                border-radius: 4px;
-                outline: none;
-                padding: 20px;
-                color: rgb(153, 0, 153);
-                text-align: center;
-                height: auto;
-                width: 80vw;
-            }
+    span {
+        display: none;
+    }
+    .flexRow {
+        display: flex;
+        flex-Direction: column;
+    }
+    .ReactModal__Content, .ReactModal__Content--after-open {
+        position: absolute;
+        top: 20%;
+        left: calc(50% - 45vw) !important;
+        right: 40px;
+        bottom: 40px;
+        border: 1px solid rgb(204, 204, 204);
+        background: rgb(255, 255, 255);
+        overflow: auto;
+        border-radius: 4px;
+        outline: none;
+        padding: 20px;
+        color: rgb(153, 0, 153);
+        text-align: center;
+        height: auto;
+        width: 80vw;
+    }
 }
