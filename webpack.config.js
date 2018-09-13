@@ -41,8 +41,7 @@ module.exports = {
                     {
                         loader: "file-loader", 
                         options: {
-							limit: 100000,
-							// publicPath: 'http://localhost:3000/',
+							limit: 200000,
                         }
                     }
                 ]
@@ -50,20 +49,18 @@ module.exports = {
 
 		]
 	},
-	/*devServer: {
-		compress: true,
-		quiet: true,
-		port: 9101,
-		historyApiFallback: true,
-		host: '0.0.0.0', // Make it accessible from another host
-	},*/
+	performance: {
+		hints: process.env.NODE_ENV === 'production' ? "warning" : false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
+	},	  
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new HtmlWebpackPlugin({
-		  template: path.resolve('template/index.ejs'),
+		template: path.resolve('template/index.ejs'),
 		}),
 		new webpack.NamedModulesPlugin(),
 		// add better error logging for build
 		new FriendlyErrorsWebpackPlugin(),
-	  ],
+	],
 };
