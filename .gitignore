@@ -9,8 +9,6 @@
 
 # production folder
 dist
-# webpack monitoring
-monitor
 
 # misc
 .DS_Store
