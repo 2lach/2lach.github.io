@@ -1,21 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
-    publicPath: '/',
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
-
   module: {
     rules: [
       {
@@ -55,17 +46,38 @@ module.exports = {
     quiet: true,
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve('template/index.ejs'),
+      template: path.resolve('template/index.ejs')
     }),
+    new webpack.HashedModuleIdsPlugin(),
+    new webpack.NamedModulesPlugin(),
+    // Error handling and analyzer 
+    new FriendlyErrorsWebpackPlugin(),
     new BundleAnalyzerPlugin({
-      analyzerPort: 3003,
+      analyzerPort: 3333,
       openAnalyzer: false, // change to true for visual overview
       statsFilename: './monitor.stats.json',
-      logLevel: 'info', //info, warn, error or silent 
+      logLevel: 'silent', //info, warn, error or silent 
     }),
-    new webpack.NamedModulesPlugin(),
-    new FriendlyErrorsWebpackPlugin(),
   ],
+  output: {
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    },
+  },
 }
