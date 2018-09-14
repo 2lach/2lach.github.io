@@ -5,11 +5,13 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
   entry: {
-    main: ["babel-polyfill", "./src/index.js"],
-    other: ["babel-polyfill", "./src/components/App.js"]
+    main: ["babel-polyfill", "./src/index.js"]
+    // other: "./src/components/App.js" 
+    // use other: -> if app gets larger with the need to break it into part
   },
   module: {
     rules: [
@@ -56,6 +58,9 @@ module.exports = {
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.HashedModuleIdsPlugin(),
+    new ManifestPlugin({
+      fileName: "manifest.json"
+    }),
     // Error handling and analyzer
     new FriendlyErrorsWebpackPlugin(),
     new BundleAnalyzerPlugin({
@@ -72,7 +77,7 @@ module.exports = {
     publicPath: "/"
   },
   optimization: {
-    runtimeChunk: "single",
+    runtimeChunk: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
