@@ -3,6 +3,10 @@
   "version": "2.0.1",
   "description": "Stefan Lachmann Homepage",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/2lach/2lach.github.io.git"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --port 3000",
     "dev:webpack": "webpack-dev-server --no-inline --mode development --open --hot --port 3000",
@@ -40,6 +44,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "chalk": "^2.4.1",
+    "clean-webpack-plugin": "^0.1.19",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.0.1",
