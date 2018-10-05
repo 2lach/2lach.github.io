@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { IoIosCloseCircle } from "react-icons/all"
 
 function setCookie(name, value, days) {
   days = 365;
@@ -28,13 +29,15 @@ class CookieConsent extends Component {
   }
 
   render() {
-    let hideOrShow = this.state.Consent ? "CookieStyle" : "hideConsent";
+    let hideOrShow = this.state.Consent ? "CookieConsentStyle" : "hideConsent";
     return (
       <footer className={hideOrShow}>
         <div>
+        <span className="consentSpan">
           This site uses Cookies to make your visit easier
-          <span className="cookieBtn" onClick={() => this.hideConsent()}>
-            X
+            <IoIosCloseCircle className="cookieBtn" onClick={() => this.hideConsent()}>
+              X
+            </IoIosCloseCircle>
           </span>
         </div>
       </footer>
