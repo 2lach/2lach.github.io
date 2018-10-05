@@ -41,38 +41,38 @@ class Links extends Component {
             <a href="https://github.com/2lach" rel="noopener">
               <IoLogoGithub className="svg" />
               <br />
-              <span>Github</span>
+              <span className="linkSpan">Github</span>
             </a>
           </li>
           <li className="item">
             <a href="https://www.linkedin.com/in/slachmann/" rel="noopener">
               <FaLinkedin />
-              <br /> <span>Linkedin</span>
+              <br /> <span className="linkSpan">Linkedin</span>
             </a>
           </li>
           <li className="item">
             <a href="https://codepen.io/2lach/" rel="noopener">
               <FaCodepen />
-              <br /> <span>Codepen</span>
+              <br /> <span className="linkSpan">Codepen</span>
             </a>
           </li>
           <li className="item">
             <a href="https://twitter.com/2lach__" rel="noopener">
               <FaTwitter />
-              <br /> <span>Twitter</span>
+              <br /> <span className="linkSpan">Twitter</span>
             </a>
           </li>
           <li className="item">
             <a href="https://medium.com/@2lach" rel="noopener">
               <FaMediumM />
-              <br /> <span>Medium</span>
+              <br /> <span className="linkSpan">Medium</span>
             </a>
           </li>
           <li className="item contactItem">
             <a>
               <MdMail className="contactIcon" onClick={this.handleOpenModal} />
               <br />
-              <span>Contact</span>
+              <span className="linkSpan">Contact</span>
               <Modal
                 isOpen={this.state.showModal}
                 style={{
