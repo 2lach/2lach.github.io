@@ -39,3 +39,7 @@ Mobile landscape - Photo by asoggetti from Unsplash
             alt="follow on Twitter"></a>
 
 -->
+
+It looks atm like this:
+
+<img src="https://raw.githubusercontent.com/2lach/2lach.github.io/master/2lach.com.jpg" alt='yo moma smells nice' />
