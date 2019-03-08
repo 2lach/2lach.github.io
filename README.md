@@ -10,10 +10,6 @@ with webpack as the bundler and some other stuff </p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2000px-React-icon.svg.png" width="auto" height="80"/><img alt="babel" src="https://camo.githubusercontent.com/d9c375f995662971a3872419c94643e6e7f565d6/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f7765627061636b2d69636f6e2e737667" alt="webpack" width="auto" height="80" style="padding-right:25px"/><img alt="prettier" src="https://pbs.twimg.com/profile_images/925713973789560832/uiRIO5mN_400x400.jpg" width="auto" height="80"/><img width="auto" height="80" src="https://pbs.twimg.com/profile_images/567000326444556290/-1wfGjNw.png" /><br/>
 <img src="https://img.shields.io/github/license/mashape/apistatus.svg"/>
 
-`wannaKnowMore`<br/>
-	`? Drop me a line`<br/>
-	`: have a nice day and thx for dropping by`<br/>
-
 
 images:
 Mobile landscape - Photo by asoggetti from Unsplash
