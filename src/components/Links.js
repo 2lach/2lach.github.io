@@ -57,13 +57,13 @@ class Links extends Component {
               <br /> <span className="linkSpan">Codepen</span>
             </a>
           </li>
-          {/*          <li className="item">
+{/*          <li className="item">
             <a href="https://twitter.com/2lach__" rel="noopener">
               <FaTwitter />
               <br /> <span className="linkSpan">Twitter</span>
             </a>
           </li>
-*/}{" "}
+*/}
           <li className="item">
             <a href="https://medium.com/@2lach" rel="noopener">
               <FaMediumM />
@@ -71,7 +71,7 @@ class Links extends Component {
             </a>
           </li>
           <li className="item">
-            <a href="https://dev.to/2lach" rel="noopener">
+            <a href="https://dev.to/2lach" rel="noopener" className="devTo">
               <DevTo />
               <br /> <span className="linkSpan">Dev.to</span>
             </a>
