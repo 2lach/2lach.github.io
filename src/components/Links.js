@@ -3,6 +3,7 @@ import { FaMediumM, FaTwitter, FaLinkedin, FaCodepen } from "react-icons/fa";
 import { IoMdClose, IoLogoGithub } from "react-icons/io";
 import { MdMail } from "react-icons/md";
 import Modal from "react-modal";
+import DevTo from "../images/dev-to.js";
 import Email from "./email";
 
 Modal.setAppElement("#root");
@@ -56,16 +57,23 @@ class Links extends Component {
               <br /> <span className="linkSpan">Codepen</span>
             </a>
           </li>
-          <li className="item">
+          {/*          <li className="item">
             <a href="https://twitter.com/2lach__" rel="noopener">
               <FaTwitter />
               <br /> <span className="linkSpan">Twitter</span>
             </a>
           </li>
+*/}{" "}
           <li className="item">
             <a href="https://medium.com/@2lach" rel="noopener">
               <FaMediumM />
               <br /> <span className="linkSpan">Medium</span>
+            </a>
+          </li>
+          <li className="item">
+            <a href="https://dev.to/2lach" rel="noopener">
+              <DevTo />
+              <br /> <span className="linkSpan">Dev.to</span>
             </a>
           </li>
           <li className="item contactItem">

@@ -1,6 +1,4 @@
 module.exports = {
-    extends: 'fyndiq',
-    
     settings: {
       'import/resolver': {
         webpack: {
@@ -9,9 +7,9 @@ module.exports = {
       },
     },
     "parserOptions": {
+      "sourceType": "module",
       "ecmaFeatures": {
           "jsx": true,
-          "modules": true,
           "experimentalObjectRestSpread": true
       }
   },
@@ -38,4 +36,3 @@ module.exports = {
     }
     
   }
-  
