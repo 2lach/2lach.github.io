@@ -30,7 +30,11 @@ svg:hover {
   transform: scale(1.2);
   text-shadow: 4px 4px 4px lightgrey;
 }
-
+.devTo > *:hover {
+  fill: black;
+  transform: scale(1.2);
+  text-shadow: 4px 4px 4px lightgrey;
+}
 .content {
   text-align: center;
 }
