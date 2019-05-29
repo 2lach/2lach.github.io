@@ -35,6 +35,9 @@ svg:hover {
   transform: scale(1.2);
   text-shadow: 4px 4px 4px lightgrey;
 }
+.devToSvg:hover {
+  fill:black;
+}
 .content {
   text-align: center;
 }

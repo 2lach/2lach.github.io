@@ -72,7 +72,7 @@ class Links extends Component {
           </li>
           <li className="item">
             <a href="https://dev.to/2lach" rel="noopener" className="devTo">
-              <DevTo />
+              <DevTo className="devToSvg" />
               <br /> <span className="linkSpan">Dev.to</span>
             </a>
           </li>
