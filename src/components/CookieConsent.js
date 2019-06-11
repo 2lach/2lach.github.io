@@ -34,7 +34,16 @@ class CookieConsent extends Component {
       <footer className={hideOrShow}>
         <div>
           <span className="consentSpan">
-            This site uses Cookies to make your visit easier
+            This site uses{" "}
+            <a
+              className="consentSpanA"
+              href="https://en.wikipedia.org/wiki/HTTP_cookie"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Cookies
+            </a>{" "}
+            to make your visit easier
             <IoIosCloseCircle
               className="cookieBtn"
               onClick={() => this.hideConsent()}

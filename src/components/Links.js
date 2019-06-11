@@ -57,7 +57,7 @@ class Links extends Component {
               <br /> <span className="linkSpan">Codepen</span>
             </a>
           </li>
-{/*          <li className="item">
+          {/*          <li className="item">
             <a href="https://twitter.com/2lach__" rel="noopener">
               <FaTwitter />
               <br /> <span className="linkSpan">Twitter</span>

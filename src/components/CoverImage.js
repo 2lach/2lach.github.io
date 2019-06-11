@@ -21,12 +21,11 @@ window.matchMedia =
 const StyledProgressiveImage = styled(ProgressiveImage)`
   height: 60vh;
   width: auto;
-  background-color: aliceblue;
+
   background-size: cover;
   background-attachment: fixed;
   background-position-y: auto;
-  background-position-x: center;
-  overflow: hidden;
+
   @media (min-width: 800px) {
     background-position-y: 160%;
   }

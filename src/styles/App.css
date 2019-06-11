@@ -1,8 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+@font-face {
+  font-family: "Ubuntu";
+  font-display: auto;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v13/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2)
+      format("woff2"),
+    url(https://fonts.gstatic.com/s/ubuntu/v13/4iCs6KVjbNBYlgoKcg72nU6AF7xm.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-display: auto;
+  src: url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTzGLQjUwkQ1OQ.woff2)
+    format("woff2");
+}
+
 body {
+  font-family: "Ubuntu", "Muli", serif, auto;
   color: #990099;
   margin: 0;
   margin-bottom: 10vh;
 }
+
+/* custom  scrollbar start */
+body::-webkit-scrollbar {
+  margin-left: 22px;
+  float: left;
+  height: auto;
+  width: 10px;
+  background: #990099;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+/**  STYLE 10 */
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(left, #990099, #990099);
+}
+
+/* custom  scrollbar end */
 
 a {
   color: #990099;
@@ -14,6 +64,11 @@ a {
 
 .content {
   margin-bottom: 5em;
+}
+
+.consentSpanA {
+  font-size: 15px;
+  text-decoration: underline;
 }
 
 svg,
@@ -36,7 +91,7 @@ svg:hover {
   text-shadow: 4px 4px 4px lightgrey;
 }
 .devToSvg:hover {
-  fill:black;
+  fill: black;
 }
 .content {
   text-align: center;
@@ -158,9 +213,14 @@ h1 {
     font-size: 12px;
     background: #9999991f;
   }
+
   .consentSpan {
     font-size: 12px;
   }
+  .consentSpanA {
+    font-size: 12px;
+  }
+
   .cookieBtn {
     width: 50px;
     height: 16px;
@@ -169,7 +229,7 @@ h1 {
   }
 }
 
-/* hotjar label */
+/* rm hotjar label */
 ._hj-f5b2a1eb-9b07_feedback_minimized_label,
 ._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
   display: none !important;
