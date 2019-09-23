@@ -1,8 +1,8 @@
 # Hello good people
-
+ 
 ### This is the codebase for my personal page 
 #### and like so many things in life it is always work in progress
-
+ 
 <p>Everything is pretty much built and setup from scratch
 currently its a react site -v 16.4
 with webpack as the bundler and some other stuff </p>
