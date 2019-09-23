@@ -1,6 +1,8 @@
 {
   "main.js": "/main.bundle.js",
-  "runtime~main.js": "/runtime~main.9b5e0298065d3f6bf75b.js",
+  "main.js.map": "/main.js.map",
+  "runtime~main.js": "/runtime~main.1f7ddd58e114d98aa122.js",
+  "runtime~main.js.map": "/runtime~main.js.map",
   "landscape.jpg": "/0bd037b15bbb3cfd36411ac47ab3a90e.jpg",
   "landscapeX60.jpg": "/6ca528a4a6582464b5375d56d34d179b.jpg",
   "portraitX60.jpg": "/6ef22ab9bd97b207d161b3ac483d30a2.jpg",
