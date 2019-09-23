@@ -1,10 +1,15 @@
 {
-  "main.js": "/main.bundle.js",
-  "runtime~main.js": "/runtime~main.6226b6c6091e3b92b432.js",
-  "landscape.jpg": "/0bd037b15bbb3cfd36411ac47ab3a90e.jpg",
-  "landscapeX60.jpg": "/6ca528a4a6582464b5375d56d34d179b.jpg",
-  "portraitX60.jpg": "/6ef22ab9bd97b207d161b3ac483d30a2.jpg",
-  "stefan.jpg": "/71b8f5aea6bacf0a422e1c71544753ca.jpg",
-  "portrait.jpg": "/dbc9274c2c47719ccc9160b334888752.jpg",
-  "index.html": "/index.html"
+  "short_name": "2lach.com",
+  "name": "2lach.com — the portfolio site of Stefan Lachmann",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#282C34",
+  "background_color": "#ffffff"
 }
