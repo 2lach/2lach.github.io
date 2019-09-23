@@ -7,6 +7,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 
+
 module.exports = {
   entry: {
     main: ["babel-polyfill", "./src/index.js"]
@@ -56,6 +57,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve("template/index.ejs")
     }),
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[name].js.map',
+      exclude: ['vendor.js']
+    }),
+ 
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.HashedModuleIdsPlugin(),
     new ManifestPlugin({
