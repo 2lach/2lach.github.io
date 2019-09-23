@@ -2,10 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 
 module.exports = {
@@ -84,6 +84,8 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: true,
+    minimize: true,
+    minimizer: [new TerserPlugin()],
     splitChunks: {
       cacheGroups: {
         vendor: {
