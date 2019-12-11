@@ -2,17 +2,15 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
-
 module.exports = {
   entry: {
     main: ["babel-polyfill", "./src/index.js"]
-    // other: "./src/components/App.js" 
-    // use other: -> if app gets larger with the need to break it into part
   },
   module: {
     rules: [
@@ -58,10 +56,10 @@ module.exports = {
       template: path.resolve("template/index.ejs")
     }),
     new webpack.SourceMapDevToolPlugin({
-      filename: '[name].js.map',
-      exclude: ['vendor.js']
+      filename: "[name].js.map",
+      exclude: ["vendor.js"]
     }),
- 
+
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.HashedModuleIdsPlugin(),
     new ManifestPlugin({
