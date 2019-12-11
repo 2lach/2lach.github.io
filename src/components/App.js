@@ -13,12 +13,11 @@ const App = () => (
     <Avatar />
     <div className="content">
       <h1>My name is Stefan and I build things</h1>
+      <h2>Dev of the North</h2>
+      <h3>Father, builder, thinker & breaker</h3>
       <Links />
     </div>
-    <hr />
     <LatestCommits />
-    <hr />
-
     {!checkConsent("cookieConsentClicked") && <CookieConsent />}
   </div>
 );
