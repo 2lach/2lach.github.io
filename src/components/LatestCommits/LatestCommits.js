@@ -80,12 +80,7 @@ export default class LatestCommits extends Component {
         >
           <h3 style={{ padding: "1em 0 0 0" }}>
             Most recent{" "}
-            <a
-              href={repoUrl}
-              rel="noopeener"
-              className="link"
-              style={{ fontSize: "1.9vw" }}
-            >
+            <a href={repoUrl} rel="noopeener" className="link">
               {" "}
               commit{" "}
             </a>{" "}
