@@ -21,7 +21,7 @@ body {
   font-family: "Ubuntu", "Muli", serif, auto;
   color: #990099;
   margin: 0;
-  background:#ebebeb;
+  background: #ebebeb;
 }
 
 /* custom  scrollbar start */
@@ -178,14 +178,12 @@ h3 {
   .linkSpan {
     display: none;
   }
-  svg {
+  svg,
+  .contactIcon {
     height: 60px;
     width: 45px;
   }
-  .contactIcon {
-    height: 70px;
-    width: 55px;
-  }
+
   .flexRow {
     display: flex;
     flex-direction: column;
@@ -246,20 +244,19 @@ h3 {
   display: none !important;
 }
 
-@media only screen and (max-width : 750px) {
-
+@media only screen and (max-width: 750px) {
   h1 {
-    font-size:22px;
+    font-size: 22px;
   }
 
   h2 {
-    font-size:20px;
+    font-size: 20px;
   }
-  
+
   h3 {
-    font-size:18px;
+    font-size: 18px;
   }
-  .link{
-    font-size:17px;
+  .link {
+    font-size: 17px;
   }
 }

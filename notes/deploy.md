@@ -1,5 +1,9 @@
 since master's is gonnna be empty this is currently the best way:
 
+if there is a dist folder run `cleanup-before-deploy.sh` script
+
+else || then:
+
 do the build in `dev` or other branch.
 
 push the dist as a single commit

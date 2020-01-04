@@ -10,7 +10,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["babel-polyfill", "./src/index.js"]
+    main: ["babel-polyfill", "./src/index.js"],
   },
   module: {
     rules: [
@@ -21,13 +21,13 @@ module.exports = {
           loader: "babel-loader",
           query: {
             presets: ["react"],
-            plugins: ["transform-object-rest-spread"]
-          }
-        }
+            plugins: ["transform-object-rest-spread"],
+          },
+        },
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/i,
@@ -35,50 +35,51 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              limit: 200000
-            }
-          }
-        ]
-      }
-    ]
+              limit: 200000,
+            },
+          },
+        ],
+      },
+    ],
   },
   performance: {
     hints: process.env.NODE_ENV === "production" ? "warning" : false,
     maxEntrypointSize: 51200,
-    maxAssetSize: 512000
+    maxAssetSize: 512000,
   },
   devServer: {
-    quiet: true
+    quiet: false,
   },
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
-      template: path.resolve("template/index.ejs")
+      template: path.resolve("template/index.ejs"),
     }),
     new webpack.SourceMapDevToolPlugin({
       filename: "[name].js.map",
-      exclude: ["vendor.js"]
+      exclude: ["vendor.js"],
     }),
 
-    new webpack.optimize.ModuleConcatenationPlugin(),
+    // new webpack.optimize.ModuleConcatenationPlugin(),
+
     new webpack.HashedModuleIdsPlugin(),
     new ManifestPlugin({
-      fileName: "manifest.json"
+      fileName: "manifest.json",
     }),
     // Error handling and analyzer
     new FriendlyErrorsWebpackPlugin(),
-    new BundleAnalyzerPlugin({
+    /*new BundleAnalyzerPlugin({
       analyzerPort: 3333,
       openAnalyzer: false, // change to true for visual overview
       statsFilename: "./monitor.stats.json",
       logLevel: "silent" //info, warn, error or silent
-    })
+    })*/
   ],
   output: {
     filename: "[name].[hash].js",
     chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
+    publicPath: "/",
   },
   optimization: {
     runtimeChunk: true,
@@ -90,9 +91,9 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           minChunks: Infinity,
-          chunks: "all"
-        }
-      }
-    }
-  }
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
