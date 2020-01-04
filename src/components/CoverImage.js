@@ -14,12 +14,12 @@ window.matchMedia =
     return {
       matches: true,
       addListener: () => {},
-      removeListener: () => {}
+      removeListener: () => {},
     };
   };
 
 const StyledProgressiveImage = styled(ProgressiveImage)`
-  height: 60vh;
+  height: 65vh;
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
