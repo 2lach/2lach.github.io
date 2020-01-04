@@ -12,7 +12,7 @@ export default class LatestCommits extends Component {
       repoUrl: "",
       commitMessageLines: "",
       repoName: "",
-      createdAt: ""
+      createdAt: "",
     };
   }
   componentDidMount() {
@@ -24,7 +24,7 @@ export default class LatestCommits extends Component {
     const email = "stefanlachmann@hotmail.com";
 
     const response = await fetch(
-      `https://api.github.com/users/${username}/events/public`
+      `https://api.github.com/users/${username}/events/public`,
     );
     const json = await response.json();
 
@@ -61,7 +61,7 @@ export default class LatestCommits extends Component {
       repoUrl: repoUrl,
       commitMessageLines: commitMessageLines,
       repoName: repo.name,
-      createdAt: lastCommitTime
+      createdAt: lastCommitTime,
     });
   }
   render() {
@@ -70,7 +70,7 @@ export default class LatestCommits extends Component {
       commitMessageLines,
       repoName,
       repoAndCommitUrl,
-      createdAt
+      createdAt,
     } = this.state;
     return (
       <div className="footer">
@@ -80,7 +80,12 @@ export default class LatestCommits extends Component {
         >
           <h3 style={{ padding: "1em 0 0 0" }}>
             Most recent{" "}
-            <a href={repoUrl} rel="noopeener" className="link">
+            <a
+              href={repoUrl}
+              rel="noopeener"
+              className="link"
+              style={{ fontSize: "inherit" }}
+            >
               {" "}
               commit{" "}
             </a>{" "}

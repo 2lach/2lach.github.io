@@ -64,6 +64,7 @@
     "react-responsive-modal": "^3.3.0",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
+    "styled-components": "^4.4.1",
     "terser-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^3.0.2",
     "webpack-manifest-plugin": "^2.0.4"
