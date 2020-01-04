@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "Stefan Lachmann Homepage",
   "main": "index.js",
+  "homepage": "https://2lach.com",
   "repository": {
     "type": "git",
     "url": "git://github.com/2lach/2lach.github.io.git"
