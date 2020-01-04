@@ -30,7 +30,6 @@ body::-webkit-scrollbar {
   float: left;
   height: auto;
   width: 10px;
-  background: #990099;
   overflow-y: scroll;
   margin-bottom: 25px;
 }
@@ -166,6 +165,18 @@ h3 {
 
 .hideConsent {
   display: none;
+}
+
+/* jokecontainer */
+.jokeContainer {
+  padding: 1em 0;
+}
+
+@media only screen and (max-width: 999px) {
+  .jokeContainer {
+    padding: 0.5em;
+    border-top: 2px solid;
+  }
 }
 
 @media (min-width: 800px) {
