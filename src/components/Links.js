@@ -34,6 +34,7 @@ class Links extends Component {
   handleCloseModal() {
     this.setState({ showModal: false });
   }
+
   changeSource() {
     this.setState({
       imgsrc:
@@ -45,7 +46,11 @@ class Links extends Component {
       <div className="flexRow">
         <ul style={{ listStyleType: "none", display: "contents" }}>
           <li className="item">
-            <a href="https://github.com/2lach" rel="noopener">
+            <a
+              href="https://github.com/2lach"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <IoLogoGithub className="svg" />
               <br />
               <span className="linkSpan">Github</span>
@@ -53,28 +58,45 @@ class Links extends Component {
           </li>
 
           <li className="item">
-            <a href="https://www.linkedin.com/in/slachmann/" rel="noopener">
+            <a
+              href="https://www.linkedin.com/in/slachmann/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaLinkedin />
               <br /> <span className="linkSpan">Linkedin</span>
             </a>
           </li>
 
           <li className="item">
-            <a href="https://dev.to/2lach" rel="noopener" className="devTo">
+            <a
+              href="https://dev.to/2lach"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="devTo"
+            >
               <DevTo className="devToSvg" />
               <br /> <span className="linkSpan">Dev.to</span>
             </a>
           </li>
 
           <li className="item">
-            <a href="https://medium.com/@2lach" rel="noopener">
+            <a
+              href="https://medium.com/@2lach"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaMediumM />
               <br /> <span className="linkSpan">Medium</span>
             </a>
           </li>
 
           <li className="item">
-            <a href="https://codepen.io/2lach/" rel="noopener">
+            <a
+              href="https://codepen.io/2lach/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaCodepen />
               <br /> <span className="linkSpan">Codepen</span>
             </a>
