@@ -39,7 +39,8 @@ export default class LatestCommits extends Component {
     });
 
     if (!latestCommit) {
-      console.info("no commits");
+      // eslint-disable-next-line no-console
+      console.log("no commits");
       return;
     }
 
@@ -56,8 +57,8 @@ export default class LatestCommits extends Component {
       .join("");
     repo.name = repo.name.replace(new RegExp(`^${username}/`), "");
     this.setState({
-      repoAndCommitUrl: repoAndCommitUrl,
-      repoUrl: repoUrl,
+      repoAndCommitUrl,
+      repoUrl,
       commitMessageLines: commitMessageLines,
       repoName: repo.name,
       createdAt: lastCommitTime,

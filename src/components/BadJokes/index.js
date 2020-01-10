@@ -1,8 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from "react";
-// import "../LatestCommits/style.css";
 
-const Jokes_Quotes = [
+const jokesQuotes = [
   "The best thing about a boolean is even if you are wrong, you are only off by a bit. (Anonymous)",
 
   "Without requirements or design, programming is the art of adding bugs to an empty text file. (Louis Srygley)",
@@ -48,9 +47,9 @@ const Jokes_Quotes = [
   "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job. (Mosher’s Law of Software Engineering)",
 ];
 
-const pick_a_quote = () => {
+const pickQuote = () => {
   const randomQuote =
-    Jokes_Quotes[Math.floor(Math.random() * Jokes_Quotes.length)];
+    jokesQuotes[Math.floor(Math.random() * jokesQuotes.length)];
   return randomQuote;
 };
 
@@ -64,7 +63,7 @@ export default class JokesAndQuotes extends Component {
   }
 
   componentDidMount() {
-    const quote = pick_a_quote();
+    const quote = pickQuote();
     this.setState({
       currentQuote: quote,
     });

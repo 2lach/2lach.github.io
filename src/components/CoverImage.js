@@ -1,4 +1,3 @@
-/* global window */
 import React from "react";
 import styled from "styled-components";
 import Media from "react-media";
@@ -36,12 +35,14 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 
 const CoverImage = () => (
   <Media query={{ minWidth: 1000 }}>
-    {matches => (
-      <StyledProgressiveImage
-        src={matches ? landscape : portrait}
-        placeholder={matches ? landscapeX60 : portraitX60}
-      />
-    )}
+    {matches => {
+      return (
+        <StyledProgressiveImage
+          src={matches ? landscape : portrait}
+          placeholder={matches ? landscapeX60 : portraitX60}
+        />
+      );
+    }}
   </Media>
 );
 

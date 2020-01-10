@@ -48,16 +48,14 @@ class Links extends Component {
     const subject = "subject=Hey Stefan, My name is: ";
     const mailto = `${emailAdress}?${subject}`;
     if (window) {
+      //* open users email client
       window.open(mailto, "_self");
       //* other ways to open mailto
-      // window.open(mailto, "_self")
       // window.location.assign(mailto);
       // window.location = mailto;
     } else {
+      // eslint-disable-next-line no-console
       console.error("oh snap you dont have a window");
-      console.log(
-        "Here is a cat image: https://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
-      );
       alert(`well that didn't work but i swear it's not me, it's you ;)`);
     }
   };

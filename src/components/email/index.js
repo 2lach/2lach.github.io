@@ -18,10 +18,8 @@ const openMail = () => {
       window.location = mailto;
       window.location.assign(mailto);
     } else {
+      // eslint-disable-next-line no-console
       console.error("oh snap you dont have a window");
-      console.log(
-        "Here is a cat image: https://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
-      );
     }
   } else {
     // const H1_elem = document.querySelector("h1");
