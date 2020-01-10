@@ -14,7 +14,11 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
+<<<<<<< HEAD:service-worker.js
   "/precache-manifest.fba94a0d6751e51fe8d9926c5dbbda69.js"
+=======
+  "/precache-manifest.013d3a3d3d2506d6cb61e08110b3c50f.js"
+>>>>>>> 341b1f7... prettier setup + script, updated readme, fixed some codestyle issues:build-3/service-worker.js
 );
 
 self.addEventListener('message', (event) => {
