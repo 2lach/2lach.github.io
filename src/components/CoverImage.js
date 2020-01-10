@@ -12,25 +12,25 @@ window.matchMedia =
   window.matchMedia ||
   function matchMedia() {
     return {
-      matches: true, // Desktop First
+      matches: true,
       addListener: () => {},
-      removeListener: () => {}
+      removeListener: () => {},
     };
   };
 
 const StyledProgressiveImage = styled(ProgressiveImage)`
-  height: 60vh;
-  width: auto;
-
+  height: 65vh;
+  width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  background-position-y: auto;
+  background-position-y: center;
+  object-fit: cover;
 
   @media (min-width: 800px) {
-    background-position-y: 160%;
+    background-position-y: center;
   }
   @media (max-width: 500px) {
-    background-position-y: 200%;
+    background-position-y: center;
   }
 `;
 

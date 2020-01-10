@@ -9,8 +9,8 @@ const Avatar = styled.div`
   height: 200px;
   width: 200px;
   position: relative;
-  top: -50px;
-  margin-bottom: -50px;
+  top: calc(-50px - 5vh);
+  margin-bottom: calc(-50px - 5.5vh);
   background-position-x: -2rem;
   border: 2px solid white;
   border-radius: 50%;

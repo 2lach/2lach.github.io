@@ -21,7 +21,7 @@ body {
   font-family: "Ubuntu", "Muli", serif, auto;
   color: #990099;
   margin: 0;
-  margin-bottom: 10vh;
+  background: #ebebeb;
 }
 
 /* custom  scrollbar start */
@@ -30,7 +30,6 @@ body::-webkit-scrollbar {
   float: left;
   height: auto;
   width: 10px;
-  background: #990099;
   overflow-y: scroll;
   margin-bottom: 25px;
 }
@@ -53,7 +52,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* custom  scrollbar end */
-
 a {
   color: #990099;
   text-decoration: none;
@@ -98,7 +96,19 @@ svg:hover {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 4vw;
+  padding: 1em 0 0 0;
+  color: #8e2b78;
+}
+
+h2 {
+  font-size: 2.5vw;
+  padding: 1em 0 0 0;
+  color: #8e2b78;
+}
+
+h3 {
+  font-size: 2vw;
   padding: 1em 0;
   color: #8e2b78;
 }
@@ -157,6 +167,18 @@ h1 {
   display: none;
 }
 
+/* jokecontainer */
+.jokeContainer {
+  padding: 1em 0;
+}
+
+@media only screen and (max-width: 999px) {
+  .jokeContainer {
+    padding: 0.5em;
+    border-top: 2px solid;
+  }
+}
+
 @media (min-width: 800px) {
   h1 {
     color: #990099;
@@ -167,14 +189,12 @@ h1 {
   .linkSpan {
     display: none;
   }
-  svg {
+  svg,
+  .contactIcon {
     height: 60px;
     width: 45px;
   }
-  .contactIcon {
-    height: 70px;
-    width: 55px;
-  }
+
   .flexRow {
     display: flex;
     flex-direction: column;
@@ -229,8 +249,25 @@ h1 {
   }
 }
 
-/* rm hotjar label */
+/* hide hotjar label */
 ._hj-f5b2a1eb-9b07_feedback_minimized_label,
 ._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
   display: none !important;
+}
+
+@media only screen and (max-width: 750px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  .link {
+    font-size: 17px;
+  }
 }
