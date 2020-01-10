@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Modal from "react-modal";
 import DevTo from "../images/dev-to.js";
-import Email from "./email";
 import Cv from "./Cv";
 // logos/icons
 import {
@@ -48,24 +47,18 @@ class Links extends Component {
     const emailAdress = "mailto:stefanlachmann@hotmail.com";
     const subject = "subject=Hey Stefan, My name is: ";
     const mailto = `${emailAdress}?${subject}`;
-    const width =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-
-    if (width > 500) {
-      if (window) {
-        window.open(mailto, "_self");
-        window.location = mailto;
-        window.location.assign(mailto);
-      } else {
-        console.error("oh snap you dont have a window");
-        console.log(
-          "Here is a cat image: https://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
-        );
-      }
+    if (window) {
+      window.open(mailto, "_self");
+      //* other ways to open mailto
+      // window.open(mailto, "_self")
+      // window.location.assign(mailto);
+      // window.location = mailto;
     } else {
-      // const H1_elem = document.querySelector("h1");
+      console.error("oh snap you dont have a window");
+      console.log(
+        "Here is a cat image: https://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
+      );
+      alert(`well that didn't work but i swear it's not me, it's you ;)`);
     }
   };
 
@@ -135,20 +128,6 @@ class Links extends Component {
               <AiOutlineMail className="contactIcon" />
               <br />
               <span className="linkSpan">Contact</span>
-              <Modal
-                isOpen={this.state.showModal}
-                style={{
-                  overlay: { backgroundColor: "rgba(32, 31, 31, 0.6)" },
-                }}
-              >
-                <IoMdClose
-                  onClick={this.handleCloseModal}
-                  style={{ float: "right" }}
-                />
-                <div>
-                  <Email />
-                </div>
-              </Modal>
             </b>
           </li>
           <li className="item contactItem">
