@@ -15,6 +15,8 @@
 
 - find a replacement react-progressive-bg-image since it comes with warnings
 
+* setup an .eslint file
+
 ### Started
 
 - clear up errors and issues from codacy
