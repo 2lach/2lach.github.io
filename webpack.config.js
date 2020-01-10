@@ -2,11 +2,12 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
@@ -50,30 +51,46 @@ module.exports = {
   devServer: {
     quiet: false,
   },
+
   plugins: [
     new CleanWebpackPlugin(["dist"]),
+
     new HtmlWebpackPlugin({
       template: path.resolve("template/index.ejs"),
     }),
+
     new webpack.SourceMapDevToolPlugin({
       filename: "[name].js.map",
       exclude: ["vendor.js"],
     }),
 
+    new CopyWebpackPlugin([
+      {
+        from: "src/docs/*.pdf",
+        to: path.resolve(__dirname, "dist/pdf"),
+      },
+    ]),
+
+    // slows build down like crazy
     // new webpack.optimize.ModuleConcatenationPlugin(),
 
     new webpack.HashedModuleIdsPlugin(),
+
     new ManifestPlugin({
       fileName: "manifest.json",
     }),
+
     // Error handling and analyzer
     new FriendlyErrorsWebpackPlugin(),
-    /*new BundleAnalyzerPlugin({
+
+    /*
+    new BundleAnalyzerPlugin({
       analyzerPort: 3333,
       openAnalyzer: false, // change to true for visual overview
       statsFilename: "./monitor.stats.json",
       logLevel: "silent" //info, warn, error or silent
-    })*/
+    })
+    */
   ],
   output: {
     filename: "[name].[hash].js",
