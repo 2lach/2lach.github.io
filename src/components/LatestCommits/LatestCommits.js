@@ -39,7 +39,7 @@ export default class LatestCommits extends Component {
     });
 
     if (!latestCommit) {
-      console.log("no commits");
+      console.info("no commits");
       return;
     }
 
