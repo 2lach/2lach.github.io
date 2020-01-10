@@ -22,7 +22,7 @@ const openMail = () => {
     } else {
       console.error("oh snap you dont have a window or a location");
       console.log(
-        "Here is a cat image: http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
+        "Here is a cat image: https://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg",
       );
     }
   } else {

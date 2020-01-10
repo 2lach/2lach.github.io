@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import DevTo from "../images/dev-to.js";
 import Email from "./email";
+import Cv from "./Cv";
 // logos/icons
 import {
   IoMdClose,
@@ -38,7 +39,7 @@ class Links extends Component {
   changeSource() {
     this.setState({
       imgsrc:
-        "http://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif",
+        "https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif",
     });
   }
   render() {
@@ -122,6 +123,30 @@ class Links extends Component {
                 />
                 <div>
                   <Email />
+                </div>
+              </Modal>
+            </a>
+          </li>
+          <li className="item contactItem">
+            <a>
+              <AiOutlineMail
+                className="contactIcon"
+                onClick={this.handleOpenModal}
+              />
+              <br />
+              <span className="linkSpan">Cv</span>
+              <Modal
+                isOpen={this.state.showModal}
+                style={{
+                  overlay: { backgroundColor: "rgba(32, 31, 31, 0.6)" },
+                }}
+              >
+                <IoMdClose
+                  onClick={this.handleCloseModal}
+                  style={{ float: "right" }}
+                />
+                <div>
+                  <Cv />
                 </div>
               </Modal>
             </a>
