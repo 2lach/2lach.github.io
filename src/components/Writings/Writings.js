@@ -1,6 +1,5 @@
 import React from "react";
 import "./Writings.css";
-import LatestCommits from "../LatestCommits/LatestCommits";
 
 const articles = [
   {
@@ -8,29 +7,29 @@ const articles = [
     date: "yyyy-mm-dd",
     description: "description",
     topic: "Javascript",
-    id: "1"
+    id: "1",
   },
   {
     header: "Re-render ssr",
     date: "yyyy-mm-dd",
     description: "description",
     topic: "React",
-    id: "12"
+    id: "12",
   },
   {
     header: "Make stuff go kabloom",
     date: "yyyy-mm-dd",
     description: "description",
     topic: "Unix",
-    id: "123"
+    id: "123",
   },
   {
     header: "Dockerize your backpack",
     date: "yyyy-mm-dd",
     description: "description",
     topic: "Docker",
-    id: "1234"
-  }
+    id: "1234",
+  },
 ];
 
 const Writings = () => {

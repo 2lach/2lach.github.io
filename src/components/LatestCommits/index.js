@@ -59,7 +59,7 @@ export default class LatestCommits extends Component {
     this.setState({
       repoAndCommitUrl,
       repoUrl,
-      commitMessageLines: commitMessageLines,
+      commitMessageLines,
       repoName: repo.name,
       createdAt: lastCommitTime,
     });

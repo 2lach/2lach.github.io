@@ -5,7 +5,7 @@ import Links from "./Links";
 import Login from "./Login";
 import "../styles/App.css";
 import { CookieConsent, checkConsent } from "./CookieConsent";
-import LatestCommits from "./LatestCommits/LatestCommits";
+import LatestCommits from "./LatestCommits";
 import BadJokes from "./BadJokes";
 
 function App() {
