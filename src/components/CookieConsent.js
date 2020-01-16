@@ -33,10 +33,10 @@ class CookieConsent extends Component {
     return (
       <footer className={hideOrShow}>
         <div>
-          <span className="consentSpan">
+          <div className="consentContent">
             This site uses{" "}
             <a
-              className="consentSpanA"
+              className="consentContentA"
               href="https://en.wikipedia.org/wiki/HTTP_cookie"
               rel="noopener noreferrer"
               target="_blank"
@@ -44,13 +44,13 @@ class CookieConsent extends Component {
               Cookies
             </a>{" "}
             to make your visit easier
-            <IoIosCloseCircle
-              className="cookieBtn"
-              onClick={() => this.hideConsent()}
-            >
-              X
-            </IoIosCloseCircle>
-          </span>
+          </div>
+          <IoIosCloseCircle
+            className="cookieBtn"
+            onClick={() => this.hideConsent()}
+          >
+            X
+          </IoIosCloseCircle>
         </div>
       </footer>
     );
