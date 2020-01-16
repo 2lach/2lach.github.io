@@ -1,3 +1,4 @@
+// file not used...
 import React from "react";
 import "./style.css";
 
@@ -14,8 +15,8 @@ const openMail = () => {
 
   if (width > 500) {
     if (window) {
-      window.open(mailto, "_self");
-      window.location = mailto;
+      // window.open(mailto, "_self");
+      // window.location = mailto;
       window.location.assign(mailto);
     } else {
       // eslint-disable-next-line no-console
