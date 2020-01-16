@@ -11,7 +11,7 @@ export default class LatestCommits extends Component {
       repoUrl: "",
       commitMessageLines: "",
       repoName: "",
-      createdAt: "",
+      createdAt: ""
     };
   }
   componentDidMount() {
@@ -23,7 +23,7 @@ export default class LatestCommits extends Component {
     const email = "stefanlachmann@hotmail.com";
 
     const response = await fetch(
-      `https://api.github.com/users/${username}/events/public`,
+      `https://api.github.com/users/${username}/events/public`
     );
     const json = await response.json();
 
@@ -61,7 +61,7 @@ export default class LatestCommits extends Component {
       repoUrl,
       commitMessageLines,
       repoName: repo.name,
-      createdAt: lastCommitTime,
+      createdAt: lastCommitTime
     });
   }
   render() {
@@ -70,7 +70,7 @@ export default class LatestCommits extends Component {
       commitMessageLines,
       repoName,
       repoAndCommitUrl,
-      createdAt,
+      createdAt
     } = this.state;
     return (
       <div className="footer">

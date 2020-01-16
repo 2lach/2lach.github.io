@@ -13,7 +13,7 @@ window.matchMedia =
     return {
       matches: true,
       addListener: () => {},
-      removeListener: () => {},
+      removeListener: () => {}
     };
   };
 

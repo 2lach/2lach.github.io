@@ -44,7 +44,7 @@ const jokesQuotes = [
 
   "The trouble with programmers is that you can never tell what a programmer is doing until it’s too late. (Seymour Cray)",
 
-  "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job. (Mosher’s Law of Software Engineering)",
+  "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job. (Mosher’s Law of Software Engineering)"
 ];
 
 const pickQuote = () => {
@@ -58,14 +58,14 @@ export default class JokesAndQuotes extends Component {
     super(props);
 
     this.state = {
-      currentQuote: "",
+      currentQuote: ""
     };
   }
 
   componentDidMount() {
     const quote = pickQuote();
     this.setState({
-      currentQuote: quote,
+      currentQuote: quote
     });
   }
 
