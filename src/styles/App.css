@@ -17,6 +17,7 @@
     format("woff2");
 }
 
+
 body {
   font-family: "Ubuntu", "Muli", serif, auto;
   color: #990099;
@@ -24,7 +25,12 @@ body {
   background: #ebebeb;
 }
 
-/* custom  scrollbar start */
+/* ########################################################
+
+#  Custom scrollbar
+
+##########################################################*/
+
 body::-webkit-scrollbar {
   margin-left: 22px;
   float: left;
@@ -34,7 +40,6 @@ body::-webkit-scrollbar {
   margin-bottom: 25px;
 }
 
-/**  STYLE 10 */
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -51,7 +56,14 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to left, #990099, #990099);
 }
 
-/* custom  scrollbar end */
+
+/* ########################################################
+
+#  General Elements
+
+##########################################################*/
+
+
 a,
 b {
   color: #990099;
@@ -65,7 +77,7 @@ b {
   margin-bottom: 5em;
 }
 
-.consentSpanA {
+.consentContentA {
   font-size: 15px;
   text-decoration: underline;
 }
@@ -85,17 +97,6 @@ svg:hover {
   transform: scale(1.2);
   text-shadow: 4px 4px 4px lightgrey;
 }
-.devTo > *:hover {
-  fill: black;
-  transform: scale(1.2);
-  text-shadow: 4px 4px 4px lightgrey;
-}
-.devToSvg:hover {
-  fill: black;
-}
-.content {
-  text-align: center;
-}
 
 h1 {
   font-size: 4vw;
@@ -113,6 +114,25 @@ h3 {
   font-size: 2vw;
   padding: 1em 0;
   color: #8e2b78;
+}
+
+
+/* ########################################################
+
+#  Custom elements
+
+##########################################################*/
+
+.devTo > *:hover {
+  fill: black;
+  transform: scale(1.2);
+  text-shadow: 4px 4px 4px lightgrey;
+}
+.devToSvg:hover {
+  fill: black;
+}
+.content {
+  text-align: center;
 }
 
 .flexRow {
@@ -139,7 +159,12 @@ h3 {
   width: 50vw;
 }
 
-/* CookieConsent */
+
+/* ########################################################
+
+ CookieConsent / Sticky Footer
+
+##########################################################*/
 
 .CookieConsentStyle {
   margin-top: 5em;
@@ -152,6 +177,7 @@ h3 {
   text-align: center;
   font-size: 15px;
   background: #f3f3f3;
+  opacity: 0.8;
   transition: ease-in-out all 0.3s;
 }
 
@@ -163,13 +189,24 @@ h3 {
   height: 24px;
   margin: -0.4rem;
   cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 20px;
 }
 
 .hideConsent {
   display: none;
 }
 
-/* jokecontainer */
+
+
+/* ########################################################
+
+#  Random Joke Component 
+
+##########################################################*/
+
+
 .jokeContainer {
   padding: 1em 0;
 }
@@ -187,69 +224,13 @@ h3 {
   }
 }
 
-@media (min-width: 100px) and (max-width: 550px) {
-  .linkSpan {
-    display: none;
-  }
-  svg,
-  .contactIcon {
-    height: 60px;
-    width: 45px;
-  }
 
-  .flexRow {
-    display: flex;
-    flex-direction: column;
-  }
-  .ReactModal__Content,
-  .ReactModal__Content--after-open {
-    position: absolute;
-    top: 20%;
-    left: calc(50% - 45vw) !important;
-    right: 40px;
-    bottom: 40px;
-    border: 1px solid rgb(204, 204, 204);
-    background: rgb(255, 255, 255);
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 20px;
-    color: rgb(153, 0, 153);
-    text-align: center;
-    height: auto;
-    width: 80vw;
-  }
-}
 
-@media (min-width: 100px) and (max-width: 330px) {
-  .CookieConsentStyle {
-    margin-top: 5em;
-    position: fixed;
-    bottom: 0;
-    height: 2.5rem;
-    width: 100%;
-    line-height: 3rem;
-    text-align: center;
-    float: left;
-    border-top: 1px solid lightgrey;
-    font-size: 12px;
-    background: #9999991f;
-  }
+/* ########################################################
 
-  .consentSpan {
-    font-size: 12px;
-  }
-  .consentSpanA {
-    font-size: 12px;
-  }
+#  Login Component
 
-  .cookieBtn {
-    width: 50px;
-    height: 16px;
-    margin: -0.4rem;
-    cursor: pointer;
-  }
-}
+##########################################################*/
 
 .loginContainer {
   display: flex;
@@ -311,10 +292,78 @@ h3 {
   cursor: pointer;
 }
 
-/* hide hotjar label */
-._hj-f5b2a1eb-9b07_feedback_minimized_label,
-._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
-  display: none !important;
+
+/* ########################################################
+
+#  Media queries
+
+##########################################################*/
+
+
+@media (min-width: 100px) and (max-width: 550px) {
+  .linkSpan {
+    display: none;
+  }
+  svg,
+  .contactIcon {
+    height: 60px;
+    width: 45px;
+  }
+
+  .flexRow {
+    display: flex;
+    flex-direction: column;
+  }
+  .ReactModal__Content,
+  .ReactModal__Content--after-open {
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 45vw) !important;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    color: rgb(153, 0, 153);
+    text-align: center;
+    height: auto;
+    width: 80vw;
+  }
+}
+
+
+
+@media (min-width: 100px) and (max-width: 330px) {
+  .CookieConsentStyle {
+    margin-top: 5em;
+    position: fixed;
+    bottom: 0;
+    height: 2.5rem;
+    width: 100%;
+    line-height: 3rem;
+    text-align: center;
+    float: left;
+    border-top: 1px solid lightgrey;
+    font-size: 12px;
+    background: #9999991f;
+  }
+
+  .consentContent {
+    font-size: 12px;
+  }
+  .consentContentA {
+    font-size: 12px;
+  }
+
+  .cookieBtn {
+    width: 50px;
+    height: 16px;
+    margin: -0.4rem;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -332,4 +381,10 @@ h3 {
   .link {
     font-size: 17px;
   }
+}
+
+/* hide hotjar label */
+._hj-f5b2a1eb-9b07_feedback_minimized_label,
+._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
+  display: none !important;
 }
