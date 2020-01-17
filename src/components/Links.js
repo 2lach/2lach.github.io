@@ -144,7 +144,7 @@ class Links extends Component {
               >
                 <IoMdClose
                   onClick={this.handleCloseModal}
-                  style={{ float: "right" }}
+                  style={{ float: "right", cursor: "pointer" }}
                 />
                 <div>
                   <Cv />
