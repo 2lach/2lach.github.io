@@ -6,11 +6,9 @@
 
 Set it up:
 
-1. `git clone https://github.com/2lach/2lach.github.io.git`
-
-2. `yarn install`
-
-3. `yarn start`
+1.  `git clone https://github.com/2lach/2lach.github.io.git`
+2.  `yarn install`
+3.  `yarn start`
 
 ```npm scripts
    - build

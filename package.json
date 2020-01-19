@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "axios": "^0.19.1",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
@@ -31,7 +32,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.5",
-    "identity-obj-proxy": "3.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "0.1.0",
     "jest-resolve": "24.9.0",
@@ -71,7 +72,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "prettier": "prettier --write \"./**/*.{js,jsx,json}\""
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "prettier": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "prettier:check": "prettier --check \"./**/*.{js.jsx.ts.tsx,json}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -114,7 +117,7 @@
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
+      "^.+\\.module\\.(css|sass|scss|svg)$"
     ],
     "modulePaths": [],
     "moduleNameMapper": {
@@ -144,6 +147,7 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
   }
 }
