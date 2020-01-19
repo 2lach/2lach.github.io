@@ -17,7 +17,6 @@
     format("woff2");
 }
 
-
 body {
   font-family: "Ubuntu", "Muli", serif, auto;
   color: #990099;
@@ -56,13 +55,11 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to left, #990099, #990099);
 }
 
-
 /* ########################################################
 
 #  General Elements
 
 ##########################################################*/
-
 
 a,
 b {
@@ -116,6 +113,9 @@ h3 {
   color: #8e2b78;
 }
 
+.linkSpan {
+  font-size: 2vw;
+}
 
 /* ########################################################
 
@@ -154,11 +154,12 @@ h3 {
   color: #990099;
   text-align: center;
   top: 20%;
-  left: calc(50% - 25vw) !important;
+  left: calc(
+    50% - 25vw
+  ) !important; /* use !impotant to override native inlinestyle of react_modal */
   height: auto;
   width: 50vw;
 }
-
 
 /* ########################################################
 
@@ -198,17 +199,18 @@ h3 {
   display: none;
 }
 
-
-
 /* ########################################################
 
 #  Random Joke Component 
 
 ##########################################################*/
 
-
 .jokeContainer {
   padding: 1em 0;
+}
+
+.quoteSpan {
+  font-size: 1.8vw;
 }
 
 @media only screen and (max-width: 999px) {
@@ -223,8 +225,6 @@ h3 {
     color: #990099;
   }
 }
-
-
 
 /* ########################################################
 
@@ -292,13 +292,11 @@ h3 {
   cursor: pointer;
 }
 
-
 /* ########################################################
 
 #  Media queries
 
 ##########################################################*/
-
 
 @media (min-width: 100px) and (max-width: 550px) {
   .linkSpan {
@@ -318,7 +316,9 @@ h3 {
   .ReactModal__Content--after-open {
     position: absolute;
     top: 20%;
-    left: calc(50% - 45vw) !important;
+    left: calc(
+      50% - 45vw
+    ) !important; /* use !impotant to override native inlinestyle of react_modal */
     right: 40px;
     bottom: 40px;
     border: 1px solid rgb(204, 204, 204);
@@ -333,8 +333,6 @@ h3 {
     width: 80vw;
   }
 }
-
-
 
 @media (min-width: 100px) and (max-width: 330px) {
   .CookieConsentStyle {
@@ -378,11 +376,14 @@ h3 {
   h3 {
     font-size: 18px;
   }
-  .link {
+  .linkspan {
     font-size: 17px;
   }
-}
 
+  .quoteSpan {
+    font-size: 18px;
+  }
+}
 /* hide hotjar label */
 ._hj-f5b2a1eb-9b07_feedback_minimized_label,
 ._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
