@@ -2,8 +2,12 @@ import React from "react";
 import axios from "axios";
 import "./style.css";
 
+// TODOs
 //* http-proxy istället för corsProxyn
 //* skriv test
+//* flytta fileSize calc function till hoc och låt den börja när pageload = completed
+//? fix styles of buttons in 320px and
+//? > 1440 font-size and button spacing
 
 // in branch backup
 const corsProxy = "https://cors-anywhere.herokuapp.com/";
@@ -27,25 +31,21 @@ class Cv extends React.Component {
     this.getSize(cvEn);
   }
 
-  /**
-   * GET filesize of the pdf's before download.
-   * and then save it to state
-   */
   async getSize(fileUrl) {
     try {
       const response = await axios.get(corsProxy + baseUrl + fileUrl);
       const { headers } = await response;
 
       const file = headers["content-length"];
-      const file_sizeKB = Math.ceil(file / 1024);
+      const fileSizeKB = Math.ceil(file / 1024);
 
       if (fileUrl.includes("cv_se")) {
-        this.setState({ Swedish: file_sizeKB, isLoadingSwe: false });
+        this.setState({ Swedish: fileSizeKB, isLoadingSwe: false });
       } else {
-        this.setState({ English: file_sizeKB, isLoadingEn: false });
+        this.setState({ English: fileSizeKB, isLoadingEn: false });
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -60,7 +60,7 @@ class Cv extends React.Component {
           </div>
           <div className="face-secondary">
             <span className="icon fa fa-hdd-o"></span>
-            Size: {isLoadingSwe ? "Loading" : Swedish} KB
+            Size: {isLoadingSwe ? "Laddar" : Swedish} KB
           </div>
         </a>
 

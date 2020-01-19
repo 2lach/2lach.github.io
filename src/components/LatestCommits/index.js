@@ -46,7 +46,7 @@ export default class LatestCommits extends Component {
 
     const { repo, created_at: createdAt } = latestPushEvent;
     const repoUrl = `https://github.com/${repo.name}`;
-
+    const userNameRegExp = new RegExp(`^${username}/`);
     const repoAndCommitUrl = `${repoUrl}/commit/${latestCommit.sha}`;
     let commitMessageLines = latestCommit.message.trim().split("\n");
     const lastCommitTime = createdAt
@@ -55,7 +55,7 @@ export default class LatestCommits extends Component {
       .trim()
       .split("Z")
       .join("");
-    repo.name = repo.name.replace(new RegExp(`^${username}/`), "");
+    repo.name = repo.name.replace(userNameRegExp, "");
     this.setState({
       repoAndCommitUrl,
       repoUrl,
@@ -99,9 +99,16 @@ export default class LatestCommits extends Component {
             was:{" "}
           </h3>
           <div>
-            <span style={{ color: "#7f2a6c", lineHeight: "24px" }}>
+            <span
+              className="quoteSpan"
+              style={{ color: "#7f2a6c", lineHeight: "auto" }}
+            >
               {commitMessageLines} In repo:{" "}
-              <a href={repoAndCommitUrl} rel="noopeener" className="link">
+              <a
+                href={repoAndCommitUrl}
+                rel="noopeener"
+                className="link quoteSpan"
+              >
                 {repoName}
               </a>{" "}
               <br />
