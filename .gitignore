@@ -6,9 +6,9 @@
 
 # testing
 /coverage
+__snapshots__
 
 # production folder
-
 
 # misc
 .DS_Store
