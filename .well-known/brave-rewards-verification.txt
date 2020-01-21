@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: 2lach.com
+Token: e5aa6fda5db1807d315c542daef85d3b856f291275e5f383ac30f52819904cd8
