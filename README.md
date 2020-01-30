@@ -6,7 +6,7 @@
 
 Set it up:
 
-1.  `git clone https://github.com/2lach/2lach.github.io.git`
+1.  `git clone github.com/2lach/2lach.github.io.git`
 2.  `yarn install`
 3.  `yarn start`
 
@@ -20,5 +20,3 @@ Set it up:
    - test
       node scripts/test.js
 ```
-
-Bootstrapped and ejected from [create-react-app](https://github.com/facebook/create-react-app)
