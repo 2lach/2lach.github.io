@@ -4,6 +4,12 @@
 
 [codacy project dashboard](https://app.codacy.com/manual/stefanlachmann/2lach.github.io/dashboard)
 
+my personal homepage
+
+The purpose of this page is:
+it's a little presentation of myself
+playground for testing 
+
 Set it up:
 
 1.  `git clone github.com/2lach/2lach.github.io.git`
