@@ -1,15 +1,13 @@
 language: node_js
-
 os:
-  - linux
-  - osx
-
+- linux
+- osx
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
-
+  - "stable"
+cache:
+  directories:
+  - node_modules
 script:
   - npm install
-  - npm run lint
+  - npm test
+  - npm run build
