@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import Modal from "react-modal";
-import DevTo from "../images/dev-to.js";
 import Cv from "./Cv";
 // logos/icons
 import {
   IoMdClose,
   IoLogoGithub,
   AiOutlineMail,
-  FaMediumM,
   FaLinkedin,
   FaCodepen,
-  TiDocumentText
+  TiDocumentText,
 } from "react-icons/all";
 
 Modal.setAppElement("#root");
@@ -21,7 +19,7 @@ class Links extends Component {
     this.state = {
       showModal: false,
       imgsrc:
-        "https://avatars.mds.yandex.net/get-pdb/936467/d6e8f55f-22db-42cf-894d-4e1b29782040/orig"
+        "https://avatars.mds.yandex.net/get-pdb/936467/d6e8f55f-22db-42cf-894d-4e1b29782040/orig",
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -39,7 +37,7 @@ class Links extends Component {
   changeSource() {
     this.setState({
       imgsrc:
-        "https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif"
+        "https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif",
     });
   }
 
@@ -86,30 +84,6 @@ class Links extends Component {
               <br /> <span className="linkSpan">Linkedin</span>
             </a>
           </li>
-
-          <li className="item">
-            <a
-              href="https://dev.to/2lach"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="devTo"
-            >
-              <DevTo className="devToSvg" />
-              <br /> <span className="linkSpan">Dev.to</span>
-            </a>
-          </li>
-
-          <li className="item">
-            <a
-              href="https://medium.com/@2lach"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaMediumM />
-              <br /> <span className="linkSpan">Medium</span>
-            </a>
-          </li>
-
           <li className="item">
             <a
               href="https://codepen.io/2lach/"
@@ -139,7 +113,7 @@ class Links extends Component {
               <Modal
                 isOpen={this.state.showModal}
                 style={{
-                  overlay: { backgroundColor: "rgba(32, 31, 31, 0.6)" }
+                  overlay: { backgroundColor: "rgba(32, 31, 31, 0.6)" },
                 }}
               >
                 <IoMdClose
