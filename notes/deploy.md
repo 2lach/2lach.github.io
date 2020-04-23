@@ -1,4 +1,5 @@
-since master's is gonnna be empty this is currently the best way:
+
+# Lazy deploy
 
 do the build build (dev branch)
 `yarn build`
@@ -14,6 +15,7 @@ in master:
 cherry-pick, cleanup and deploy
 
 ```SHELL
+getLastestGitSha="git rev-parse HEAD"
 git cherry-pick -x fea914cc6f66861af7ef04ae8aaa28793572be35
 
 rm -rf *.jpg
