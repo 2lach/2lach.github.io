@@ -1,24 +1,40 @@
+.app-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.loadingMessage {
+  text-align: center;
+  font-size: 37px;
+  font-family: cursive;
+  font-weight: 600;
+  color: rgb(169 169 169);
+  margin-top: 40px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-
 @font-face {
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-style: normal;
   font-weight: 400;
-  src: local('Playfair Display'), local('Playfair Display'), url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap.woff2) format('woff2');
+  src: local('Playfair Display'), local('Playfair Display'),
+    url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap.woff2)
+      format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-display: auto;
   src: url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTzGLQjUwkQ1OQ.woff2)
-    format("woff2");
-      font-display: swap;
+    format('woff2');
+  font-display: swap;
 }
 
 body {
-  font-family: "Muli", "Ubuntu", serif, auto;
+  font-family: 'Muli', 'Ubuntu', serif, auto;
   color: #990099;
   margin: 0;
   background: #ebebeb;

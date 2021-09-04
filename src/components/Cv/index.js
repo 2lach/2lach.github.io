@@ -13,22 +13,18 @@ import axios from "axios";
 // in branch backup
 const corsProxy = "https://cors-anywhere.herokuapp.com/";
 const baseUrl = "https://github.com/2lach/2lach.github.io/raw/backup/src/docs/";
-const cvSwe = "cv_se_2020.pdf";
-const cvEn = "cv_en_2020.pdf";
+const cvEn = 'cv-stefan_lachmann_en.pdf';
 
 class Cv extends React.Component {
   constructor() {
     super();
     this.state = {
-      isLoadingSwe: true,
       isLoadingEn: true,
-      Swedish: "Ladda ner",
       English: "Download"
     };
   }
 
   async componentDidMount() {
-    this.getSize(cvSwe);
     this.getSize(cvEn);
   }
 
@@ -51,28 +47,16 @@ class Cv extends React.Component {
   }
 
   render() {
-    const { isLoadingSwe, isLoadingEn, Swedish, English } = this.state;
     return (
       <div className="wrapper">
-        <a className="face-button" href={baseUrl + cvSwe}>
-          <div className="face-primary">
-            <span className="icon fa fa-download"></span>
-            Swedish
-          </div>
-          <div className="face-secondary">
-            <span className="icon fa fa-hdd-o"></span>
-            Size: {isLoadingSwe ? "Laddar" : Swedish} KB
-          </div>
-        </a>
-
         <a className="face-button" href={baseUrl + cvEn}>
           <div className="face-primary">
             <span className="icon fa fa-download"></span>
-            English
+            Get a copy
           </div>
           <div className="face-secondary">
             <span className="icon fa fa-hdd-o"></span>
-            Size: {isLoadingEn ? "Loading" : English} KB
+            Download PDF
           </div>
         </a>
       </div>
