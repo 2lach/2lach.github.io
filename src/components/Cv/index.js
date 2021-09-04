@@ -35,7 +35,7 @@ class Cv extends React.Component {
   async getSize(fileUrl) {
     try {
       const response = await axios.get(corsProxy + baseUrl + fileUrl);
-      const { headers } = await response;
+      const { headers } = response;
 
       const file = headers["content-length"];
       const fileSizeKB = Math.ceil(file / 1024);
