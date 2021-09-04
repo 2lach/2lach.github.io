@@ -1,6 +1,7 @@
+import "./style.css";
+
 import React from "react";
 import axios from "axios";
-import "./style.css";
 
 // TODOs
 //* http-proxy istället för corsProxyn
