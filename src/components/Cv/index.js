@@ -13,7 +13,7 @@ import axios from "axios";
 // in branch backup
 const corsProxy = "https://cors-anywhere.herokuapp.com/";
 const baseUrl = "https://github.com/2lach/2lach.github.io/raw/backup/src/docs/";
-const cvEn = 'cv-stefan_lachmann_en.pdf';
+const cvEn = "cv-stefan_lachmann_en.pdf";
 
 class Cv extends React.Component {
   constructor() {
