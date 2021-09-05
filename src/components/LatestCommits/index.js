@@ -11,7 +11,7 @@ export default class LatestCommits extends Component {
       repoUrl: "",
       commitMessageLines: "",
       repoName: "",
-      createdAt: ""
+      createdAt: "",
     };
   }
   componentDidMount() {
@@ -28,13 +28,13 @@ export default class LatestCommits extends Component {
     const json = await response.json();
 
     let latestCommit;
-    const latestPushEvent = json.find(event => {
+    const latestPushEvent = json.find((event) => {
       if (event.type !== "PushEvent") {
         return false;
       }
       latestCommit = event.payload.commits
         .reverse()
-        .find(commit => commit.author.email === email);
+        .find((commit) => commit.author.email === email);
       return Boolean(latestCommit);
     });
 
@@ -61,7 +61,7 @@ export default class LatestCommits extends Component {
       repoUrl,
       commitMessageLines,
       repoName: repo.name,
-      createdAt: lastCommitTime
+      createdAt: lastCommitTime,
     });
   }
   render() {
@@ -70,7 +70,7 @@ export default class LatestCommits extends Component {
       commitMessageLines,
       repoName,
       repoAndCommitUrl,
-      createdAt
+      createdAt,
     } = this.state;
     return (
       <div className="footer">

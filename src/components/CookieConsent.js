@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { IoIosCloseCircle } from "react-icons/all";
 
 function setCookie(name, value, days) {
@@ -12,16 +13,12 @@ function checkConsent(name) {
   return v ? v[2] : null;
 }
 class CookieConsent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      Consent: true
-    };
-  }
-
+  state = {
+    Consent: true,
+  };
   hideConsent() {
     this.setState({
-      Consent: false
+      Consent: false,
     });
     if (checkConsent() === null) {
       setCookie("cookieConsentClicked", 1, 365);

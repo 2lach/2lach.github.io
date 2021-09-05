@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
 import Media from "react-media";
-import ProgressiveImage from "react-progressive-bg-image";
-import landscapeX60 from "../images/landscapeX60.jpg";
+import ProgressiveImage from "react-progressive-graceful-image";
+import React from "react";
 import landscape from "../images/landscape.jpg";
-import portraitX60 from "../images/portraitX60.jpg";
+import landscapeX60 from "../images/landscapeX60.jpg";
 import portrait from "../images/portrait.jpg";
+import portraitX60 from "../images/portraitX60.jpg";
+import styled from "styled-components";
 
 window.matchMedia =
   window.matchMedia ||
@@ -13,11 +13,11 @@ window.matchMedia =
     return {
       matches: true,
       addListener: () => {},
-      removeListener: () => {}
+      removeListener: () => {},
     };
   };
 
-const StyledProgressiveImage = styled(ProgressiveImage)`
+const StyledProgressiveImage = styled.img`
   height: 65vh;
   width: 100%;
   background-size: cover;
@@ -35,12 +35,14 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 
 const CoverImage = () => (
   <Media query={{ minWidth: 1000 }}>
-    {matches => {
+    {(matches) => {
       return (
-        <StyledProgressiveImage
+        <ProgressiveImage
           src={matches ? landscape : portrait}
           placeholder={matches ? landscapeX60 : portraitX60}
-        />
+        >
+          {(src) => <StyledProgressiveImage src={src} alt="the main splash" />}
+        </ProgressiveImage>
       );
     }}
   </Media>
