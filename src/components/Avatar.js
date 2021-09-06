@@ -1,6 +1,6 @@
-import ProgressiveImage from "react-progressive-graceful-image";
-import stefan from "../images/sl.jpg";
-import styled from "styled-components";
+import ProgressiveImage from 'react-progressive-graceful-image';
+import stefan from '../images/sl.jpg';
+import styled from 'styled-components';
 
 const AvatarContantainer = styled.div`
   display: flex;
@@ -14,8 +14,6 @@ const AvatarContantainer = styled.div`
 
 const StyledProgressiveImage = styled.img`
   background-size: cover;
-  height: 250px;
-  width: 236px;
   border: 2px solid white;
   border-top-left-radius: 0;
   border-top-right-radius: 15%;
@@ -30,7 +28,14 @@ const StyledProgressiveImage = styled.img`
 const Avatar = () => (
   <AvatarContantainer>
     <ProgressiveImage src={stefan} placeholder={stefan}>
-      {(src) => <StyledProgressiveImage src={src} alt="2lach avatar" />}
+      {src => (
+        <StyledProgressiveImage
+          src={src}
+          height='250'
+          width='240px'
+          alt='2lach avatar'
+        />
+      )}
     </ProgressiveImage>
   </AvatarContantainer>
 );

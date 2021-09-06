@@ -80,6 +80,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "new:build": "rm -rf ../build && yarn run build && serve -s build",
     "prettier": "prettier --write \"./**/*.{js,jsx,json}\"",
     "prettier:check": "prettier --check \"./**/*.{js,jsx,json}\""
   },
