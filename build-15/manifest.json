@@ -1,11 +1,12 @@
 {
   "short_name": "2lach",
   "name": "stefan lachmann personal homepage",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "A readable Hacker News app.",
   "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -15,8 +16,12 @@
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff"
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
