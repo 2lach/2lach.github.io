@@ -1,10 +1,10 @@
 import Media from "react-media";
 import ProgressiveImage from "react-progressive-graceful-image";
 import React from "react";
-import landscape from "../images/landscape.jpg";
-import landscapeX60 from "../images/landscapeX60.jpg";
-import portrait from "../images/portrait.jpg";
-import portraitX60 from "../images/portraitX60.jpg";
+import landscape from "../assets/images/landscape.jpg";
+import landscapeX60 from '../assets/images/landscapeX60.jpg';
+import portrait from '../assets/images/portrait.jpg';
+import portraitX60 from '../assets/images/portraitX60.jpg';
 import styled from "styled-components";
 
 window.matchMedia =

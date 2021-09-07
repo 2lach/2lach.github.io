@@ -1,5 +1,5 @@
 import ProgressiveImage from 'react-progressive-graceful-image';
-import stefan from '../images/sl.jpg';
+import stefan from '../assets/images/sl.jpg';
 import styled from 'styled-components';
 
 const AvatarContantainer = styled.div`
@@ -32,7 +32,7 @@ const Avatar = () => (
         <StyledProgressiveImage
           src={src}
           height='250'
-          width='240px'
+          width='240'
           alt='2lach avatar'
         />
       )}
