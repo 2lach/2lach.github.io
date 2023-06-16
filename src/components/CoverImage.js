@@ -1,21 +1,11 @@
-import Media from "react-media";
-import ProgressiveImage from "react-progressive-graceful-image";
-import React from "react";
+// import Media from "react-media";
+// import ProgressiveImage from "react-progressive-graceful-image";
+import {Component} from "react";
 import landscape from "../assets/images/landscape.jpg";
 import landscapeX60 from '../assets/images/landscapeX60.jpg';
 import portrait from '../assets/images/portrait.jpg';
 import portraitX60 from '../assets/images/portraitX60.jpg';
 import styled from "styled-components";
-
-window.matchMedia =
-  window.matchMedia ||
-  function matchMedia() {
-    return {
-      matches: true,
-      addListener: () => {},
-      removeListener: () => {},
-    };
-  };
 
 const StyledProgressiveImage = styled.img`
   height: 65vh;
@@ -33,21 +23,36 @@ const StyledProgressiveImage = styled.img`
   }
 `;
 
-const CoverImage = () => (
-  <Media query={{ minWidth: 1000 }}>
-    {(matches) => {
-      return (
-        <ProgressiveImage
-          src={matches ? landscape : portrait}
-          placeholder={matches ? landscapeX60 : portraitX60}
-        >
-          {(src) => <StyledProgressiveImage src={src} alt="the main splash" />}
-        </ProgressiveImage>
-      );
-    }}
-  </Media>
-);
+class CoverImage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { matches: window.matchMedia('(min-width: 768px)').matches };
+  }
 
-CoverImage.displayName = "CoverImage";
+  componentDidMount() {
+    const handler = e => this.setState({ matches: e.matches });
+    window.matchMedia('(min-width: 1000px)').addEventListener('change', handler);
+  }
+  render() {
+    return (
+      <div>
+        {this.state.matches && (
+          <StyledProgressiveImage
+            src={landscape}
+            alt='the main splash'
+            placeholder={landscapeX60}
+          />
+        )}
+        {!this.state.matches && (
+          <StyledProgressiveImage
+            src={portrait}
+            alt='the small splash'
+            placeholder={portraitX60}
+          />
+        )}
+      </div>
+    );
+  }
+}
 
 export default CoverImage;

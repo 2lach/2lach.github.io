@@ -1,5 +1,6 @@
-import React, { Component } from "react";
 import "./style.css";
+
+import React, { Component } from "react";
 
 export default class LatestCommits extends Component {
   constructor(props) {
@@ -73,46 +74,45 @@ export default class LatestCommits extends Component {
       createdAt,
     } = this.state;
     return (
-      <div className="footer">
+      <div className='footer'>
         <div
-          clas="commitContainer"
-          style={{ margin: "6px", textAlign: "center" }}
+          clas='commitContainer'
+          style={{ margin: '6px', textAlign: 'center' }}
         >
-          <h3 style={{ padding: "1em 0 0 0" }}>
-            Most recent{" "}
-            <a
+          <h3 style={{ padding: '1em 0 0 0' }}>
+            Most recent commit
+            {/*<a
               href={repoUrl}
-              rel="noopeener"
-              className="link"
-              style={{ fontSize: "inherit" }}
+              rel='noopeener'
+              className='link'
+              style={{ fontSize: 'inherit' }}
             >
-              {" "}
-              commit{" "}
-            </a>{" "}
-            by{" "}
+              commit{' '}
+    </a>*/}{' '}
+            by{' '}
             <img
-              title="2lach"
-              alt="github avatar"
-              src="https://avatars1.githubusercontent.com/u/11457600?s=40&v=4"
-              className="commitImage"
-            />{" "}
-            was:{" "}
+              title='2lach'
+              alt='github avatar'
+              src='https://avatars1.githubusercontent.com/u/11457600?s=40&v=4'
+              className='commitImage'
+            />{' '}
+            was:{' '}
           </h3>
           <div>
             <span
-              className="quoteSpan"
-              style={{ color: "#7f2a6c", lineHeight: "auto" }}
+              className='quoteSpan'
+              style={{ color: '#7f2a6c', lineHeight: 'auto' }}
             >
-              {commitMessageLines} In repo:{" "}
+              {commitMessageLines} In repo:{' '}
               <a
                 href={repoAndCommitUrl}
-                rel="noopeener"
-                className="link quoteSpan"
+                rel='noopeener'
+                className='link quoteSpan'
               >
                 {repoName}
-              </a>{" "}
+              </a>{' '}
               <br />
-              <span style={{ color: "#000000" }}>{createdAt}</span>
+              <span style={{ color: '#000000' }}>{createdAt}</span>
             </span>
           </div>
         </div>

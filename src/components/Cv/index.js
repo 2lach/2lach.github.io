@@ -10,10 +10,9 @@ import axios from "axios";
 //? fix styles of buttons in 320px and
 //? > 1440 font-size and button spacing
 
-// in branch backup
 const corsProxy = "https://cors-anywhere.herokuapp.com/";
 const baseUrl = "https://github.com/2lach/2lach.github.io/raw/backup/src/docs/";
-const cvEn = "cv-stefan_lachmann_en.pdf";
+const cvEn = 'CV-en-2023_Stefan-Lachmann.pdf';
 
 class Cv extends React.Component {
   state = {

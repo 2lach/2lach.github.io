@@ -139,7 +139,10 @@ h3 {
 }
 
 .linkSpan {
-  font-size: 2vw;
+  margin-Top: 12px;
+    color: #000;
+    font-Size: 2vw;
+    text-align: center
 }
 
 /* ########################################################
@@ -168,6 +171,9 @@ h3 {
 .item {
   flex-grow: 7;
   font-family: 'Muli';
+  margin-bottom: 12px;
+    display: flex;
+    align-items: center
 }
 
 .contactItem {
@@ -343,7 +349,9 @@ h3 {
 
   .flexRow {
     display: flex;
-    flex-direction: column;
+      flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
   }
   .ReactModal__Content,
   .ReactModal__Content--after-open {
