@@ -37,8 +37,6 @@ git cherry-pick -x "$gitSHA"
 rm -rfv *.jpg
 rm -rfv static
 mv build-"$buildNR"/* .
-mv public-"$buildNR/*" public/
-rd public-"$buildNR"
 
 git add .
 git status
