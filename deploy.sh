@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# exit on error
-set -x
-set -e
+
+# set -x # debug script
+set -e # exit on error
 
 # verify that yarn exists
 command -v yarn >/dev/null 2>&1 || { echo >&2 "Yarn is not installed. Aborting."; exit 1; }
@@ -23,6 +23,7 @@ read -r buildNR
 echo "removing previous build"
 rm -rf build-*
 mv build build-"$buildNR"
+mv public build-"$buildNR"
 git add .
 git commit -m "build $buildNR"
 git push

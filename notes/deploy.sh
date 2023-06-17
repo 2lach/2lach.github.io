@@ -22,6 +22,7 @@ read -r buildNR
 echo "removing previous build"
 rm -rf build-*
 mv build build-"$buildNR"
+mv public build-"$buildNR"
 git add .
 git commit -m "build $buildNR"
 git push
