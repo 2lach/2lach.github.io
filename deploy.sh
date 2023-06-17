@@ -33,6 +33,7 @@ git cherry-pick -x "$gitSHA"
 
 # remove old assets
 rm -rf *.jpg
+rm -rf static
 mv build-"$buildNR"/* .
 
 git add .
