@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# set -x # debug script
+set -x # debug script
 set -e # exit on error
 
 # verify that yarn exists
@@ -23,9 +23,9 @@ read -r buildNR
 echo "removing previous build"
 rm -rf build-*
 mv build build-"$buildNR"
-mv public build-"$buildNR"
+mv public build-"$buildNR/public-$buildNR"
 git add .
-git commit -m "build $buildNR"
+git commit -m "Build $buildNR"
 git push
 
 echo "get git sha for latest deployment"
@@ -37,6 +37,7 @@ git cherry-pick -x "$gitSHA"
 rm -rfv *.jpg
 rm -rfv static
 mv build-"$buildNR"/* .
+mv public-"$buildNR" public
 
 git add .
 git status
