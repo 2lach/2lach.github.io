@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# exit on error
-set -e
+
+set -x # debug script
+set -e # exit on error
 
 # verify that yarn exists
 command -v yarn >/dev/null 2>&1 || { echo >&2 "Yarn is not installed. Aborting."; exit 1; }
@@ -22,8 +23,9 @@ read -r buildNR
 echo "removing previous build"
 rm -rf build-*
 mv build build-"$buildNR"
+mv public build-"$buildNR"
 git add .
-git commit -m "build $buildNR"
+git commit -m "Build $buildNR"
 git push
 
 echo "get git sha for latest deployment"
@@ -35,6 +37,8 @@ git cherry-pick -x "$gitSHA"
 rm -rfv *.jpg
 rm -rfv static
 mv build-"$buildNR"/* .
+mv public-"$buildNR/*" public/
+rd public-"$buildNR"
 
 git add .
 git status
