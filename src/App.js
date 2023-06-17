@@ -1,6 +1,6 @@
 import './styles/App.css';
 
-// import { CookieConsent, checkConsent } from './src/components/CookieConsent';
+import { CookieConsent, checkConsent } from './components/CookieConsent';
 import React, { Suspense, lazy } from 'react';
 
 import LatestCommits from './components/LatestCommits';
@@ -9,7 +9,7 @@ const BadJokes = lazy(() => import('./components/BadJokes'));
 const CoverImage = lazy(() => import('./components/CoverImage'));
 const Links = lazy(() => import('./components/Links'));
 const Avatar = lazy(() => import('./components/Avatar'));
-const HelloWorld = lazy(() => import('./components/HelloWorld'))
+const HelloWorld = lazy(() => import('./components/HelloWorld'));
 
 function App() {
   return (
@@ -24,14 +24,14 @@ function App() {
         <CoverImage />
 
         <div className='app-container'>
-          <Avatar /> 
+          <Avatar />
           <div className='content'>{HelloWorld}</div>
           <Links />
-          {/*
-          {!checkConsent('cookieConsentClicked') && <CookieConsent />}*/}
+
+          {!checkConsent('cookieConsentClicked') && <CookieConsent />}
         </div>
         <BadJokes />
-        <LatestCommits/>
+        <LatestCommits />
       </Suspense>
     </div>
   );

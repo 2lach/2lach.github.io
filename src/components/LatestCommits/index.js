@@ -67,7 +67,7 @@ export default class LatestCommits extends Component {
   }
   render() {
     const {
-      repoUrl,
+      // repoUrl,
       commitMessageLines,
       repoName,
       repoAndCommitUrl,
