@@ -1,5 +1,5 @@
 
-# Lazy deploy
+# Deployment steps
 
 do the build build (dev branch)
 `yarn build`

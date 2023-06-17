@@ -570,6 +570,7 @@ module.exports = function (webpackEnv) {
     plugins: [
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
+         
         Object.assign(
           {},
           {
@@ -588,7 +589,8 @@ module.exports = function (webpackEnv) {
                   keepClosingSlash: true,
                   minifyJS: true,
                   minifyCSS: true,
-                  minifyURLs: true
+                  minifyURLs: true,
+                  cacheControl: 'max-age=31536000',
                 }
               }
             : undefined
