@@ -29,7 +29,7 @@ class CookieConsent extends Component {
       if (checkConsent() === null) {
         setCookie('cookieConsentClicked', 1, 365);
       } else {
-        alert('Cookies already set');
+        console.info('Cookies already set');
       }
     } else {
       // Split cookies by semicolon to get individual cookies
@@ -40,7 +40,7 @@ class CookieConsent extends Component {
         const cookieName = cookie.split('=')[0].trim();
         document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
       });
-      alert('no all cookies should be gone')
+      console.info('now all cookies should be gone')
     }
   };
 

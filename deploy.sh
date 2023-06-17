@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # exit on error
+set -x
 set -e
 
 # verify that yarn exists
