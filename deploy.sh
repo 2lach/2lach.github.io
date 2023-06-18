@@ -1,41 +1,48 @@
 #!/bin/bash
 
+set -x # Enable debug mode
+set -e # Exit on error
 
-set -x # debug script
-set -e # exit on error
-
-# verify that yarn exists
-command -v yarn >/dev/null 2>&1 || { echo >&2 "Yarn is not installed. Aborting."; exit 1; }
+# Verify that yarn exists
+if ! command -v yarn >/dev/null 2>&1; then
+  echo >&2 "Yarn is not installed. Aborting."
+  exit 1
+fi
 
 echo "Start from the development branch"
 echo ""
 git checkout development
 echo ""
-echo "then we do a new build"
+echo "Then we do a new build"
 echo ""
 yarn build
-echo "the latest build was:"
-# build script will exit if there are no log entries named " build"
-git log | grep "build" | head -n 2
+echo "The latest build was:"
+# Build script will exit if there are no log entries named "build"
+git log --grep="build" -n 2
 echo ""
-echo "enter the current build nr:"
+echo "Enter the current build number:"
 read -r buildNR
-echo "removing previous build"
+echo "Removing previous build"
 rm -rf build-*
 mv build build-"$buildNR"
+mv public build-"$buildNR"
 git add .
 git commit -m "Build $buildNR"
 git push
 
-echo "get git sha for latest deployment"
+echo "Get git SHA for the latest deployment"
 gitSHA=$(git rev-parse HEAD)
 git checkout master
-git cherry-pick -x "$gitSHA"
-
-# remove old assets
+# Remove old assets
 rm -rfv *.jpg
 rm -rfv static
+# Get new stuff
+git cherry-pick -x "$gitSHA"
+# Add new stuff
 mv build-"$buildNR"/* .
+
+# Remove the directory only if it's empty
+rmdir build-"$buildNR" 2>/dev/null || true
 
 git add .
 git status
@@ -46,7 +53,7 @@ read -r response
 
 if [[ $response == "y" || $response == "yes" ]]; then
   echo "Continuing..."
-  git commit -m "deploying $buildNR"
+  git commit -m "Deploying $buildNR"
   git push
 else
   echo "Exiting."
