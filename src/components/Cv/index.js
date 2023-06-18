@@ -9,8 +9,15 @@ const cvSwe = 'CV-se-2023_Stefan-Lachmann.pdf';
 class Cv extends React.Component {
   render() {
     return (
-      <div className='wrapper'>
-        <a className='face-button' href={baseUrl + cvEn}>
+      <div
+        className='wrapper'
+        style={{ display: 'flex', flexDirection: 'column' }}
+      >
+        <a
+          className='face-button'
+          style={{ margin: '10px' }}
+          href={baseUrl + cvEn}
+        >
           <div className='face-primary'>
             <span className='icon fa fa-download'></span>
             Get a copy
@@ -21,7 +28,11 @@ class Cv extends React.Component {
           </div>
         </a>
 
-        <a className='face-button' href={baseUrl + cvSwe}>
+        <a
+          className='face-button'
+          href={baseUrl + cvSwe}
+          style={{ margin: '10px' }}
+        >
           <div className='face-primary'>
             <span className='icon fa fa-download'></span>
             Ladda ner
