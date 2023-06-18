@@ -1,6 +1,6 @@
 //import ProgressiveImage from 'react-progressive-graceful-image';
-import stefan from '../assets/images/sl.jpg';
-import styled from 'styled-components';
+import stefan from "../assets/images/sl.jpg";
+import styled from "styled-components";
 
 const AvatarContantainer = styled.div`
   display: flex;
@@ -27,8 +27,11 @@ const StyledProgressiveImage = styled.img`
 
 const Avatar = () => (
   <AvatarContantainer>
-    <StyledProgressiveImage src={stefan} placeholder={stefan}
-      alt='2lach avatar' />
+    <StyledProgressiveImage
+      src={stefan}
+      placeholder={stefan}
+      alt="2lach avatar"
+    />
   </AvatarContantainer>
 );
 

@@ -1,10 +1,10 @@
 // import Media from "react-media";
 // import ProgressiveImage from "react-progressive-graceful-image";
-import {Component} from "react";
+import { Component } from "react";
 import landscape from "../assets/images/landscape.jpg";
-import landscapeX60 from '../assets/images/landscapeX60.jpg';
-import portrait from '../assets/images/portrait.jpg';
-import portraitX60 from '../assets/images/portraitX60.jpg';
+import landscapeX60 from "../assets/images/landscapeX60.jpg";
+import portrait from "../assets/images/portrait.jpg";
+import portraitX60 from "../assets/images/portraitX60.jpg";
 import styled from "styled-components";
 
 const StyledProgressiveImage = styled.img`
@@ -26,12 +26,14 @@ const StyledProgressiveImage = styled.img`
 class CoverImage extends Component {
   constructor(props) {
     super(props);
-    this.state = { matches: window.matchMedia('(min-width: 768px)').matches };
+    this.state = { matches: window.matchMedia("(min-width: 768px)").matches };
   }
 
   componentDidMount() {
-    const handler = e => this.setState({ matches: e.matches });
-    window.matchMedia('(min-width: 1000px)').addEventListener('change', handler);
+    const handler = (e) => this.setState({ matches: e.matches });
+    window
+      .matchMedia("(min-width: 1000px)")
+      .addEventListener("change", handler);
   }
   render() {
     return (
@@ -39,14 +41,14 @@ class CoverImage extends Component {
         {this.state.matches && (
           <StyledProgressiveImage
             src={landscape}
-            alt='the main splash'
+            alt="the main splash"
             placeholder={landscapeX60}
           />
         )}
         {!this.state.matches && (
           <StyledProgressiveImage
             src={portrait}
-            alt='the small splash'
+            alt="the small splash"
             placeholder={portraitX60}
           />
         )}

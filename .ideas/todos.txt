@@ -1,0 +1,5 @@
+1 setup a real deployment system/pipeline cause the current deployment script with build_id and tags current is just to stupid
+2 auto versioning with semVer or something like it
+3 Cleanup colours in UI
+4 Use an api for random jokes instead of current solution
+5 probably lots of other stuff too.

@@ -1,4 +1,4 @@
-import * as serviceWorker from './serviceWorkerRegistration';
+import * as serviceWorker from "./serviceWorkerRegistration";
 
 import App from "./App";
 import React from "react";

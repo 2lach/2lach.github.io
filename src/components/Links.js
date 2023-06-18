@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { FaCodepen, FaLinkedin } from 'react-icons/fa';
-import { IoLogoGithub, IoMdClose } from 'react-icons/io';
-import React, { Component } from 'react';
+import { FaCodepen, FaLinkedin } from "react-icons/fa";
+import { IoLogoGithub, IoMdClose } from "react-icons/io";
+import React, { Component } from "react";
 
-import { AiOutlineMail } from 'react-icons/ai';
-import Cv from './Cv';
-import Modal from 'react-modal';
-import { TiDocumentText } from 'react-icons/ti';
+import { AiOutlineMail } from "react-icons/ai";
+import Cv from "./Cv";
+import Modal from "react-modal";
+import { TiDocumentText } from "react-icons/ti";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 class Links extends Component {
   constructor() {
@@ -16,7 +16,7 @@ class Links extends Component {
     this.state = {
       showModal: false,
       imgsrc:
-        'https://i0.wp.com/theperfectroundgolf.com/wp-content/uploads/2022/04/placeholder.png?w=1200&ssl=1'
+        "https://i0.wp.com/theperfectroundgolf.com/wp-content/uploads/2022/04/placeholder.png?w=1200&ssl=1",
     };
   }
 
@@ -34,14 +34,14 @@ class Links extends Component {
   changeSource = () => {
     this.setState({
       imgsrc:
-        'https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif'
+        "https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif",
     });
   };
 
   // Open the default email client with a pre-filled email
   openMail = () => {
-    const emailAddress = 'mailto:stefanlachmann@hotmail.com';
-    const subject = 'subject=Hey Stefan, My name is: ';
+    const emailAddress = "mailto:stefanlachmann@hotmail.com";
+    const subject = "subject=Hey Stefan, My name is: ";
     const mailto = `${emailAddress}?${subject}`;
     try {
       if (window) {
@@ -58,58 +58,58 @@ class Links extends Component {
 
   render() {
     return (
-      <ul className='flexRow linkList'>
-        <li className='item'>
+      <ul className="flexRow linkList">
+        <li className="item">
           <a
-            href='https://github.com/2lach'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://github.com/2lach"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <IoLogoGithub className='svg' />
-            <div className='linkSpan'>Github</div>
+            <IoLogoGithub className="svg" />
+            <div className="linkSpan">Github</div>
           </a>
         </li>
-        <li className='item'>
+        <li className="item">
           <a
-            href='https://www.linkedin.com/in/slachmann/'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://www.linkedin.com/in/slachmann/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <FaLinkedin />
-            <div className='linkSpan'>Linkedin</div>
+            <div className="linkSpan">Linkedin</div>
           </a>
         </li>
-        <li className='item'>
+        <li className="item">
           <a
-            href='https://codepen.io/2lach/'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://codepen.io/2lach/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <FaCodepen />
-            <div className='linkSpan'>Codepen</div>
+            <div className="linkSpan">Codepen</div>
           </a>
         </li>
-        <li className='item contactItem' onClick={this.openMail}>
-          <a href='#'>
-            <AiOutlineMail className='contactIcon' />
-            <div className='linkSpan'>Contact</div>
+        <li className="item contactItem" onClick={this.openMail}>
+          <a href="#">
+            <AiOutlineMail className="contactIcon" />
+            <div className="linkSpan">Contact</div>
           </a>
         </li>
-        <li className='item contactItem'>
-          <a href='#'>
+        <li className="item contactItem">
+          <a href="#">
             <TiDocumentText
-              className='contactIcon'
+              className="contactIcon"
               onClick={this.handleOpenModal}
             />
-            <div className='linkSpan'>Cv</div>
+            <div className="linkSpan">Cv</div>
           </a>
           <Modal
             isOpen={this.state.showModal}
-            style={{ overlay: { backgroundColor: 'rgba(32, 31, 31, 0.6)' } }}
+            style={{ overlay: { backgroundColor: "rgba(32, 31, 31, 0.6)" } }}
           >
             <IoMdClose
               onClick={this.handleCloseModal}
-              style={{ float: 'right', cursor: 'pointer' }}
+              style={{ float: "right", cursor: "pointer" }}
             />
             <div>
               <Cv />
