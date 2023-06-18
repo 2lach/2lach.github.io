@@ -1,41 +1,37 @@
-import "./style.css";
+import './style.css';
 
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
-// TODOs
-//* http-proxy istället för corsProxyn
-//* skriv test
-//* flytta fileSize calc function till hoc och låt den börja när pageload = completed
-//? fix styles of buttons in 320px and
-//? > 1440 font-size and button spacing
-
-const corsProxy = "https://cors-anywhere.herokuapp.com/";
-const baseUrl = "https://github.com/2lach/2lach.github.io/raw/backup/src/docs/";
+const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+const baseUrl = 'https://github.com/2lach/2lach.github.io/raw/backup/src/docs/';
 const cvEn = 'CV-en-2023_Stefan-Lachmann.pdf';
+const cvSwe = 'CV-se-2023_Stefan-Lachmann.pdf';
 
 class Cv extends React.Component {
   state = {
     isLoadingEn: true,
-    English: "Download",
+    isLoadingSwe: true,
+    fileSizeEn: '',
+    fileSizeSwe: ''
   };
 
   async componentDidMount() {
-    this.getSize(cvEn);
+    this.getFileSize(cvEn, 'en');
+    this.getFileSize(cvSwe, 'swe');
   }
 
-  async getSize(fileUrl) {
+  async getFileSize(fileUrl, language) {
     try {
       const response = await axios.get(corsProxy + baseUrl + fileUrl);
       const { headers } = response;
 
-      const file = headers["content-length"];
-      const fileSizeKB = Math.ceil(file / 1024);
+      const fileSize = Math.ceil(headers['content-length'] / 1024);
 
-      if (fileUrl.includes("cv_se")) {
-        this.setState({ Swedish: fileSizeKB, isLoadingSwe: false });
+      if (language === 'swe') {
+        this.setState({ fileSizeSwe: fileSize, isLoadingSwe: false });
       } else {
-        this.setState({ English: fileSizeKB, isLoadingEn: false });
+        this.setState({ fileSizeEn: fileSize, isLoadingEn: false });
       }
     } catch (error) {
       console.error(error);
@@ -43,16 +39,29 @@ class Cv extends React.Component {
   }
 
   render() {
+    const { isLoadingEn, isLoadingSwe, fileSizeEn, fileSizeSwe } = this.state;
+
     return (
-      <div className="wrapper">
-        <a className="face-button" href={baseUrl + cvEn}>
-          <div className="face-primary">
-            <span className="icon fa fa-download"></span>
+      <div className='wrapper'>
+        <a className='face-button' href={baseUrl + cvEn}>
+          <div className='face-primary'>
+            <span className='icon fa fa-download'></span>
             Get a copy
           </div>
-          <div className="face-secondary">
-            <span className="icon fa fa-hdd-o"></span>
-            Download PDF
+          <div className='face-secondary'>
+            <span className='icon fa fa-hdd-o'></span>
+            Download PDF ({isLoadingEn ? 'Loading...' : fileSizeEn} KB)
+          </div>
+        </a>
+
+        <a className='face-button' href={baseUrl + cvSwe}>
+          <div className='face-primary'>
+            <span className='icon fa fa-download'></span>
+            Ladda ner
+          </div>
+          <div className='face-secondary'>
+            <span className='icon fa fa-hdd-o'></span>
+            Ladda ner PDF ({isLoadingSwe ? 'Laddar...' : fileSizeSwe} KB)
           </div>
         </a>
       </div>
