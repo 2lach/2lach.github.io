@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_2lach_github=self.webpackChunk_2lach_github||[]).push([[462],{462:function(e,h,i){i.r(h);var l=i(184),n=(0,l.jsxs)("div",{className:"helloWorld",children:[(0,l.jsx)("h1",{children:"Greetings pilgrim"}),(0,l.jsx)("h2",{children:"Welcome to my little corner of the internet"}),(0,l.jsx)("h2",{children:"I'am Stefan and enjoy I building things!"}),(0,l.jsx)("h3",{children:"Besides that I'am also a Father and maker of various things."})]});h.default=n}}]);
+//# sourceMappingURL=462.a4de5c75.chunk.js.map
