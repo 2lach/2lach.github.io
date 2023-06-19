@@ -3,16 +3,18 @@
   bottom: 0;
   width: 100%;
   height: auto;
-  padding-bottom: 4vh;
+  padding: 26px 0 56px 0;
 }
 
 .commitContainer {
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
   align-items: center;
+  
 }
 
 .commitContainer:nth-child(1) {
@@ -39,7 +41,7 @@ a {
 
 .link {
   text-decoration: none;
-  color: #561e49;
+  color: #004d80;
   position: relative;
 }
 
@@ -50,14 +52,14 @@ a {
   height: 3px;
   display: block;
   right: 0;
-  background: #561e49;
+  background: #004d80;
   transition: width 0.2s ease;
 }
 
 .link:hover:after {
   width: 100%;
   left: 0;
-  background: #561e49;
+  background: #004d80;
 }
 
 .commitImage {
@@ -75,8 +77,8 @@ a {
       180deg,
       rgba(235, 235, 235, 1) 0%,
       rgb(215, 210, 215) 40%,
-        rgb(183, 153, 183) 80%,
-        rgb(165, 121, 165) 100%
+        #777997 80%,
+          rgb(81, 98, 112) 100%
     );
   }
 }

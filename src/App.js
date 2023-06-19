@@ -3,14 +3,14 @@ import './styles/App.css';
 import { CookieConsent, checkConsent } from './components/CookieConsent';
 import React, { Suspense, lazy } from 'react';
 
-import LatestCommits from './components/latestCommits';
+import LatestCommits from './components/LatestCommits';
 import { suppressConsole } from './components/supressConsole';
 
-const BadJokes = lazy(() => import('./components/badjokes'));
+const BadJokes = lazy(() => import('./components/BadJokes'));
 const CoverImage = lazy(() => import('./components/CoverImage'));
 const Links = lazy(() => import('./components/Links'));
 const Avatar = lazy(() => import('./components/Avatar'));
-const HelloWorld = lazy(() => import('./components/helloWorld'));
+const HelloWorld = lazy(() => import('./components/HelloWorld'));
 
 suppressConsole();
 
@@ -42,3 +42,4 @@ function App() {
   );
 }
 export default App;
+
