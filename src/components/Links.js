@@ -4,7 +4,7 @@ import { IoLogoGithub, IoMdClose } from "react-icons/io";
 import React, { Component } from "react";
 
 import { AiOutlineMail } from "react-icons/ai";
-import Cv from "./Cv";
+import Cv from "./cv";
 import Modal from "react-modal";
 import { TiDocumentText } from "react-icons/ti";
 
