@@ -37,18 +37,18 @@ class CoverImage extends Component {
   }
   render() {
     return (
-      <div>
+      <div data-testid='cover-image'>
         {this.state.matches && (
           <StyledProgressiveImage
             src={landscape}
-            alt="the main splash"
+            alt='the main splash'
             placeholder={landscapeX60}
           />
         )}
         {!this.state.matches && (
           <StyledProgressiveImage
             src={portrait}
-            alt="the small splash"
+            alt='the small splash'
             placeholder={portraitX60}
           />
         )}

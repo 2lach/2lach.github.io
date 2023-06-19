@@ -1,6 +1,7 @@
+import "./style.css";
+
 // file not used...
 import React from "react";
-import "./style.css";
 
 /* Envelop design by @Oksana_ -> https://codepen.io/Oksana_/*/
 
@@ -52,10 +53,18 @@ const Email = () => {
   }
 
   return (
-    <div className="wrapper" onClick={() => openMail()}>
-      <div className="mail">
-        <div className="cover" />
-        <div className="letter" onClick={() => openMail()}>
+    <div
+      className='wrapper'
+      data-testid='email-wrapper'
+      onClick={() => openMail()}
+    >
+      <div className='mail'>
+        <div className='cover' />
+        <div
+          className='letter'
+          data-testid='email-letter'
+          onClick={() => openMail()}
+        >
           {message}
         </div>
       </div>

@@ -7,11 +7,13 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.4.0",
+    "jest-snapshot": "^29.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-modal": "^3.16.1",
     "react-scripts": "5.0.1",
+    "source-map": "^0.7.4",
     "styled-components": "^6.0.0-rc.3",
     "web-vitals": "^3.3.2"
   },

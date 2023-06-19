@@ -4357,13 +4357,18 @@
         !r.pathname.match(Ke)
       );
     }, ((Ae = "/index.html"), X().createHandlerBoundToURL(Ae))),
-      ie(function (e) {
-        var t = e.url;
-        return t.origin === self.location.origin && t.pathname.endsWith(".png");
-      }, new Ue({
-        cacheName: "images",
-        plugins: [new qe({ maxEntries: 50 })],
-      })),
+      ie(
+        function (e) {
+          var t = e.url;
+          return (
+            t.origin === self.location.origin && t.pathname.endsWith(".png")
+          );
+        },
+        new Ue({
+          cacheName: "images",
+          plugins: [new qe({ maxEntries: 50 })],
+        })
+      ),
       self.addEventListener("message", function (e) {
         e.data && "SKIP_WAITING" === e.data.type && self.skipWaiting();
       });
