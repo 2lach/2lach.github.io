@@ -68,21 +68,21 @@ export default class JokesAndQuotes extends Component {
   render() {
     const { currentQuote } = this.state;
     return (
-      <div className='jokeContainer'>
-        <div style={{ textAlign: 'center' }}>
+      <div className="jokeContainer">
+        <div style={{ textAlign: "center" }}>
           <span
-            className='quoteSpan'
-            style={{ color: '#004d80', lineHeight: '24px' }}
+            className="quoteSpan"
+            style={{ color: "#004d80", lineHeight: "24px" }}
           >
-            Here's a random joke:{' '}
-            <span role='img' aria-label='wink'>
+            Here's a random joke:{" "}
+            <span role="img" aria-label="wink">
               😉
             </span>
             <br />
           </span>
           <span
-            className='quoteSpan'
-            style={{ color: '#000000', padding: '4px' }}
+            className="quoteSpan"
+            style={{ color: "#000000", padding: "4px" }}
           >
             {currentQuote}
           </span>

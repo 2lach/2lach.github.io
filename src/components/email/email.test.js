@@ -8,7 +8,7 @@ describe("Email component", () => {
     // Mock the necessary global objects and methods
     delete window.location;
     window.location = { assign: jest.fn() };
-   const assignMock = jest.spyOn(window.location, 'assign');
+    const assignMock = jest.spyOn(window.location, "assign");
     render(<Email />);
 
     const wrapper = screen.getByTestId("email-wrapper");
@@ -19,7 +19,7 @@ describe("Email component", () => {
       "mailto:stefanlachmann@hotmail.com?subject=Hey Stefan, My name is: "
     );
 
-      assignMock.mockRestore();
+    assignMock.mockRestore();
   });
 
   test("Verify that the email opens correctly when the letter is clicked", () => {

@@ -29,6 +29,8 @@ const Avatar = () => (
   <AvatarContantainer>
     <StyledProgressiveImage
       src={stefan}
+      height="250"
+      width="248"
       placeholder={stefan}
       alt="2lach avatar"
     />

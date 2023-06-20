@@ -58,58 +58,58 @@ class Links extends Component {
 
   render() {
     return (
-      <ul className='flexRow linkList'>
-        <li className='item'>
+      <ul className="flexRow linkList">
+        <li className="item">
           <a
-            href='https://github.com/2lach'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://github.com/2lach"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <IoLogoGithub className='svg' />
-            <div className='linkSpan'>Github</div>
+            <IoLogoGithub className="svg" />
+            <div className="linkSpan">Github</div>
           </a>
         </li>
-        <li className='item'>
+        <li className="item">
           <a
-            href='https://www.linkedin.com/in/slachmann/'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://www.linkedin.com/in/slachmann/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <FaLinkedin />
-            <div className='linkSpan'>Linkedin</div>
+            <div className="linkSpan">Linkedin</div>
           </a>
         </li>
-        <li className='item'>
+        <li className="item">
           <a
-            href='https://codepen.io/2lach/'
-            rel='noopener noreferrer'
-            target='_blank'
+            href="https://codepen.io/2lach/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <FaCodepen />
-            <div className='linkSpan'>Codepen</div>
+            <div className="linkSpan">Codepen</div>
           </a>
         </li>
-        <li className='item contactItem' onClick={this.openMail}>
-          <a href='#'>
-            <AiOutlineMail className='contactIcon' />
-            <div className='linkSpan'>Contact</div>
+        <li className="item contactItem" onClick={this.openMail}>
+          <a href="#">
+            <AiOutlineMail className="contactIcon" />
+            <div className="linkSpan">Contact</div>
           </a>
         </li>
-        <li className='item contactItem'>
-          <a href='#'>
+        <li className="item contactItem">
+          <a href="#">
             <TiDocumentText
-              className='contactIcon'
+              className="contactIcon"
               onClick={this.handleOpenModal}
             />
-            <div className='linkSpan'>Cv</div>
+            <div className="linkSpan">Cv</div>
           </a>
           <Modal
             isOpen={this.state.showModal}
-            style={{ overlay: { backgroundColor: '#004d80' } }}
+            style={{ overlay: { backgroundColor: "#004d80" } }}
           >
             <IoMdClose
               onClick={this.handleCloseModal}
-              style={{ float: 'right', cursor: 'pointer' }}
+              style={{ float: "right", cursor: "pointer" }}
             />
             <div>
               <Cv />

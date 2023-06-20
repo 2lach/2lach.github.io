@@ -54,15 +54,15 @@ const Email = () => {
 
   return (
     <div
-      className='wrapper'
-      data-testid='email-wrapper'
+      className="wrapper"
+      data-testid="email-wrapper"
       onClick={() => openMail()}
     >
-      <div className='mail'>
-        <div className='cover' />
+      <div className="mail">
+        <div className="cover" />
         <div
-          className='letter'
-          data-testid='email-letter'
+          className="letter"
+          data-testid="email-letter"
           onClick={() => openMail()}
         >
           {message}

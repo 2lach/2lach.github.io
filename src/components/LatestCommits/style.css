@@ -7,14 +7,12 @@
 }
 
 .commitContainer {
-
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
   align-items: center;
-  
 }
 
 .commitContainer:nth-child(1) {
@@ -77,8 +75,8 @@ a {
       180deg,
       rgba(235, 235, 235, 1) 0%,
       rgb(215, 210, 215) 40%,
-        #777997 80%,
-          rgb(81, 98, 112) 100%
+      #777997 80%,
+      rgb(81, 98, 112) 100%
     );
   }
 }

@@ -1,9 +1,9 @@
-import { Component } from 'react';
-import landscape from '../assets/images/landscape.jpg';
-import landscapeX60 from '../assets/images/landscapeX60.jpg';
-import portrait from '../assets/images/portrait.jpg';
-import portraitX60 from '../assets/images/portraitX60.jpg';
-import styled from 'styled-components';
+import { Component } from "react";
+import landscape from "../assets/images/landscape.jpg";
+import landscapeX60 from "../assets/images/landscapeX60.jpg";
+import portrait from "../assets/images/portrait.jpg";
+import portraitX60 from "../assets/images/portraitX60.jpg";
+import styled from "styled-components";
 
 const StyledProgressiveImage = styled.img`
   height: 65vh;
@@ -25,16 +25,16 @@ class CoverImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      matches: window.matchMedia('(min-width: 768px)').matches,
-      mainImageLoaded: false
+      matches: window.matchMedia("(min-width: 768px)").matches,
+      mainImageLoaded: false,
     };
   }
 
   componentDidMount() {
-    const handler = e => this.setState({ matches: e.matches });
+    const handler = (e) => this.setState({ matches: e.matches });
     window
-      .matchMedia('(min-width: 1000px)')
-      .addEventListener('change', handler);
+      .matchMedia("(min-width: 1000px)")
+      .addEventListener("change", handler);
   }
 
   handleMainImageLoad = () => {
@@ -45,18 +45,18 @@ class CoverImage extends Component {
     const { matches, mainImageLoaded } = this.state;
 
     return (
-      <div data-testid='cover-image'>
+      <div data-testid="cover-image">
         {matches && (
           <StyledProgressiveImage
             src={mainImageLoaded ? landscape : landscapeX60}
-            alt='the main splash'
+            alt="the main splash"
             onLoad={this.handleMainImageLoad}
           />
         )}
         {!matches && (
           <StyledProgressiveImage
             src={mainImageLoaded ? portrait : portraitX60}
-            alt='the small splash'
+            alt="the small splash"
             onLoad={this.handleMainImageLoad}
           />
         )}
