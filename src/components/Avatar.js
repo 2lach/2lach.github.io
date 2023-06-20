@@ -20,6 +20,30 @@ const Avatar = styled.div`
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
 `;
 
+<<<<<<< HEAD
 Avatar.displayName = "Avatar";
+||||||| parent of cfe1832 (deployment 36)
+const Avatar = () => (
+  <AvatarContantainer>
+    <StyledProgressiveImage
+      src={stefan}
+      placeholder={stefan}
+      alt="2lach avatar"
+    />
+  </AvatarContantainer>
+);
+=======
+const Avatar = () => (
+  <AvatarContantainer>
+    <StyledProgressiveImage
+      src={stefan}
+      height="250"
+      width="248"
+      placeholder={stefan}
+      alt="2lach avatar"
+    />
+  </AvatarContantainer>
+);
+>>>>>>> cfe1832 (deployment 36)
 
 export default Avatar;

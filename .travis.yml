@@ -1,0 +1,12 @@
+language: node_js
+os:
+  - linux
+  - osx
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm install
+  - npm run build
