@@ -19,21 +19,21 @@ function App() {
     <div>
       <Suspense
         fallback={
-          <div className="loadingMessage">
+          <div className='loadingMessage'>
             <u>Winter </u> is coming...
           </div>
         }
       >
-        <CoverImage data-testid="cover-image" />
+        <CoverImage data-testid='cover-image' />
 
-        <div className="app-container">
-          <Avatar data-testid="avatar" />
-          <div className="content" data-testid="hello-world">
+        <div className='app-container'>
+          <Avatar data-testid='avatar' />
+          <div className='content' data-testid='hello-world'>
             {HelloWorld}
           </div>
-          <Links data-testid="links" />
+          <Links data-testid='links' />
 
-          {!checkConsent("cookieConsentClicked") && <CookieConsent />}
+          {!checkConsent('cookieConsentClicked') && <CookieConsent />}
         </div>
         <BadJokes />
         <LatestCommits />

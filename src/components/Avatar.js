@@ -28,11 +28,12 @@ const StyledProgressiveImage = styled.img`
 const Avatar = () => (
   <AvatarContantainer>
     <StyledProgressiveImage
+      fetchpriority='high'
       src={stefan}
-      height="250"
-      width="248"
+      height='250'
+      width='248'
       placeholder={stefan}
-      alt="2lach avatar"
+      alt='2lach avatar'
     />
   </AvatarContantainer>
 );

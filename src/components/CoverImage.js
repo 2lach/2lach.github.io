@@ -45,18 +45,20 @@ class CoverImage extends Component {
     const { matches, mainImageLoaded } = this.state;
 
     return (
-      <div data-testid="cover-image">
+      <div data-testid='cover-image'>
         {matches && (
           <StyledProgressiveImage
+            fetchpriority='high'
             src={mainImageLoaded ? landscape : landscapeX60}
-            alt="the main splash"
+            alt='the main splash'
             onLoad={this.handleMainImageLoad}
           />
         )}
         {!matches && (
           <StyledProgressiveImage
+            fetchpriority='high'
             src={mainImageLoaded ? portrait : portraitX60}
-            alt="the small splash"
+            alt='the small splash'
             onLoad={this.handleMainImageLoad}
           />
         )}
