@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
+import styled, { css, keyframes } from 'styled-components'; // Import css from styled-components
+
 import LogoImg from '../../assets/karmalimited.webp';
-import React from 'react';
-import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
   width: 102%;
-  background-color: #f8f9fa;
+  background-color: #f0f4f8;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -12,11 +13,30 @@ const HeaderContainer = styled.header`
   align-items: center;
 `;
 
+const yoyo = keyframes`
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(99vw) rotate(900deg); // Moves right and rotates
+  }
+  100% {
+    transform: translateX(0) rotate(0deg); // Returns to original position
+  }
+`;
 
-
-const Logo = styled.img`
+const AnimatedLogo = styled.img<{ 'data-animate': boolean }>`
   height: 50px;
   width: auto;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  animation: ${props =>
+    props['data-animate']
+      ? css`
+          ${yoyo} 2s ease-in-out
+        `
+      : 'none'};
 `;
 
 const Navigation = styled.nav`
@@ -33,9 +53,21 @@ const Navigation = styled.nav`
 `;
 
 const Header: React.FC = () => {
+  const [animate, setAnimate] = useState(false);
+
+  const toggleAnimation = () => {
+    setAnimate(true);
+    setTimeout(() => setAnimate(false), 2000); // Resets animation after 2 seconds
+  };
+
   return (
     <HeaderContainer>
-      <Logo src={LogoImg} alt='Karma Limited Logo' />
+      <AnimatedLogo
+        src={LogoImg}
+        alt='Karma Limited Logo'
+        data-animate={animate}
+        onClick={toggleAnimation}
+      />
       <Navigation>
         <a href='#home'></a>
         <a href='#about'></a>

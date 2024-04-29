@@ -1,42 +1,36 @@
+import React from 'react';
 import styled from 'styled-components';
 
-interface HeroSectionProps {}
+interface HeroSectionProps {
+  children?: React.ReactNode;
+}
 
-const HeroSectionContainer = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
-  height: 300px;
-  color: lightgray;
-  drop-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
-  text-align: center;
-`;
-
-const StyledBackgroundImage = styled.div<{ isdarktheme: boolean }>`
+const StyledBackgroundImage = styled.div<{ 'data-isdarktheme': boolean }>`
+  position: fixed;
   width: 100%;
-  height: 30vh;
+  top: 0;
+  left: 0;
+  height: 100vw;
   background-image: url(${props =>
-    props.isdarktheme
-      ? 'https://source.unsplash.com/1600x900/?night'
-      : 'https://source.unsplash.com/1600x900/?nature,water'});
+    props['data-isdarktheme']
+      ? 'src/assets/nathan-anderson-L95xDkSSuWw-unsplash.webp' // night image
+      : 'src/assets/ellie-ellien-tJ9ZwimIGjc-unsplash.webp'}); // day image
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   transition: background-image 0.5s ease-in-out;
+  z-index: -1;
 `;
 
-const HeroSection: React.FC<HeroSectionProps> = () => {
+const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
   const getThemeType = (): boolean => {
     const hour = new Date().getHours();
     return hour > 17 || hour < 8;
   };
 
-  const isdarktheme = getThemeType();
+  const isDarkTheme = getThemeType();
   return (
-    <StyledBackgroundImage isdarktheme={isdarktheme}>
-      <HeroSectionContainer>
-        <h1>Greetings, Pilgrim!</h1>
-      </HeroSectionContainer>
+    <StyledBackgroundImage data-isdarktheme={isDarkTheme}>
+      {children}
     </StyledBackgroundImage>
   );
 };
