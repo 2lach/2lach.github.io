@@ -7,8 +7,7 @@ const FooterContainer = styled.footer`
   background-color: #343a40;
   color: #f8f9fa; // Ljus text för läsbarhet
   text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); // Skugga för att lyfta footern från sidan
-  overflow: hidden;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const FooterContent = styled.div`

@@ -12,11 +12,18 @@ interface Body {
 const BodyContainer = styled.div`
   padding: 20px;
   background-color: #f0f4f8;
+  margin: 200px 10px;
+  @media (max-width: 768px) {
+    background-color: #f0f4f88f;
+  }
 `;
 
 const Section = styled.section`
-  margin: 50px 10px;
   text-align: center;
+`;
+
+const About = styled.p`
+  padding: 0 20%;
 `;
 
 const SocialLink = styled.a`
@@ -50,16 +57,19 @@ const RandomJokeContainer = styled.div`
   font-style: italic;
   color: #708090;
 `;
-
 const HeroSectionContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 300px;
   color: #708090;
-  drop-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+  text-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
   text-align: center;
-  padding: 40px;
+  padding: 40px; // Too much padding for mobile, adjust this
+  background-size: cover;
+  @media (max-width: 768px) {
+    display: none; // Hide Greeting hero section on mobile
+  }
 `;
 
 const Body: React.FC = () => {
@@ -72,10 +82,13 @@ const Body: React.FC = () => {
       </HeroSection>
       <Section>
         <h2>Welcome to my little corner of the internet</h2>
-        <p>
-          I'm Stefan, and I enjoy building things! Besides that, I'm also a
-          father and a maker of various things.
-        </p>
+        <About>
+          I'm Stefan, a devoted developer and leader with a passion for
+          technology and project management. Besides building innovative
+          solutions, I am also a proud father and craftsman. I highly value
+          personal development and believe in creating positive and meaningful
+          collaborations.
+        </About>
         <p>
           <SocialLink
             href='https://github.com/2lach'
