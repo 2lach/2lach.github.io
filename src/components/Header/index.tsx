@@ -4,7 +4,7 @@ import styled, { css, keyframes } from 'styled-components'; // Import css from s
 import LogoImg from '../../assets/karmalimited.webp';
 
 const HeaderContainer = styled.header`
-  width: 102%;
+  width: 100%;
   background-color: #f0f4f8;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,7 +18,8 @@ const yoyo = keyframes`
     transform: translateX(0) rotate(0deg);
   }
   50% {
-    transform: translateX(99vw) rotate(900deg); // Moves right and rotates
+    transform: translateX(-90vw) rotate(720deg); // Moves right and rotates
+    transform-style: preserve-3d;
   }
   100% {
     transform: translateX(0) rotate(0deg); // Returns to original position
@@ -31,6 +32,7 @@ const AnimatedLogo = styled.img<{ 'data-animate': boolean }>`
   cursor: pointer;
   width: 100px;
   height: auto;
+
   animation: ${props =>
     props['data-animate']
       ? css`
@@ -41,13 +43,28 @@ const AnimatedLogo = styled.img<{ 'data-animate': boolean }>`
 
 const Navigation = styled.nav`
   a {
-    color: #007bff;
+    margin: 0 10px;
+    color: #708190;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -2px; // Positioning the underline slightly below the text
+      left: 50%; // Start from the middle
+      width: 0; // Start width as zero
+      height: 2px; // Thickness of the underline
+      background-color: #708190; // Same color as the text
+      transition: all 0.3s ease-in-out; // Smooth transition for all changes
+      transform: translateX(-50%); // Center the pseudo-element
+    }
 
-    &:hover {
-      text-decoration: underline;
+    &:hover::before {
+      width: 100%; // Full width on hover
+      left: 0; // Reset to start from the left edge
+      transform: translateX(0%); // Reset transform to none
     }
   }
 `;
@@ -59,20 +76,32 @@ const Header: React.FC = () => {
     setAnimate(true);
     setTimeout(() => setAnimate(false), 2000); // Resets animation after 2 seconds
   };
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <HeaderContainer>
+      <Navigation>
+        <a href='#' onClick={() => handleScroll('about')}>
+          About
+        </a>
+        <a href='#' onClick={() => handleScroll('services')}>
+          Services
+        </a>
+        <a href='#' onClick={() => handleScroll('footer')}>
+          Work
+        </a>
+      </Navigation>
       <AnimatedLogo
         src={LogoImg}
         alt='Karma Limited Logo'
         data-animate={animate}
         onClick={toggleAnimation}
       />
-      <Navigation>
-        <a href='#home'></a>
-        <a href='#about'></a>
-        <a href='#services'></a>
-      </Navigation>
     </HeaderContainer>
   );
 };
