@@ -1,10 +1,9 @@
-import { FaCodepen, FaLinkedin } from "react-icons/fa";
-import { IoLogoGithub, IoMdClose } from "react-icons/io";
+import { AiFillBook, AiOutlineMail } from "react-icons/ai";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React, { Component } from "react";
 
-import { AiOutlineMail } from "react-icons/ai";
 import Cv from "./Cv";
-import { IoBook } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 import Modal from "react-modal";
 import { TiDocumentText } from "react-icons/ti";
 
@@ -65,7 +64,7 @@ class Links extends Component {
             rel='noopener noreferrer'
             target='_blank'
           >
-            <IoLogoGithub className='svg' />
+            <FaGithub className='svg' />
             <div className='linkSpan'>Github</div>
           </a>
         </li>
@@ -81,6 +80,16 @@ class Links extends Component {
         </li>
         <li className='item'>
           <a
+            href='https://books.2lach.com'
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            <AiFillBook/>
+            <div className='linkSpan'>Books</div>
+          </a>
+        </li>
+        {/* <li className='item'>
+          <a
             href='https://codepen.io/2lach/'
             rel='noopener noreferrer'
             target='_blank'
@@ -88,7 +97,7 @@ class Links extends Component {
             <FaCodepen />
             <div className='linkSpan'>Codepen</div>
           </a>
-        </li>
+        </li> */}
         <li className='item contactItem' onClick={this.openMail}>
           <a href='/'>
             <AiOutlineMail className='contactIcon' />
@@ -115,16 +124,6 @@ class Links extends Component {
               <Cv />
             </div>
           </Modal>
-        </li>
-        <li className='item'>
-          <a
-            href='https://books.2lach.com'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <IoBook />
-            <div className='linkSpan'>Books</div>
-          </a>
         </li>
       </ul>
     );
