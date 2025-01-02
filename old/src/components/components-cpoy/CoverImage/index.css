@@ -1,0 +1,15 @@
+.portrait-image {
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: center;
+
+  @media (min-width: 800px) {
+    background-position-y: center;
+  }
+
+  @media (max-width: 500px) {
+    background-position-y: center;
+  }
+}
