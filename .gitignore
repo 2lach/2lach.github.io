@@ -24,3 +24,5 @@ yarn-error.log*
 
 # cause annoying
 yarn.lock
+old
+.vercel/project.json

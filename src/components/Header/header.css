@@ -1,0 +1,108 @@
+.HeaderContainer,
+.header {
+  width: 99vw;
+  max-width: 100%;
+  background-color: #f0f4f8;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**/
+/* Keyframes for the yoyo animation */
+@keyframes yoyo {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-90vw) rotate(720deg);
+    /* Moves right and rotates */
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+    /* Returns to original position */
+  }
+}
+
+/* Styles for the animated logo image */
+img[data-animate="true"] {
+  height: auto;
+  /* Set height to auto for responsiveness */
+  width: 100px;
+  /* Width is explicitly set */
+  cursor: pointer;
+  /* Cursor changes on hover to indicate interactivity */
+
+  /* Apply the yoyo animation */
+  animation: yoyo 2s ease-in-out;
+}
+
+img[data-animate="false"] {
+  height: auto;
+  width: 100px;
+  cursor: pointer;
+  /* No animation applied */
+}
+
+/*
+@keyframes yoyo {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-90vw) rotate(720deg);
+    transform-style: preserve-3d;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+*/
+
+.AnimatedLogo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  animation: yoyo 2s ease-in-out;
+}
+
+.Navigation,
+.nav {
+  display: flex;
+
+  a {
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    color: #708190;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #708190;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    &:hover::before {
+      width: 100%;
+      left: 0;
+      transform: translateX(0%);
+    }
+  }
+}
