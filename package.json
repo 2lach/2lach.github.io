@@ -43,6 +43,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "lefthook": "^1.11.10"
+    "lefthook": "^1.13.4"
   }
 }
