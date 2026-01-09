@@ -1,7 +1,6 @@
-import "./badjokes.css";
-
 /* eslint-disable class-methods-use-this */
 import React, { Component } from "react";
+import "./badjokes.css";
 
 const jokesQuotes = [
   "The best thing about a boolean is even if you are wrong, you are only off by a bit. (Anonymous)",
