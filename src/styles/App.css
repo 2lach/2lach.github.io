@@ -1,493 +1,694 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap");
 
-.app-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+/* ===========================
+   Design System & Variables
+   =========================== */
+
+:root {
+  /* Color Palette */
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --text-dark: #0a0e27;
+  --text-light: #ffffff;
+  --text-muted: #8b92a9;
+  --bg-light: #f8f9fb;
+  --bg-white: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
+
+  /* Typography */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.loadingMessage {
-  text-align: center;
-  font-size: 37px;
-  font-family: cursive;
-  font-weight: 600;
-  color: rgb(169 169 169);
-  margin-top: 40px;
+/* ===========================
+   Global Styles
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.loadingMessage > span {
-  color: #0000;
-}
-
-@font-face {
-  font-family: "Playfair Display", serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Playfair Display"), local("Playfair Display"),
-    url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap.woff2)
-      format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Muli";
-  font-display: auto;
-  src: url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTzGLQjUwkQ1OQ.woff2)
-    format("woff2");
-  font-display: swap;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  /* Design tokens */
-  --color-primary: #004d80;
-  --color-accent: #675367;
-  --color-bg: #ebebeb;
-  --color-text: #0b3a57;
-  font-family: "Playfair Display", "Muli", "Ubuntu", serif, auto;
-  color: var(--color-primary);
-  margin: 0;
-  background: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--bg-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body::-webkit-scrollbar {
-  margin-left: 22px;
-  float: left;
-  height: auto;
-  width: 10px;
-  overflow-y: scroll;
-  margin-bottom: 25px;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #555;
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
 }
 
-body::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: transparent;
-  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3);
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  transition: background var(--transition-base);
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to left, #666, #004d80);
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
-a,
-b {
-  color: #004d80;
-  text-decoration: none;
-  font-size: 20px;
-  padding-bottom: 2px;
-  transition: ease-in-out all 0.3s;
-}
+/* ===========================
+   Typography
+   =========================== */
 
-a {
-  color: #675367;
-}
-
-.content {
-  margin-bottom: 5em;
-}
-
-.consentContentA {
-  font-size: 15px;
-  text-decoration: underline;
-}
-
-svg,
-.contactIcon {
-  color: #004d80;
-  transition: ease-in-out all 0.3s;
-  width: 7vw;
-  height: 8vh;
-}
-
-a:hover,
-b:hover,
-svg:hover {
-  color: black;
-  transform: scale(1.2);
-  text-shadow: 4px 4px 4px lightgrey;
-}
-
-.helloWorld {
-  padding: 0 12px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
 }
 
 h1 {
-  font-size: 4vw;
-  color: var(--color-text);
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.5px;
 }
 
 h2 {
-  font-size: 2.5vw;
-  color: black;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: var(--spacing-md);
 }
 
 h3 {
-  font-size: 2vw;
-  color: #004d80;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: var(--spacing-md);
+  color: var(--accent);
 }
 
-.linkSpan {
-  margin-top: 12px;
-  color: #000;
-  font-size: 2vw;
-  text-align: center;
+p {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-muted);
 }
 
-.devTo > *:hover {
-  fill: black;
-  transform: scale(1.2);
-  text-shadow: 4px 4px 4px lightgrey;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-base), text-shadow var(--transition-base);
+  font-weight: 500;
 }
 
-.devToSvg:hover {
-  fill: black;
+a:hover {
+  color: var(--highlight);
+  text-shadow: 0 0 12px rgba(233, 69, 96, 0.3);
 }
 
-.content {
-  text-align: center;
-}
+/* ===========================
+   Layout & Components
+   =========================== */
 
-.flexRow {
-  display: flex;
-  flex-direction: row;
-}
-
-.item {
-  flex-grow: 7;
-  font-family: "Muli";
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.contactItem {
-  cursor: pointer;
-}
-
-.ReactModal__Content,
-.ReactModal__Content--after-open {
-  position: absolute;
-  color: #004d80;
-  text-align: center;
-  top: 20%;
-  left: calc(50% - 25vw) !important;
-  /* use !important to override native inline style of react_modal */
-  height: auto;
-  width: 50vw;
-}
-
-.CookieConsentStyle {
-  margin-top: 5em;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 50px;
+.App {
   width: 100%;
-  line-height: 3rem;
-  text-align: center;
-  margin: -2px 0;
-  color: rgb(169 169 169);
-  background: rgb(243 243 243);
-  transition: ease-in-out all 0.3s;
-}
-
-.consentContentMini {
-  display: none;
-}
-
-.cookieBtn {
-  color: rgb(169 169 169);
-  transition: ease-in-out all 0.3s;
-  min-width: auto;
-  height: 24px;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 24px;
-}
-
-.rightCheck {
-  position: absolute;
-  left: 0;
-}
-
-.hideConsent {
-  display: none;
-}
-
-.jokeContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-.jokeContainer > div {
-  text-align: center;
-}
-.quoteSpan {
-  font-size: 1.8vw;
-}
-
-@media only screen and (max-width: 999px) {
-  .jokeContainer {
-    padding: 56px 0 56px 0;
-    border-top: #004d80 2px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .jokeContainer > div {
-    text-align: center;
-  }
-}
-
-@media (min-width: 800px) {
-  h1 {
-    color: #004d80;
-  }
-}
-
-.loginContainer {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: stretch;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.loginForm {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-  text-align: center;
-}
-
-.loginInput {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  float: none;
-  z-index: auto;
-  width: 150px;
-  height: 25px;
-  position: static;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0 20px;
-  overflow: hidden;
-  border: none;
-  border-radius: 21px;
-  color: rgba(181, 181, 181, 1);
-  text-decoration: normal;
-  text-overflow: ellipsis;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
-  text-shadow: none;
-  transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  transform: none;
-  transform-origin: 50% 50% 0;
-}
-
-.loginBtn {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-  width: 148px;
-  height: 20px;
-  background: #004d80;
-  border: none;
-  border-radius: 21px;
-  margin: 3px 0;
-  color: white;
-  cursor: pointer;
-}
-
-@media (min-width: 100px) and (max-width: 550px) {
-  .item {
-    line-height: 10px;
-    margin-bottom: 20px;
-  }
-
-  .linkSpan {
-    font-size: 13px;
-    line-height: 2;
-  }
-
-  svg,
-  .contactIcon {
-    height: 60px;
-    width: 45px;
-  }
-
-  .flexRow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-  .ReactModal__Content,
-  .ReactModal__Content--after-open {
-    position: absolute;
-    top: 20%;
-    left: calc(50% - 45vw) !important;
-    /* use !important to override native inline style of react_modal */
-    right: 40px;
-    bottom: 40px;
-    border: 1px solid rgb(204, 204, 204);
-    background: rgb(255, 255, 255);
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 20px;
-    color: #004d80;
-    text-align: center;
-    height: auto;
-    width: 80vw;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 330px) {
-  .CookieConsentStyle,
-  #cookieLink {
-    position: fixed;
-    bottom: 0;
-    line-height: 3rem;
-    text-align: center;
-    float: left;
-    border-top: 1px solid lightgrey;
-    font-size: 12px;
-    background: #ffff;
-  }
-
-  .consentContent,
-  #cookieLink .consentContent > * {
-    font-size: 12px;
-  }
-
-  .consentContentA {
-    font-size: 12px;
-  }
-
-  .cookieBtn {
-    width: 50px;
-    height: 16px;
-    margin: -0.4rem;
-    cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  .linkspan {
-    font-size: 17px;
-  }
-
-  .quoteSpan {
-    font-size: 18px;
-    font-family: "Muli";
-    color: var(--color-text);
-  }
-}
-
-/* hide hotjar label */
-._hj-f5b2a1eb-9b07_feedback_minimized_label,
-._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
-  display: none !important;
-}
-
-@media only screen and (max-width: 440px) {
-  .consentContent {
-    display: none;
-  }
-
-  .consentContentMini {
-    display: block;
-    margin: 18px;
-  }
-}
-
-.CookieConsentStyle {
-  line-height: inherit !important;
-}
-
-/* Subtle UI animations & utility classes */
+/* Card Component */
 .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.3s ease;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
 }
 
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Animation: Fade In Up */
 .fade-in {
   opacity: 0;
-  transform: translateY(6px);
-  animation: fadeInUp 500ms ease forwards;
+  transform: translateY(20px);
+  animation: fadeInUp 600ms var(--transition-slow) forwards;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.muted {
-  color: #666;
+.fade-in:nth-child(1) {
+  animation-delay: 0ms;
+}
+.fade-in:nth-child(2) {
+  animation-delay: 100ms;
+}
+.fade-in:nth-child(3) {
+  animation-delay: 200ms;
+}
+.fade-in:nth-child(4) {
+  animation-delay: 300ms;
+}
+.fade-in:nth-child(5) {
+  animation-delay: 400ms;
 }
 
-.subtle-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+/* Button Style */
+button {
+  font-family: var(--font-body);
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 1rem;
 }
 
-/* Simple modal styles used by Links component (replacement for react-modal) */
+button:hover {
+  background: var(--highlight);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ===========================
+   Page-Specific Styles
+   =========================== */
+
+.helloWorld {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.helloWorld h1 {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--highlight) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.helloWorld h2 {
+  color: var(--text-dark);
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+}
+
+.helloWorld h3 {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Content Section */
+.content {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Loading Message */
+.loadingMessage {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   Links & Social Icons
+   =========================== */
+
+.item,
+.linkSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: var(--spacing-lg) 0;
+}
+
+.linkSpan {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+svg,
+.contactIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent);
+  transition: all var(--transition-base);
+  margin: var(--spacing-md) 0;
+}
+
+svg:hover,
+.contactIcon:hover {
+  color: var(--highlight);
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(233, 69, 96, 0.4));
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin: var(--spacing-xl) 0;
+}
+
+/* ===========================
+   Cookie Consent
+   =========================== */
+
+.CookieConsentStyle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: var(--spacing-lg);
+  background: var(--bg-white);
+  border-top: 2px solid var(--accent);
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 400ms var(--transition-base);
+  z-index: 1000;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.consentContent {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.consentContent p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.consentContent a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.consentContentMini {
+  display: none;
+  text-align: center;
+}
+
+.cookieBtn {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border-radius: 50%;
+  padding: var(--spacing-sm);
+  margin-left: var(--spacing-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookieBtn:hover {
+  color: var(--highlight);
+  background: rgba(233, 69, 96, 0.1);
+  transform: scale(1.1);
+}
+
+.cookieBtns {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.hideConsent {
+  display: none !important;
+}
+
+/* ===========================
+   Jokes Section
+   =========================== */
+
+.jokeContainer {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jokeContainer h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent);
+}
+
+.jokeContainer p {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+}
+
+.jokeContainer button {
+  margin-top: var(--spacing-md);
+}
+
+/* ===========================
+   Modal Styles
+   =========================== */
+
 .simple-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10000;
+  backdrop-filter: blur(4px);
+  animation: fadeInOverlay 300ms var(--transition-base);
 }
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .simple-modal {
-  background: #fff;
-  border-radius: 10px;
-  max-width: 900px;
-  width: 94%;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  max-width: 90%;
   max-height: 90vh;
   overflow: auto;
-  padding: 20px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+  animation: modalSlideIn 400ms var(--transition-base);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===========================
+   Commits Section
+   =========================== */
+
+.footer {
+  width: 100%;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  position: relative;
+}
+
+.ocean {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: var(--spacing-xl);
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--accent) 50%,
+    var(--accent) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+  animation: wave 8s linear infinite;
+}
+
+.wave:nth-child(2) {
+  bottom: 15px;
+  animation: wave 4s linear infinite reverse;
+  opacity: 0.5;
+}
+
+.wave:nth-child(3) {
+  bottom: 30px;
+  animation: wave 6s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes wave {
+  to {
+    transform: translateX(-20px);
+  }
+}
+
+.commitContainer {
+  padding: var(--spacing-xl);
+}
+
+.commitContainer h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent);
+}
+
+.commitImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.quoteSpan {
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--highlight);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-2xl: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  .simple-modal {
+    max-width: 95%;
+    padding: var(--spacing-xl);
+  }
+
+  svg,
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .jokeContainer {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .cookieBtn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 1rem;
+    --spacing-lg: 1rem;
+    --spacing-md: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+  }
+
+  .app-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .helloWorld {
+    padding: var(--spacing-lg);
+  }
+
+  .flexRow {
+    gap: var(--spacing-md);
+  }
+
+  .consentContent {
+    font-size: 0.85rem;
+  }
+
+  .consentContentMini {
+    display: block;
+  }
+
+  .consentContent {
+    display: none;
+  }
+
+  .CookieConsentStyle {
+    padding: var(--spacing-md);
+  }
+
+  .cookieBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .simple-modal {
+    max-width: 98%;
+    padding: var(--spacing-lg);
+  }
+
+  .jokeContainer p {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+
+.muted {
+  color: var(--text-muted);
+}
+
+.subtle-hover {
+  transition: all var(--transition-base);
+}
+
+.subtle-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }

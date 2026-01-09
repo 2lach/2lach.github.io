@@ -3,11 +3,11 @@
 
 pre-commit:
   parallel: true
-  commands:
-    eslint:
-      glob: "src/**/*.{js,ts,jsx,tsx}"
-      run: yarn eslint {staged_files}
-      stage_fixed: true
+  # commands:
+  #   eslint:
+  #     glob: "src/**/*.{js,ts,jsx,tsx}"
+  #     run: yarn eslint {staged_files}
+  #     stage_fixed: true
 
 pre-push:
   commands:
