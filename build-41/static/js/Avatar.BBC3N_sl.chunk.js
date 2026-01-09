@@ -1,4 +1,4 @@
-import{j as t}from"./index.BnP0Mabf.js";import{d as e}from"./styled-components.browser.esm.xa0D6PGz.chunk.js";const r="/static/media/sl.Bc-EGpE9.jpg",a=e.div`
+import{j as t}from"./index.B9WnxBvV.js";import{d as e}from"./styled-components.browser.esm.D96xQbqb.chunk.js";const r="/static/media/sl.Bc-EGpE9.jpg",a=e.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
