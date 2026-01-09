@@ -1,10 +1,11 @@
 import { AiFillBook, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import React, { Component } from "react";
 
-import Cv from "./Cv/index.jsx";
-import { IoMdClose } from "react-icons/io";
-import { TiDocumentText } from "react-icons/ti";
+import { Component } from "react";
+
+// import Cv from "./Cv/index.jsx";
+// import { IoMdClose } from "react-icons/io";
+// import { TiDocumentText } from "react-icons/ti";
 
 class Links extends Component {
   constructor() {
@@ -24,14 +25,6 @@ class Links extends Component {
   // Close the modal
   handleCloseModal = () => {
     this.setState({ showModal: false });
-  };
-
-  // Unused method, can be removed
-  changeSource = () => {
-    this.setState({
-      imgsrc:
-        "https://gifimage.net/wp-content/uploads/2017/07/happy-dog-gif-5.gif",
-    });
   };
 
   // Open the default email client with a pre-filled email
@@ -101,7 +94,7 @@ class Links extends Component {
             <div className="linkSpan">Contact</div>
           </a>
         </li>
-        <li className="item contactItem">
+        {/*<li className="item contactItem">
           <a href="/">
             <TiDocumentText
               className="contactIcon"
@@ -110,7 +103,7 @@ class Links extends Component {
             <div className="linkSpan">Cv</div>
           </a>
 
-          {/* Simple custom modal to replace react-modal */}
+          Simple custom modal to replace react-modal
           {this.state.showModal && (
             <div
               className="simple-modal-overlay"
@@ -131,8 +124,8 @@ class Links extends Component {
                 </div>
               </div>
             </div>
-          )}
-        </li>
+          )} 
+        </li>*/}
       </ul>
     );
   }

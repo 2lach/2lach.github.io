@@ -283,6 +283,7 @@ button:active {
   justify-content: center;
   flex-direction: column;
   margin: var(--spacing-lg) 0;
+  text-align: center;
 }
 
 .linkSpan {
