@@ -28,6 +28,7 @@ interface CommitInfo {
 
 const LatestCommits = () => {
   const [commitInfo, setCommitInfo] = useState<CommitInfo | undefined>();
+  const [likes, setLikes] = useState(0);
 
   useEffect(() => {
     const getCommit = async () => {
@@ -64,51 +65,62 @@ const LatestCommits = () => {
           createdAt
         });
       } catch (error) {
-        console.error('Error fetching latest commits:', error);
+        // console.error('Error fetching latest commits:', error);
       }
     };
 
     getCommit();
   }, []);
 
-  if (!commitInfo) {
-    return <div>Loading latest commit data...</div>;
+  function handleClick() {
+    console.log('increment the like count');
+    setLikes(likes + 1);
   }
 
-  return (
-    <div
-      className='commitContainer'
-      style={{ margin: '6px', textAlign: 'center' }}
-    >
-      <h3 style={{ padding: '1em 0 0 0' }}>
-        Most recent commit by{' '}
-        <img
-          title='2lach'
-          alt='github avatar'
-          src='https://avatars1.githubusercontent.com/u/11457600?s=40&v=4'
-          className='commitImage'
-        />{' '}
-        was:
-      </h3>
+  if (!commitInfo) {
+    return (
       <div>
-        <span
-          className='quoteSpan'
-          style={{ color: '#004d80', lineHeight: 'auto' }}
-        >
-          {commitInfo.commitMessageLines} In repo:{' '}
-          <a
-            href={commitInfo.repoAndCommitUrl}
-            rel='noopener noreferrer'
-            className='link quoteSpan'
-          >
-            {commitInfo.repoName}
-          </a>
-          <br />
-          <span style={{ color: '#000000' }}>{commitInfo.createdAt}</span>
-        </span>
+        <button onClick={handleClick}>Likes ({likes})</button>
       </div>
-    </div>
-  );
-};
-
+    );
+  } else {
+    return (
+      <>
+        {commitInfo ? 'yay' : 'nay'}
+        <div
+          className='commitContainer'
+          style={{ margin: '6px', textAlign: 'center' }}
+        >
+          <h3 style={{ padding: '1em 0 0 0' }}>
+            Most recent commit by{' '}
+            <img
+              title='2lach'
+              alt='github avatar'
+              src='https://avatars1.githubusercontent.com/u/11457600?s=40&v=4'
+              className='commitImage'
+            />{' '}
+            was:
+          </h3>
+          <div>
+            <span
+              className='quoteSpan'
+              style={{ color: '#004d80', lineHeight: 'auto' }}
+            >
+              {commitInfo.commitMessageLines} In repo:{' '}
+              <a
+                href={commitInfo.repoAndCommitUrl}
+                rel='noopener noreferrer'
+                className='link quoteSpan'
+              >
+                {commitInfo.repoName}
+              </a>
+              <br />
+              <span style={{ color: '#000000' }}>{commitInfo.createdAt}</span>
+            </span>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
 export default LatestCommits;

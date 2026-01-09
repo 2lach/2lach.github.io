@@ -4,10 +4,17 @@ import Services from '../Services';
 import Work from '../Work';
 
 const Body: React.FC = () => {
+  const stuff_i_like = [
+    'Peace and quiet',
+    'Working out',
+    'Reading',
+    'Learning',
+    'Family'
+  ];
   return (
     <>
       <div id='about'>
-        <About />
+        <About stuff={stuff_i_like} />
       </div>
       <div id='services'>
         <Services />

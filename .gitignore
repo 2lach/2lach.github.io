@@ -26,3 +26,5 @@ yarn-error.log*
 yarn.lock
 old
 .vercel
+src/components/About/about-index2.tsx
+src/components/About/index copy.tsx

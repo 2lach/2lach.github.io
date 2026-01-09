@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
 import styled, { css, keyframes } from 'styled-components'; // Import css from styled-components
 
 import LogoImg from '../../assets/karmalimited.webp';
+import { useState } from 'react';
 
 const HeaderContainer = styled.header`
-  width: 100%;
+  width: 99vw;
+  max-width: 100%;
   background-color: #f0f4f8;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -42,8 +43,10 @@ const AnimatedLogo = styled.img<{ 'data-animate': boolean }>`
 `;
 
 const Navigation = styled.nav`
+  display: flex;
   a {
-    margin: 0 10px;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
     color: #708190;
     text-decoration: none;
     position: relative;
@@ -68,8 +71,11 @@ const Navigation = styled.nav`
     }
   }
 `;
+interface HeaderProps {
+  today: string;
+}
 
-const Header: React.FC = () => {
+const Header = ({ today }: HeaderProps) => {
   const [animate, setAnimate] = useState(false);
 
   const toggleAnimation = () => {
@@ -96,6 +102,7 @@ const Header: React.FC = () => {
           Work
         </a>
       </Navigation>
+      <div id={today}>Happy {today}</div>
       <AnimatedLogo
         src={LogoImg}
         alt='Karma Limited Logo'

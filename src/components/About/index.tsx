@@ -72,7 +72,11 @@ const HeroSectionContainer = styled.section`
   }
 `;
 
-const Body: React.FC = () => {
+interface AboutProps {
+  stuff: Array<string>;
+}
+
+const Body = ({ stuff }: AboutProps) => {
   return (
     <BodyContainer className='muted-gray'>
       <HeroSection>
@@ -89,6 +93,9 @@ const Body: React.FC = () => {
           personal development and believe in creating positive and meaningful
           collaborations.
         </About>
+        {stuff.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
         <p>
           <SocialLink
             href='https://github.com/2lach'
