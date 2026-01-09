@@ -33,7 +33,7 @@ git checkout master
 git cherry-pick -x "$gitSHA"
 
 # remove old assets
-rm -rfv *.jpg
+rm -rfv "*.jpg"
 rm -rfv static
 mv build-"$buildNR"/* .
 
