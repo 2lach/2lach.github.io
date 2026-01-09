@@ -48,7 +48,6 @@ class CoverImage extends Component {
       <div data-testid="cover-image">
         {matches && (
           <StyledProgressiveImage
-            fetchPriority="high"
             src={mainImageLoaded ? landscape : landscapeX60}
             alt="the main splash"
             onLoad={this.handleMainImageLoad}
@@ -56,7 +55,6 @@ class CoverImage extends Component {
         )}
         {!matches && (
           <StyledProgressiveImage
-            fetchPriority="high"
             src={mainImageLoaded ? portrait : portraitX60}
             alt="the small splash"
             onLoad={this.handleMainImageLoad}

@@ -28,7 +28,6 @@ const StyledProgressiveImage = styled.img`
 const Avatar = () => (
   <AvatarContantainer>
     <StyledProgressiveImage
-      fetchPriority="high"
       src={stefan}
       height="250"
       width="248"

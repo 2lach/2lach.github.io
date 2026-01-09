@@ -126,36 +126,29 @@ export default class LatestCommits extends Component {
           <div className="wave"></div>
         </div>
 
-        <div
-          className="commitContainer"
-          style={{ margin: "6px", textAlign: "center" }}
-        >
-          <h3 style={{ padding: "1em 0 0 0" }}>
-            Most recent commit by{" "}
+        <div className="commitContainer">
+          <h3>Most recent commit</h3>
+          <div className="commitContent">
             <img
               title="2lach"
               alt="github avatar"
               src="https://avatars1.githubusercontent.com/u/11457600?s=40&v=4"
               className="commitImage"
-            />{" "}
-            was:
-          </h3>
-          <div>
-            <span
-              className="quoteSpan"
-              style={{ color: "#004d80", lineHeight: "auto" }}
-            >
-              {commitMessageLines} In repo:{" "}
-              <a
-                href={repoAndCommitUrl}
-                rel="noopener noreferrer"
-                className="link quoteSpan"
-              >
-                {repoName}
-              </a>{" "}
-              <br />
-              <span style={{ color: "#000000" }}>{createdAt}</span>
-            </span>
+            />
+            <div className="commitText">
+              <p className="commitMessage">{commitMessageLines}</p>
+              <p className="commitRepo">
+                In repo:{" "}
+                <a
+                  href={repoAndCommitUrl}
+                  rel="noopener noreferrer"
+                  className="commitLink"
+                >
+                  {repoName}
+                </a>
+              </p>
+              <p className="commitTime">{createdAt}</p>
+            </div>
           </div>
         </div>
       </div>
