@@ -86,7 +86,7 @@ class CookieConsent extends Component {
           <IoIosCloseCircle
             className="cookieBtn"
             onClick={() => this.hideConsent(false)}
-            title="Deny"
+            title="Reject"
           />
         </div>
       </footer>
