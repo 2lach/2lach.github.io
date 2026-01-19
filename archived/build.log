@@ -1,0 +1,31 @@
+
+> 2lach.github@1.2.9 build
+> vite build
+
+vite v7.3.1 building client environment for production...
+transforming...
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+18 |  }
+19 |  
+20 |  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  @font-face {
+✓ 75 modules transformed.
+rendering chunks...
+computing gzip size...
+build/index.html                                                     0.55 kB │ gzip:  0.32 kB
+build/static/media/sl.Bc-EGpE9.jpg                                  11.46 kB
+build/static/media/portrait.DQ9LFO4e.jpg                            73.97 kB
+build/static/media/landscape.DZSl_1rR.jpg                        1,301.30 kB
+build/static/css/Links.ByfANPdL.css                                  0.62 kB │ gzip:  0.35 kB
+build/static/css/index.t9YGKDxd.css                                  0.65 kB │ gzip:  0.36 kB
+build/static/css/index.b2Luzou8.css                                  7.85 kB │ gzip:  2.55 kB
+build/static/js/index.Cj1uyouE.chunk.js                              0.38 kB │ gzip:  0.27 kB
+build/static/js/Avatar.DmDjM0F6.chunk.js                             0.76 kB │ gzip:  0.47 kB
+build/static/js/index.CHWJHNra.chunk.js                              3.19 kB │ gzip:  1.64 kB
+build/static/js/CoverImage.Clz8r29N.chunk.js                         4.63 kB │ gzip:  3.08 kB
+build/static/js/Links.Be_uygeS.chunk.js                              6.40 kB │ gzip:  2.48 kB
+build/static/js/styled-components.browser.esm.QVGdNNXY.chunk.js     26.20 kB │ gzip: 10.27 kB
+build/static/js/index.Boy0gazZ.js                                  203.23 kB │ gzip: 64.46 kB
+✓ built in 717ms
