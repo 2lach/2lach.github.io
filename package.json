@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@vitejs/plugin-react": "^5.1.4",
-    "@vitest/ui": "^4.0.17",
+    "@vitest/ui": "^4.1.0",
     "jsdom": "^28.1.0",
     "lefthook": "^2.1.2",
     "vite": "^7.3.1",
