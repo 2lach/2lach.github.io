@@ -46,7 +46,7 @@
     "@vitejs/plugin-react": "^5.1.4",
     "@vitest/ui": "^4.0.17",
     "jsdom": "^29.0.1",
-    "lefthook": "^2.1.2",
+    "lefthook": "^2.1.9",
     "vite": "^7.3.2",
     "vitest": "^4.0.18"
   }
