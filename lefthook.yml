@@ -1,0 +1,16 @@
+# Lefthook configuration for code quality and security checks
+# Reference: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-commit:
+  parallel: true
+  # commands:
+  #   eslint:
+  #     glob: "src/**/*.{js,ts,jsx,tsx}"
+  #     run: bun eslint {staged_files}
+  #     stage_fixed: true
+
+pre-push:
+  commands:
+    packages-audit:
+      tags: frontend security
+      run: bun audit
