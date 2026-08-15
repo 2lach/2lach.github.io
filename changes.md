@@ -151,6 +151,6 @@ If you'd like, I will now apply the `.card` and `.subtle-hover` wrappers to a fe
 - Added modal overlay styles in `src/styles/App.css` under `.simple-modal-overlay` and `.simple-modal`.
 - Reason: `react-modal@3.x` has a peer dependency range that conflicts with `react@19`, so removing it resolves the peer dependency error while keeping modal functionality.
 
-Notes: This migration is an initial, non-destructive step. You should run `npm install` (or `yarn`) locally and test the dev server and build. I preserved the CRA-built `index.html` as `index.cra.html` so you can revert if needed.
+Notes: This migration is an initial, non-destructive step. You should run `npm install` (or `bun`) locally and test the dev server and build. I preserved the CRA-built `index.html` as `index.cra.html` so you can revert if needed.
 
 These are small, non-breaking visual improvements intended to align the jokes component with the site's visual language. Let me know if you'd like stronger visual changes (colors, larger layout shifts, or an animated hero).

@@ -3,8 +3,8 @@
 # exit on error
 set -e
 
-# verify that yarn exists
-command -v yarn >/dev/null 2>&1 || { echo >&2 "Yarn is not installed. Aborting."; exit 1; }
+# verify that bun exists
+command -v bun >/dev/null 2>&1 || { echo >&2 "bun is not installed. Aborting."; exit 1; }
 
 echo "Start from the development branch"
 echo ""
@@ -12,7 +12,7 @@ git checkout development
 echo ""
 echo "then we do a new build"
 echo ""
-yarn build
+bun build
 echo "the latest build was:"
 # build script will exit if there are no log entries named " build"
 git log | grep "build" | head -n 2

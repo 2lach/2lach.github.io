@@ -43,9 +43,9 @@ Personal portfolio website built with React (v19) using Create React App. The si
 ### Development
 
 - **Commands**:
-  - `yarn start` - dev server via react-scripts
-  - `yarn build` - production build to `build/` folder
-  - `yarn test` - run tests with react-scripts
+  - `bun start` - dev server via react-scripts
+  - `bun build` - production build to `build/` folder
+  - `bun test` - run tests with react-scripts
 
 ### Build Numbering System
 

@@ -1,7 +1,7 @@
 # Deployment steps
 
 do the build build (dev branch)
-`yarn build`
+`bun build`
 then:
 `git llg`
 and include new features in commit message
