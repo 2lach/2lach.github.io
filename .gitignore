@@ -18,12 +18,10 @@
 .env.production.local
 
 npm-debug.log*
-<<<<<<< HEAD
 yarn-debug.log*
 yarn-error.log*
 yarn.lock
 package-lock.json
-=======
 bun-debug.log*
 bun-error.log*
 
@@ -33,4 +31,5 @@ old
 .vercel/project.json
 archived.tar.gz
 src/components/BadJokes/badjokes.wipTesting.js
->>>>>>> 411393423b1d (Build 43)
+
+files.zip

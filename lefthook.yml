@@ -3,14 +3,10 @@
 
 pre-commit:
   parallel: true
-  # commands:
-  #   eslint:
-  #     glob: "src/**/*.{js,ts,jsx,tsx}"
-  #     run: bun eslint {staged_files}
-  #     stage_fixed: true
 
 pre-push:
   commands:
     packages-audit:
+      exclude: master
       tags: frontend security
-      run: bun audit
+      run: ./scripts/security-audit-fix.sh
