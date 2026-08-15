@@ -7,6 +7,7 @@ pre-commit:
 pre-push:
   commands:
     packages-audit:
-      exclude: master
+      skip:
+        - ref: master
       tags: frontend security
       run: ./scripts/security-audit-fix.sh
